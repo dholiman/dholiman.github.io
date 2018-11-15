@@ -1,10 +1,12 @@
-
+body {
+    position: relative;
+}
 #background {
     position: fixed;
     top: -50%;
     left: -50%;
     height: 200%;
-    width: 200vw;
+    width: 200%;
     background-image: url(../img/background-image-optimized.jpg);
     background-size: cover;
     z-index:-2;
@@ -12,11 +14,20 @@
 .filter {
     position: fixed;
     top: 0;
-    left: -50%;
-    height: 200%;
-    width: 200%;
+    left: 0;
+    height: 100%;
+    width: 100%;
     background-color: rgba(26,39,52,0.7);
     z-index: -1;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 140vw;
+    width: 100%;
+    z-index; -2;
+    opacity: .99;
 }
 .box {
     position: relative;
@@ -65,7 +76,7 @@ P {
 .center {
     text-align: center;
 }
-a {
+.center a {
     font-size: 4vw;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
@@ -108,6 +119,40 @@ a {
 .orange-s {
     background-color: rgba(254,127,45,1);
 }
+footer {
+    position: relative;
+    height: auto;
+    padding: 20vw 0 0 0;
+    z-index: 2
+}
+.footy {
+    padding: 20vw 5vw;
+    z-index: 9999;
+}
+footer p {
+    padding: 10vw 5vw 0 5vw;
+    line-height: 5.5vw;
+}
+footer img {
+    width: 100%;
+    height: 100%;
+}
+footer a {
+    width: 21%;
+    margin: 0 4% 0 0;
+    padding: 0;
+    z-index: 999;
+    cursor: pointer;
+    display: inline-block;
+    
+} 
+.margin-reset {
+    margin: 0;
+}
+#icons {
+    padding: 5vw 10vw 10vw 10vw;
+    z-index: 99999;
+}
 @media (min-width: 600px){
     h2 {
         font-size: 6vw;
@@ -124,6 +169,10 @@ a {
     .center p {
         margin: 10vw 2vw 5vw;
     }
+    .center a {
+        font-size: 3.5vw;
+        padding: 3vw 7.5vw;
+    }
     a {
         padding: 1.7vw 3vw;
         margin: 20vw 0 20vw 0;
@@ -139,7 +188,23 @@ a {
     .info {
         height: 10.5vw;
     }
+    footer a {
+        width: 20.8%;
+        margin: 0 4% 0 0;
+    } 
+    footer p {
+        font-size: 3vw;
+        line-height: 5vw;
+    }
+    .footer {
+    height: 80vw;
+    }
+    #icons {
+        padding: 5vw 29vw 5vw 29vw;
+        z-index: 5;
+    }   
 }
+
 @media (min-width: 800px){
     h2 {
         font-size: 4vw;
@@ -157,7 +222,11 @@ a {
     }
     .center p {
         font-size: 2.3vw;
-        margin: 7vw 2vw 3vw;
+        margin: 7vw 2vw 4vw;
+    }
+    .center a {
+        font-size: 2vw;
+        padding: 2vw 6.5vw;
     }
     a {
         font-size: 2.4vw;
@@ -170,9 +239,24 @@ a {
     .info {
         height: 6.6625vw;
     }
+    footer p {
+        line-height: 4vw;
+    }
+    
+    footer a {
+        width: 20.6%;
+        margin: 0 4% 0 0;
+    } 
+    .footer {
+        height: 65vw;
+    }
+    #icons {
+        padding: 5vw 36.675vw 5vw 36.675vw;
+        z-index: 5;
+    }   
 }
 @media (min-width: 1024px){
-    body {
+    #body {
         width: 1024px;
         margin: 0 auto;
     }
@@ -185,7 +269,11 @@ a {
         margin: 14px 14px;
     }
     .center p {
-        font-size: 1.47em
+        font-size: 1.47em;
+    }
+    .center a {
+        font-size: 1.5em;
+        padding: 20px 52px;
     }
     a {
         font-size: 1.53em;
@@ -198,5 +286,25 @@ a {
     }
     .info {
         height: 68.22px;
+    }
+    footer p {
+        line-height: 130%;
+        font-size: 1.7em;
+    }
+    footer a {
+        width: 56.2px;
+        margin: 0 10px 0 0;
+    }
+    .footer {
+        height: 550px;
+        width: 100%;
+        
+    }
+     #icons {
+        padding: 5% 36.675% 5% 36.675%;
+        z-index: 5;
+    }   
+    footer {
+        width: 100%;
     }
 }
