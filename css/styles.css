@@ -154,6 +154,10 @@ footer a {
     padding: 5vw 10vw 10vw 10vw;
     z-index: 99999;
 }
+main h2 { 
+    text-align: center;
+}
+
 @media (min-width: 600px){
     h2 {
         font-size: 6vw;
@@ -174,7 +178,7 @@ footer a {
         font-size: 3.5vw;
         padding: 3vw 7.5vw;
     }
-    a {
+    .icons a {
         padding: 1.7vw 3vw;
         margin: 20vw 0 20vw 0;
     }
@@ -229,7 +233,7 @@ footer a {
         font-size: 2vw;
         padding: 2vw 6.5vw;
     }
-    a {
+    .icons a {
         font-size: 2.4vw;
         padding: 1vw 2vw;
     }
@@ -276,7 +280,7 @@ footer a {
         font-size: 1.5em;
         padding: 20px 52px;
     }
-    a {
+    .icons a {
         font-size: 1.53em;
         padding: 10px 20px;
     }
