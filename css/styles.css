@@ -35,7 +35,7 @@ body {
     height: 80vw;
     width: 80vw;
     /*background image*/
-    margin: 0;
+    margin: 5vw 10vw;
     cursor: pointer;
     z-index: 1;
 }
@@ -185,7 +185,7 @@ main h2 {
     .box {
         height: 42vw;
         width: 42vw;
-        margin: 5vw 0 0 5vw;
+        margin: 4.8vw 0 0 4.8vw;
     }
     .box:hover {
         background-color: rgba(52,78,104,0);
