@@ -120,6 +120,10 @@ P {
 .orange-s {
     background-color: rgba(254,127,45,1);
 }
+.mainy a {
+    margin: 0;
+    padding: 0;
+}
 footer {
     position: relative;
     height: auto;
