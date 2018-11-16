@@ -35,7 +35,7 @@ body {
     height: 80vw;
     width: 80vw;
     /*background image*/
-    margin: 5vw 10vw;
+    margin: 10vw;
     cursor: pointer;
     z-index: 1;
 }
