@@ -1,5 +1,6 @@
 body {
     position: relative;
+    padding: 0 10vw;
 }
 #background {
     position: fixed;
@@ -35,7 +36,7 @@ body {
     height: 80vw;
     width: 80vw;
     /*background image*/
-    margin: 5vw 10vw;
+    margin: 5vw 0;
     cursor: pointer;
     z-index: 1;
 }
@@ -160,6 +161,9 @@ main h2 {
 }
 
 @media (min-width: 600px){
+    body {
+        padding: 0;
+    }
     .mainy a   {
         margin: 0;
         padding: 0;
