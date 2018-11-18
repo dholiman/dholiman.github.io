@@ -25,7 +25,7 @@ body {
     position: absolute;
     bottom: 0;
     left: 0;
-    height: 140vw;
+    height: 170vw;
     width: 100%;
     z-index; -2;
     opacity: .99;
@@ -35,7 +35,7 @@ body {
     display: inline-block;
     height: 80vw;
     width: 80vw;
-    /*background image*/
+    /*background image*/ 
     margin: 5vw 0;
     cursor: pointer;
     z-index: 1;
@@ -54,7 +54,7 @@ header {
     text-align: center;
 }
 h2 {
-    font-size: 2.1em;
+    font-size: 2em;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     color: white;
@@ -91,6 +91,7 @@ P {
 }
 .teal {
     background-color: rgba(87,156,135,0.5);
+    
 }
 
 .yellow {
@@ -121,7 +122,42 @@ P {
 .orange-s {
     background-color: rgba(254,127,45,1);
 }
-
+.one:hover {
+    background-image: url(../img/coldbrew-preview.jpg);
+    background-size: cover;
+}
+.two:hover {
+    background-image: url(../img/kcr-poster-preview.JPG);
+    background-size: cover;
+}
+.three:hover {
+    background-image: url(../img/tiny-book-preview.jpg);
+    background-size: cover;
+}
+.four:hover {
+    background-image: url(../img/card-preview.JPG);
+    background-size: cover;
+}
+.five:hover {
+    background-image: url(../img/journal-preview.jpg);
+    background-size: cover;
+}
+.six:hover {
+    background-image: url(../img/infographic-preview.JPG);
+    background-size: cover;
+}
+.seven:hover {
+    background-image: url(../img/record-preview.JPG);
+    background-size: cover;
+}
+.eight:hover {
+    background-image: url(../img/dance-poster-preview.JPG);
+    background-size: cover;
+}
+.nine:hover {
+    background-image: url(../img/type-specimen-preview.JPG);
+    background-size: cover;
+}
 footer {
     position: relative;
     height: auto;
@@ -141,8 +177,8 @@ footer img {
     height: 100%;
 }
 footer a {
-    width: 21%;
-    margin: 0 4% 0 0;
+    width: 20%;
+    margin: 0 5% 0 0;
     padding: 0;
     z-index: 999;
     cursor: pointer;
