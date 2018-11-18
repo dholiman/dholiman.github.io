@@ -89,6 +89,7 @@ P {
     width: 60vw;
     background-color: rgba(252,202,70,0.8);
 }
+/*
 .teal {
     background-color: rgba(87,156,135,0.5);
     
@@ -106,6 +107,7 @@ P {
 .orange {
     background-color: rgba(254,127,45,0.5);
 }
+*/
 .teal-s {
     background-color: rgba(87,156,135,1);
 }
@@ -122,36 +124,72 @@ P {
 .orange-s {
     background-color: rgba(254,127,45,1);
 }
+.one {
+    background-image: url(../img/colored-coldbrew-preview.jpg);
+    background-size: cover;
+}
 .one:hover {
     background-image: url(../img/coldbrew-preview.jpg);
+    background-size: cover;
+}
+.two {
+    background-image: url(../img/colored-kcr-poster-preview.jpg);
     background-size: cover;
 }
 .two:hover {
     background-image: url(../img/kcr-poster-preview.JPG);
     background-size: cover;
 }
+.three {
+    background-image: url(../img/colored-tiny-book-preview.jpg);
+    background-size: cover;
+}
 .three:hover {
     background-image: url(../img/tiny-book-preview.jpg);
+    background-size: cover;
+}
+.four {
+    background-image: url(../img/colored-card-preview.jpg);
     background-size: cover;
 }
 .four:hover {
     background-image: url(../img/card-preview.JPG);
     background-size: cover;
 }
+.five {
+    background-image: url(../img/colored-journal-preview.jpg);
+    background-size: cover;
+}
 .five:hover {
     background-image: url(../img/journal-preview.jpg);
+    background-size: cover;
+}
+.six {
+    background-image: url(../img/colored-infographic-preview.jpg);
     background-size: cover;
 }
 .six:hover {
     background-image: url(../img/infographic-preview.JPG);
     background-size: cover;
 }
+.seven {
+    background-image: url(../img/colored-record-preview.jpg);
+    background-size: cover;
+}
 .seven:hover {
     background-image: url(../img/record-preview.JPG);
     background-size: cover;
 }
+.eight {
+    background-image: url(../img/colored-dance-poster-preview.jpg);
+    background-size: cover;
+}
 .eight:hover {
     background-image: url(../img/dance-poster-preview.JPG);
+    background-size: cover;
+}
+.nine {
+    background-image: url(../img/colored-type-specimen-preview.jpg);
     background-size: cover;
 }
 .nine:hover {
