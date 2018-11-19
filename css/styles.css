@@ -78,13 +78,15 @@ P {
     text-align: center;
 }
 .center a {
+    position: relative;
+    z-index: 3;
     font-size: 4vw;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     color: WHITE;
     text-decoration: none;
     padding: 4vw 9vw;
-    margin: 0 0 20vw 0;
+    margin: 0 0 0 0;
     height: 10vw;
     width: 60vw;
     background-color: rgba(252,202,70,0.8);
@@ -136,11 +138,11 @@ P {
     background-size: cover;
 }
 .two:hover {
-    background-image: url(../img/previews/kcr-poster-preview.JPG);
+    background-image: url(../img/previews/kcr-poster-preview.jpg);
     background-size: cover;
 }
 .three {
-    background-image: url(../img/colored/colored-record-preview.JPG);
+    background-image: url(../img/colored/colored-record-preview.jpg);
     background-size: cover;
 }
 .three:hover {
@@ -152,7 +154,7 @@ P {
     background-size: cover;
 }
 .four:hover {
-    background-image: url(../img/previews/card-preview.JPG);
+    background-image: url(../img/previews/card-preview.jpg);
     background-size: cover;
 }
 .five {
@@ -168,7 +170,7 @@ P {
     background-size: cover;
 }
 .six:hover {
-    background-image: url(../img/previews/infographic-preview.JPG);
+    background-image: url(../img/previews/infographic-preview.jpg);
     background-size: cover;
 }
 .seven {
@@ -176,7 +178,7 @@ P {
     background-size: cover;
 }
 .seven:hover {
-    background-image: url(../img/previews/tiny-book-preview.JPG);
+    background-image: url(../img/previews/tiny-book-preview.jpg);
     background-size: cover;
 }
 .eight {
@@ -184,7 +186,7 @@ P {
     background-size: cover;
 }
 .eight:hover {
-    background-image: url(../img/previews/dance-poster-preview.JPG);
+    background-image: url(../img/previews/dance-poster-preview.jpg);
     background-size: cover;
 }
 .nine {
@@ -192,7 +194,7 @@ P {
     background-size: cover;
 }
 .nine:hover {
-    background-image: url(../img/previews/type-specimen-preview.JPG);
+    background-image: url(../img/previews/type-specimen-preview.jpg);
     background-size: cover;
 }
 footer {
