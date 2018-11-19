@@ -140,11 +140,11 @@ P {
     background-size: cover;
 }
 .three {
-    background-image: url(../img/colored-tiny-book-preview.jpg);
+    background-image: url(../img/colored-record-preview.JPG);
     background-size: cover;
 }
 .three:hover {
-    background-image: url(../img/tiny-book-preview.jpg);
+    background-image: url(../img/record-preview.jpg);
     background-size: cover;
 }
 .four {
@@ -172,11 +172,11 @@ P {
     background-size: cover;
 }
 .seven {
-    background-image: url(../img/colored-record-preview.jpg);
+    background-image: url(../img/colored-tiny-book-preview.jpg);
     background-size: cover;
 }
 .seven:hover {
-    background-image: url(../img/record-preview.JPG);
+    background-image: url(../img/tiny-book-preview.JPG);
     background-size: cover;
 }
 .eight {
