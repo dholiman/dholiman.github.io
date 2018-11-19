@@ -72,7 +72,14 @@ P {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     color: WHITE;
-    margin: 8vw 4vw;
+    margin: 6vw 4vw 8vw 4vw;
+}
+.smallp {
+    font-size: 3vw;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    color: WHITE;
+    margin: -6vw 4vw 0vw 4vw;
 }
 .center {
     text-align: center;
@@ -255,6 +262,10 @@ main h2 {
         font-size: 3.5vw;
         margin: 1.8vw 2vw;
     }
+    .smallp {
+        font-size: 2.5vw;
+        margin: -1.2vw 1.8vw 0vw 1.8vw;
+    }
     .center p {
         margin: 10vw 2vw 5vw;
     }
@@ -309,6 +320,10 @@ main h2 {
         font-size: 2vw;
         margin: 1.4vw 2vw;
     }
+    .smallp {
+        font-size: 1.5vw;
+        margin: -0.8vw 2vw 0vw 2vw;
+    }
     .center p {
         font-size: 2.3vw;
         margin: 7vw 2vw 4vw;
@@ -356,6 +371,10 @@ main h2 {
     p {
         font-size: 1.29em;
         margin: 14px 14px;
+    }
+    .smallp {
+        font-size: .95em;
+        margin: -10px 14px 0vw 14px;
     }
     .center p {
         font-size: 1.47em;
