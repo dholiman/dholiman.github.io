@@ -20,6 +20,7 @@ body {
     width: 100%;
     background-color: rgba(26,39,52,0.7);
     z-index: -1;
+    
 }
 .footer {
     position: absolute;
@@ -75,11 +76,11 @@ P {
     margin: 6vw 4vw 8vw 4vw;
 }
 .smallp {
-    font-size: 3vw;
+    font-size: 3.5vw;
     font-family: 'Montserrat', sans-serif;
     font-weight: 200;
     color: WHITE;
-    margin: -6vw 4vw 0vw 4vw;
+    margin: -7vw 4vw 0vw 4vw;
 }
 .center {
     text-align: center;
@@ -208,12 +209,14 @@ footer {
     position: relative;
     height: auto;
     padding: 20vw 0 0 0;
-    z-index: 2
+    z-index: 2;
+    text-align: center;
 }
 .footy {
     padding: 20vw 5vw;
     z-index: 9999;
 }
+
 footer p {
     padding: 10vw 5vw 0 5vw;
     line-height: 5.5vw;
@@ -300,7 +303,7 @@ main h2 {
     height: 80vw;
     }
     #icons {
-        padding: 5vw 29vw 5vw 29vw;
+        padding: 5vw 28vw 5vw 28vw;
         z-index: 5;
     }   
 }
@@ -355,7 +358,7 @@ main h2 {
         height: 65vw;
     }
     #icons {
-        padding: 5vw 36.675vw 5vw 36.675vw;
+        padding: 5vw 34.75vw 5vw 34.75vw;
         z-index: 5;
     }   
 }
