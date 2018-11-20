@@ -26,7 +26,7 @@ body {
     position: absolute;
     bottom: 0;
     left: 0;
-    height: 170vw;
+    height: 145vw;
     width: 100%;
     z-index; -2;
     opacity: .99;
@@ -244,7 +244,21 @@ footer a {
 main h2 { 
     text-align: center;
 }
-
+.gallery img {
+    width: 100%;
+    margin: 5vw 0;
+}
+.gallery .box {
+    width: 100%;
+    height: auto;
+    margin: 5vw 0 15vw 0;
+}
+.gallery .box:hover {
+    background-color: rgba(252,202,70,0.5);
+}
+.gallery .box p {
+    line-height: 5.5vw;
+}
 @media (min-width: 600px){
     body {
         padding: 0;
@@ -305,7 +319,21 @@ main h2 {
     #icons {
         padding: 5vw 28vw 5vw 28vw;
         z-index: 5;
-    }   
+    }  
+    .gallery img {
+        display: inline-block;
+        width: 42%;
+        margin: 4.8vw 0 0 4.8%;
+    }
+    .gallery .box {
+        width: 89%;
+        margin: 5vw 5vw 20vw 5vw;
+        padding: 1vw;
+    }
+    .gallery .box p {
+        font-size: 3vw;
+        line-height: 5vw;
+    }
 }
 
 @media (min-width: 800px){
@@ -360,7 +388,12 @@ main h2 {
     #icons {
         padding: 5vw 34.75vw 5vw 34.75vw;
         z-index: 5;
-    }   
+    }  
+    .gallery .box p {
+        font-size: 2.2vw;
+        line-height: 4vw
+    }
+    
 }
 @media (min-width: 1024px){
     #body {
@@ -399,6 +432,7 @@ main h2 {
         height: 68.22px;
     }
     footer p {
+        padding: 0 2em;
         line-height: 130%;
         font-size: 1.7em;
     }
@@ -417,5 +451,18 @@ main h2 {
     }   
     footer {
         width: 100%;
+    }
+    .gallery img {
+        width: 423px;
+        margin: 59px 0 0 59px;
+    }
+    .gallery .box {
+        width: 905px;
+        margin: 59px 0 59px 59px;
+        padding: 1em 2em;
+    }
+    .gallery .box p {
+        font-size: 1.29em;
+        line-height: 150%;
     }
 }
