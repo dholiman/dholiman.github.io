@@ -84,6 +84,7 @@ P {
 }
 .center {
     text-align: center;
+    margin: 15vw 0 0 0;
 }
 .center a {
     position: relative;
@@ -255,6 +256,7 @@ main h2 {
 }
 .gallery .box:hover {
     background-color: rgba(252,202,70,0.5);
+    
 }
 .gallery .box p {
     line-height: 5.5vw;
