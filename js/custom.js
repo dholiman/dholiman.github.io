@@ -36,7 +36,6 @@ if (screen.width > 1024){
     });
 };
 
-
 var position = $("#slides").position().left;
 console.log(position);
 
@@ -44,4 +43,5 @@ $("#slides img").click(function(){
     var source = $(this).attr("src");
     $("#current img").attr("src", source);
 });
+// this comment in just to change the js file so I can upload a new version to test the site
 
