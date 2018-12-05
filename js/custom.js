@@ -4,5 +4,44 @@ var images = ['../img/previews/coldbrew-preview.jpg', '../img/previews/kcr-poste
 images.forEach(function(src, idx) {
 var i = new Image()
 i.src = src;
-})// your custom javascript goes here
+});
+
+var newPos = $("#slides").position();
+console.log(position);
+
+if (screen.width < 1024){
+    $(".left").click(function() {
+        $("#slides").animate({
+            "marginLeft" : "+=20.01vw"
+        });
+    });
+
+    $(".right").click(function() {
+        $("#slides").animate({
+            "marginLeft" : "-=20.01vw"
+        });
+    });
+};
+if (screen.width > 1024){
+    $(".left").click(function() {
+        $("#slides").animate({
+            "marginLeft" : "+=213.33"
+        });
+    });
+
+    $(".right").click(function() {
+        $("#slides").animate({
+            "marginLeft" : "-=213.33"
+        });
+    });
+};
+
+
+var position = $("#slides").position().left;
+console.log(position);
+
+$("#slides img").click(function(){
+    var source = $(this).attr("src");
+    $("#current img").attr("src", source);
+});
 
