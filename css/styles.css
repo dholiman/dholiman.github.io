@@ -205,6 +205,22 @@ P {
     background-image: url(../img/previews/type-specimen-preview.jpg);
     background-size: cover;
 }
+.ten {
+    background-image: url(../img/colored/colored-chapbook-preview.jpg);
+    background-size: cover;
+}
+.ten:hover {
+    background-image: url(../img/previews/chapbook-preview.jpg);
+    background-size: cover;
+}
+.eleven {
+    background-image: url(../img/colored/colored-snake-preview.jpg);
+    background-size: cover;
+}
+.eleven:hover {
+    background-image: url(../img/previews/snake-preview.jpg);
+    background-size: cover;
+}
 footer {
     position: relative;
     height: auto;
@@ -467,3 +483,36 @@ main h2 {
     }
 }
 
+
+
+
+
+
+
+
+#snake {
+			margin: 2vw 0 7vw 0;
+			padding: 0;
+		}
+		html {
+			height: 100%;
+		}
+		body {
+			text-align: center;
+		}
+		.score {
+			font-family: verdana;
+			font-size: 2em;
+			position: relative;
+			color: #fff;
+		}
+		canvas {
+			display: block;
+			position: relative;
+			margin: auto;
+			top: 2vw;
+			bottom: 0;
+			right: 0;
+			left: 0;
+            
+		}
