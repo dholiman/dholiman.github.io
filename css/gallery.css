@@ -22,7 +22,7 @@
 }
 #slidey #slider #slides {
     position: relative;
-    width: 250vw;
+    width: 500vw;
     height: 15vw;
 }
 #slidey #slider #slides img {
@@ -60,6 +60,7 @@
 @media (min-width: 1024px){
     #slidey #slider #slides {
         height: 160px;
+        width: 50000px;
     }
     #slidey #slider #slides img {
         height: 160px;
