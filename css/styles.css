@@ -523,4 +523,5 @@ main h2 {
 			right: 0;
 			left: 0;
             
+            max-width: 100%; /* don't let it get wider than the screen (mobile)*/
 		}
