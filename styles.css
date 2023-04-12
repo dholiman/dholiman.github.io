@@ -1,0 +1,659 @@
+html {
+    margin: 0;
+    height: 100vh;
+}
+body {
+    margin: 0;
+    height: 100vh;
+    background: url(../img/background-image-optimized.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+
+}
+body:after {
+    content:"";
+      position:fixed; /* stretch a fixed position to the whole screen */
+      top:0;
+      height:100vh; /* fix for mobile browser address bar appearing disappearing */
+      left:0;
+      right:0;
+      z-index:-1; /* needed to keep in the background */
+      background: url(../img/background-image-optimized.jpg) center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+}
+body::after{
+    position:absolute; width:0; height:0; overflow:hidden; z-index:-1; /* hide images */
+    content:url(../img/YL-Nav-Case-Study-Hover.jpg) url(../img/Multiman-Case-Study-Hover.jpg) url(../img/Web-Design-2-Hover.jpg) url(../img/Graphic-Design-Hover.jpg) url(../img/Snake-Hover.jpg);   /* load images */
+ }
+.body {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1920px;
+}
+.blue-bg {
+    background-color: rgba(26,39,52,.8);
+    padding: 2.5vw 0;
+}
+.yellow-bg {
+    background-color: rgba(252,202,70,1);
+    padding: 2.5vw 0 0 0;
+}
+.footer-bg {
+    background-color: rgba(252,202,70,1);
+}
+h1 {
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 4rem;
+    letter-spacing: .5rem;
+    line-height: 4rem;
+    text-transform: uppercase;
+    color: rgba(255,255,255,1);
+
+}
+h2 {
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    font-size: 2.5rem;
+    letter-spacing: .3rem;
+    line-height: 2.5rem;
+    color: rgba(252,202,70,1);
+}
+h3 {
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    font-size: 1.1rem;
+    letter-spacing: .15rem;
+    text-transform: uppercase;
+    color: rgba(35,61,77,1);
+}
+p {
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color: rgba(35,61,77,1);
+}
+.inverse {
+    color: white;
+}
+a {
+    cursor: pointer;
+    color: inherit;
+    text-decoration: none;
+}
+.button1 {
+    background-color: rgba(35,61,77,1);
+    border: none;
+    color: rgba(252,202,70,1);
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    font-size: .75rem;
+    letter-spacing: .15rem;
+    text-transform: uppercase;
+    position: relative;
+    transition: all 0.25s;
+}
+.button1:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;  
+    top: 12px;
+    right: -24px;
+    transition: 0.25s;
+}
+.button1:hover{
+    padding-right: 36px;
+    padding-left: 12px;
+}
+.button1:hover:after {
+    opacity: 1;
+    right: 12px;
+}
+.button2 {
+    border: 2px solid rgba(35,61,77,1);
+    color: rgba(35,31,77,1);
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    font-size: .75rem;
+    letter-spacing: .15rem;
+    text-transform: uppercase;
+    position: relative;
+    transition: all 0.25s;
+}
+.button2:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;  
+    top: 10px;
+    right: -22px;
+    transition: 0.25s;
+}
+.button2:hover{
+    padding-right: 34px;
+    padding-left: 10px;
+}
+.button2:hover:after {
+    opacity: 1;
+    right: 10px;
+}
+.button3 {
+    background-color: rgba(252,202,70,1);
+    border: none;
+    color: rgba(35,61,77,1);
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    font-size: 1.25rem;
+    letter-spacing: .15rem;
+    text-transform: uppercase;
+    position: relative;
+    transition: all 0.25s;
+}
+.button3:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;  
+    top: 16px;
+    right: -32px;
+    transition: 0.25s;
+}
+.button3:hover{
+    padding-right: 48px;
+    padding-left: 16px;
+}
+.button3:hover:after {
+    opacity: 1;
+    right: 16px;
+}
+.button4 {
+    background-color: rgba(252,202,70,1);
+    border: none;
+    color: rgba(35,61,77,1);
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    font-size: 1.25rem;
+    letter-spacing: .15rem;
+    text-transform: uppercase;
+    position: relative;
+    transition: all 0.25s;
+}
+.button4:after {
+    content: '«';
+    position: absolute;
+    opacity: 0;  
+    top: 16px;
+    left: -32px;
+    transition: 0.25s;
+}
+.button4:hover{
+    padding-right: 16px;
+    padding-left: 48px;
+}
+.button4:hover:after {
+    opacity: 1;
+    left: 16px;
+}
+header {
+    text-align: center;
+    padding: 20vw 0;
+}
+header h2 {
+    margin-top: -1.25rem;
+}
+.grid-container {
+    margin: 0 10vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-column-gap: 2.5vw;
+    grid-row-gap: 2.5vw;
+    grid-template-areas: 
+    "case-1 case-1 case-1"
+    "case-2 case-2 case-2"
+    "case-3 case-4 case-5";
+}
+.grid-item-1 {
+    grid-area: case-1;
+}
+.grid-item-2 {
+    grid-area: case-2;
+}
+.grid-item-3 {
+    grid-area: case-3;
+}
+.grid-item-4 {
+    grid-area: case-4;
+}
+.grid-item-5 {
+    grid-area: case-5;
+}
+.alt-grid-item {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 0;
+    grid-template-rows: auto auto;
+    grid-template-areas: "img" "sidebar";
+}
+.alt-grid-item .img {
+    grid-area: img;
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    width: calc(100% + 2.5vw);
+    width: 100%;
+    height: 0;
+    padding-top: 75%;
+}
+.grid-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 2.5vw;
+    grid-template-areas: "img img sidebar";
+}
+.grid-item .img {
+    grid-area: img;
+    grid-row: 1 / 2;
+    grid-column: 1 / 3;
+    width: calc(100% + 2.5vw);
+}
+.img {
+    background-size: 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.one {
+    background-image: url(../img/YL-Nav-Case-Study.jpg);
+    transition: ease-in 0.1s;
+}
+.grid-item-1:hover .one {
+    background-image: url(../img/YL-Nav-Case-Study-Hover.jpg);
+    transition: ease-in 0.1s;
+}
+.two {
+    background-image: url(../img/Multiman-Case-Study.jpg);
+    transition: ease-in 0.1s;
+}
+.grid-item-2:hover .two {
+    background-image: url(../img/Multiman-Case-Study-Hover.jpg);
+    transition: ease-in 0.1s;
+}
+.three {
+    background-image: url(../img/Web-Design-2.jpg);
+    transition: ease-in 0.1s;
+}
+.grid-item-3:hover .three {
+    background-image: url(../img/Web-Design-2-Hover.jpg);
+    transition: ease-in 0.1s;
+}
+.four {
+    background-image: url(../img/Graphic-Design.jpg);
+    transition: ease-in 0.1s;
+}
+.grid-item-4:hover .four {
+    background-image: url(../img/Graphic-Design-Hover.jpg);
+    transition: ease-in 0.1s;
+}
+.five {
+    background-image: url(../img/Snake.jpg);
+    transition: ease-in 0.1s;
+}
+.grid-item-5:hover .five {
+    background-image: url(../img/Snake-Hover.jpg);
+    transition: ease-in 0.1s;
+}
+.sub-grid-item {
+    position: relative;
+    grid-area: sidebar;
+    background-color: rgba(252,202,70,1);
+    height: 100%;
+    width: 100%;
+}
+.sub-grid-item h3 {
+    margin: 5% 10% 5% 10%;
+}
+.sub-grid-item p {
+    margin: 0% 10% 5% 10%;
+}
+.sub-grid-item .button1 {
+    margin: 0% 10% 5% 10%;
+}
+.sub-grid-item .button2 {
+    margin: 0% 10% 5% 10%;
+    
+}
+.cta {
+    padding: 10vw 10vw;
+    text-align: center;
+}
+.cta h3 {
+    color: white;
+}
+.grid-container-2 {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 10vw 1fr 1fr 1fr 10vw;
+    grid-column-gap: 5vw;
+    grid-template-areas: 
+    "photo photo bio bio .";
+}
+.footer h2 {
+    color: rgba(35,61,77,1);
+}
+.footer-grid-item-1 {
+    grid-area: bio;
+    margin: auto auto auto -2.5vw;
+}
+.footer-grid-item-2 {
+    grid-area: photo;
+    margin: auto;
+}
+.footer-grid-item-2 img {
+    width: 100%;
+    margin: 0;
+}
+.footer-grid-item-1 .button1, .footer-grid-item-1 .button2 {
+    margin-right: 1vw;
+} 
+
+/* --- Case Study Specific --- */
+.blue-bg .case-study h3, .blue-bg .case-study p {
+    color: white;
+}
+.cs-content, .cs-photo {
+    margin: auto 0px;
+} 
+.case-study img {
+    width: 100%;
+}
+.grid-container-3 {
+    padding: 0 10vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-column-gap: 2.5vw;
+    grid-row-gap: 2.5vw;
+}
+
+/* --- Gallery Specific --- */
+.gallery {
+    margin: 0 10vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-column-gap: 1.25vw;
+    grid-row-gap: 1.25vw;
+}
+.gal-intro {
+    margin: 0 10vw 5vw 10vw;
+    color: white;
+}
+.gallery img {
+    width: 100%;
+    -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.gallery img:hover {
+	-webkit-transform: scale(1.05);
+	transform: scale(1.05);
+}
+
+/* --- Snake specific --- */
+section h3 {
+    color: white;
+}
+#snake {
+    margin: 0 0 0 0;
+    padding: 0;
+    text-align: center;
+}
+.score {
+    font-family: Inter, Arial, Helvetica, sans-serif;;
+    font-size: 2em;
+    position: relative;
+    color: rgb(252,202,70,1);
+}
+canvas {
+    display: block;
+    position: relative;
+    margin: auto;
+    top: 2vw;
+    bottom: 0;
+    right: 0;
+    left: 0;
+               
+    max-width: 100%; /* don't let it get wider than the screen (mobile)*/
+}
+@media only screen and (min-width: 1920px) {
+    header {
+        padding: 20% 0;
+    }
+    .grid-container {
+        margin: 0 10%;
+        grid-column-gap: 3.1%;
+        grid-row-gap: 5.35%;
+    }
+    .cta {
+        padding: 25% 0 15% 0;
+    }
+    .grid-container-2 {
+        margin: 0 10%;
+        grid-template-columns: 1fr 2fr;
+        grid-column-gap: 5%;
+        grid-template-areas: 
+        "photo bio";
+    }
+}
+@media only screen and (max-width: 948px) {
+    .yellow-bg {
+        padding: 2.5vw 0;
+    }
+    h1 {
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+    h2 {
+        font-size: 1.75rem;
+        line-height: 2rem;
+    }
+    header {
+        text-align: center;
+        padding: 30vw 0;
+    }
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto;
+        grid-row-gap: 5vw;
+        grid-template-areas: 
+        "case-1 case-1 case-1"
+        "case-2 case-2 case-2"
+        "case-3 case-3 case-3"
+        "case-4 case-4 case-4"
+        "case-5 case-5 case-5";
+    }
+    .sub-grid-item {
+        position: relative;
+        grid-area: sidebar;
+        background-color: rgba(252,202,70,1);
+        height: 100%;
+        width: 100%;
+    }
+    .sub-grid-item h3 {
+        margin: 5% 10% 2.5% 10%;
+    }
+    .sub-grid-item p{
+        margin: 0% 10% 2.5% 10%;
+    }
+    .sub-grid-item .button1 {
+        position: relative;
+        margin: 0% 10% 5% 10%;
+    }
+    .sub-grid-item .button2 {
+        margin: 0% 10% 5% 10%;
+    }
+    .alt-grid-item {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-column-gap: 0;
+        grid-template-rows: auto auto;
+        grid-template-areas: "img" "sidebar";
+    }
+    .alt-grid-item .img {
+        grid-area: img;
+        width: 100%;
+        height: 0;
+        padding-top: 75%;
+    }
+    .one {
+        background-image: url(../img/YL-Nav-Case-Study-Hover.jpg);
+    }
+    .two {
+        background-image: url(../img/Multiman-Case-Study-Hover.jpg);
+    }
+    .three {
+        background-image: url(../img/Web-Design-2-Hover.jpg);
+    }
+    .four {
+        background-image: url(../img/Graphic-Design-Hover.jpg);
+    }
+    .five {
+        background-image: url(../img/Snake-Hover.jpg);
+    }
+    .grid-item {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-column-gap: 0;
+        grid-template-rows: auto auto;
+        grid-template-areas: "img" "sidebar";
+    }
+    .grid-item .img {
+        grid-area: img;
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+        width: 100%;
+        height: 0;
+        padding-top: 75%;
+    }
+    .img {
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+
+    .grid-container-2 {
+        margin: 0 10vw;
+        padding: 10vw 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-column-gap: 0;
+        grid-template-rows: auto auto;
+        grid-row-gap: 5vw;
+        grid-template-areas: 
+        "photo" "bio";
+    }
+    .footer-grid-item-1 {
+        margin: 0;
+    }
+    .footer-grid-item-2 img {
+        width: 40vw;
+        border-radius: 50%;
+    }
+    /* --- Case Study Specific --- */
+    .grid-container-3 {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-row-gap: 2.5vw;
+       
+    }
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        grid-column-gap: 2.5vw;
+        grid-row-gap: 2.5vw;
+    }
+}
+@media only screen and (max-width: 524px) {
+    .footer-grid-item-1 .button1, .footer-grid-item-1 .button2 {
+        margin-bottom: 2.5vw;
+    } 
+}
+@media only screen and (max-width: 415px) {
+    .footer-grid-item-2 img {
+        width: 60vw;
+    }
+    /* --- Gallery Specific --- */
+    .gallery {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-row-gap: 2.5vw;
+    }
+}
+@media only screen and (max-width: 375px) {
+    .button3:after {
+        top: 28px;
+    }
+    .button3:hover:after {
+        right: 32px;
+    }
+}
+@media only screen and (max-width: 340px) {
+    h1 {
+        font-size: 2rem;
+        line-height: 2.25rem;
+    }
+    h2 {
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+        font-weight: 200;
+    }
+}
+@media only screen and (max-width: 280px) {
+    
+    .button1:after {
+        top: 20px;
+    }
+    .button1:hover:after {
+        right: 24px;
+    }
+    .button2:after {
+        top: 20px;
+    }
+    .button2:hover:after {
+        right: 24px;
+    }
+}
+@media only screen and (max-width: 200px) {
+    h1 {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+        margin-bottom: 15vw;
+    }
+    h2 {
+        font-size: 1rem;
+        line-height: 1.25rem;
+    }
+}
