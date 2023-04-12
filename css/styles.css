@@ -1,37 +1,31 @@
 html {
     margin: 0;
-    height: 100vh;
+    height: 100%;
 }
 body {
+    position: fixed;
     margin: 0;
     height: 100vh;
-    background: url(../img/background-image-optimized.jpg);
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
+    background-color: rgba(1,1,1,0);
 
-}
-body:after {
-    content:"";
-      position:fixed; /* stretch a fixed position to the whole screen */
-      top:0;
-      height:100vh; /* fix for mobile browser address bar appearing disappearing */
-      left:0;
-      right:0;
-      z-index:-1; /* needed to keep in the background */
-      background: url(../img/background-image-optimized.jpg) center center;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
 }
 body::after{
     position:absolute; width:0; height:0; overflow:hidden; z-index:-1; /* hide images */
     content:url(../img/YL-Nav-Case-Study-Hover.jpg) url(../img/Multiman-Case-Study-Hover.jpg) url(../img/Web-Design-2-Hover.jpg) url(../img/Graphic-Design-Hover.jpg) url(../img/Snake-Hover.jpg);   /* load images */
  }
+.bg-img {
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    background-position-x: 50%;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-image: url(../img/background-image-optimized.jpg);
+    background-repeat: no-repeat;
+    overflow-y:scroll;
+    overflow-x:hidden;
+}
 .body {
     margin: 0 auto;
     width: 100%;
@@ -610,6 +604,9 @@ canvas {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
         grid-row-gap: 2.5vw;
+    }
+    header {
+        padding: 30vw 10vw;
     }
 }
 @media only screen and (max-width: 375px) {
