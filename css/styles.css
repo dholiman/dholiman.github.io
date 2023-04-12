@@ -1,527 +1,656 @@
+html {
+    margin: 0;
+    height: 100%;
+}
 body {
-    position: relative;
-    padding: 0 10vw;
-}
-#background {
     position: fixed;
-    top: -50%;
-    left: -50%;
-    height: 200%;
-    width: 200%;
-    background-image: url(../img/background-image-optimized.jpg);
-    background-size: cover;
-    z-index:-2;
+    margin: 0;
+    height: 100vh;
+    background-color: rgba(1,1,1,0);
+
 }
-.filter {
+body::after{
+    position:absolute; width:0; height:0; overflow:hidden; z-index:-1; /* hide images */
+    content:url(../img/YL-Nav-Case-Study-Hover.jpg) url(../img/Multiman-Case-Study-Hover.jpg) url(../img/Web-Design-2-Hover.jpg) url(../img/Graphic-Design-Hover.jpg) url(../img/Snake-Hover.jpg);   /* load images */
+ }
+.bg-img {
+    z-index: -1;
     position: fixed;
     top: 0;
-    left: 0;
+    background-position-x: 50%;
     height: 100%;
     width: 100%;
-    background-color: rgba(26,39,52,0.7);
-    z-index: -1;
-    
+    background-size: cover;
+    background-image: url(../img/background-image-optimized.jpg);
+    background-repeat: no-repeat;
+    overflow-y:scroll;
+    overflow-x:hidden;
 }
-.footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 145vw;
+.body {
+    margin: 0 auto;
     width: 100%;
-    z-index; -2;
-    opacity: .99;
+    max-width: 1920px;
 }
-.box {
-    position: relative;
-    display: inline-block;
-    height: 80vw;
-    width: 80vw;
-    /*background image*/ 
-    margin: 5vw 0;
+.blue-bg {
+    background-color: rgba(26,39,52,.8);
+    padding: 2.5vw 0;
+}
+.yellow-bg {
+    background-color: rgba(252,202,70,1);
+    padding: 2.5vw 0 0 0;
+}
+.footer-bg {
+    background-color: rgba(252,202,70,1);
+}
+h1 {
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 4rem;
+    letter-spacing: .5rem;
+    line-height: 4rem;
+    text-transform: uppercase;
+    color: rgba(255,255,255,1);
+
+}
+h2 {
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    font-size: 2.5rem;
+    letter-spacing: .3rem;
+    line-height: 2.5rem;
+    color: rgba(252,202,70,1);
+}
+h3 {
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    font-size: 1.1rem;
+    letter-spacing: .15rem;
+    text-transform: uppercase;
+    color: rgba(35,61,77,1);
+}
+p {
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color: rgba(35,61,77,1);
+}
+.inverse {
+    color: white;
+}
+a {
     cursor: pointer;
-    z-index: 1;
+    color: inherit;
+    text-decoration: none;
 }
-.box:hover {
-    background-color: rgba(0,0,0,0);
-    /*switch to new background image*/
+.button1 {
+    background-color: rgba(35,61,77,1);
+    border: none;
+    color: rgba(252,202,70,1);
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    font-size: .75rem;
+    letter-spacing: .15rem;
+    text-transform: uppercase;
+    position: relative;
+    transition: all 0.25s;
 }
-.info {
-    height: 20vw;
-    width: 100%;
+.button1:after {
+    content: '»';
     position: absolute;
-    bottom: 0;
+    opacity: 0;  
+    top: 12px;
+    right: -24px;
+    transition: 0.25s;
+}
+.button1:hover{
+    padding-right: 36px;
+    padding-left: 12px;
+}
+.button1:hover:after {
+    opacity: 1;
+    right: 12px;
+}
+.button2 {
+    border: 2px solid rgba(35,61,77,1);
+    color: rgba(35,31,77,1);
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    font-size: .75rem;
+    letter-spacing: .15rem;
+    text-transform: uppercase;
+    position: relative;
+    transition: all 0.25s;
+}
+.button2:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;  
+    top: 10px;
+    right: -22px;
+    transition: 0.25s;
+}
+.button2:hover{
+    padding-right: 34px;
+    padding-left: 10px;
+}
+.button2:hover:after {
+    opacity: 1;
+    right: 10px;
+}
+.button3 {
+    background-color: rgba(252,202,70,1);
+    border: none;
+    color: rgba(35,61,77,1);
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    font-size: 1.25rem;
+    letter-spacing: .15rem;
+    text-transform: uppercase;
+    position: relative;
+    transition: all 0.25s;
+}
+.button3:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;  
+    top: 16px;
+    right: -32px;
+    transition: 0.25s;
+}
+.button3:hover{
+    padding-right: 48px;
+    padding-left: 16px;
+}
+.button3:hover:after {
+    opacity: 1;
+    right: 16px;
+}
+.button4 {
+    background-color: rgba(252,202,70,1);
+    border: none;
+    color: rgba(35,61,77,1);
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    font-size: 1.25rem;
+    letter-spacing: .15rem;
+    text-transform: uppercase;
+    position: relative;
+    transition: all 0.25s;
+}
+.button4:after {
+    content: '«';
+    position: absolute;
+    opacity: 0;  
+    top: 16px;
+    left: -32px;
+    transition: 0.25s;
+}
+.button4:hover{
+    padding-right: 16px;
+    padding-left: 48px;
+}
+.button4:hover:after {
+    opacity: 1;
+    left: 16px;
 }
 header {
     text-align: center;
+    padding: 15vw 0;
 }
-h2 {
-    font-size: 2em;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    color: white;
-    margin: 10vw 0 0;
+header h2 {
+    margin-top: -1.25rem;
 }
-h3 {
-    font-size: 1.5em;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 100;
-    color: rgb(252,202,70);
-    margin: 0 0 10vw 0;
+.grid-container {
+    margin: 0 10vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-column-gap: 2.5vw;
+    grid-row-gap: 2.5vw;
+    grid-template-areas: 
+    "case-1 case-1 case-1"
+    "case-2 case-2 case-2"
+    "case-3 case-4 case-5";
 }
-P {
-    font-size: 4vw;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    color: WHITE;
-    margin: 6vw 4vw 8vw 4vw;
+.grid-item-1 {
+    grid-area: case-1;
 }
-.smallp {
-    font-size: 3.5vw;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 200;
-    color: WHITE;
-    margin: -7vw 4vw 0vw 4vw;
+.grid-item-2 {
+    grid-area: case-2;
 }
-.center {
-    text-align: center;
+.grid-item-3 {
+    grid-area: case-3;
 }
-.center a {
-    position: relative;
-    z-index: 3;
-    font-size: 4vw;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    color: WHITE;
-    text-decoration: none;
-    padding: 4vw 9vw;
-    margin: 0 0 0 0;
-    height: 10vw;
-    width: 60vw;
-    background-color: rgba(252,202,70,0.8);
+.grid-item-4 {
+    grid-area: case-4;
 }
-
-.teal {
-    background-color: rgba(87,156,135,0.5);
-    
+.grid-item-5 {
+    grid-area: case-5;
 }
-
-.yellow {
-    background-color: rgba(252,202,70,0.5);
+.alt-grid-item {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 0;
+    grid-template-rows: auto auto;
+    grid-template-areas: "img" "sidebar";
 }
-.blue {
-    background-color: rgba(35,61,77,0.5);
-}
-.green {
-    background-color: rgba(161,193,129,0.5);
-}
-.orange {
-    background-color: rgba(254,127,45,0.5);
-}
-.teal-s {
-    background-color: rgba(87,156,135,1);
-}
-
-.yellow-s {
-    background-color: rgba(252,202,70,1);
-}
-.blue-s {
-    background-color: rgba(35,61,77,1);
-}
-.green-s {
-    background-color: rgba(161,193,129,1);
-}
-.orange-s {
-    background-color: rgba(254,127,45,1);
-}
-.slow {
-    background-image: url(../img/colored/colored-coldbrew-preview.jpg);
-    background-size: cover;
-}
-.slow:hover {
-    background-image: url(../img/previews/coldbrew-preview.jpg);
-    background-size: cover;
-}
-.websites {
-    background-image: url(../img/colored/Colored-Websites.jpg);
-    background-size: cover;
-}
-.websites:hover {
-    background-image: url(../img/previews/Websites.jpg);
-    background-size: cover;
-}
-.logos {
-    background-image: url(../img/colored/Colored-Logo.jpg);
-    background-size: cover;
-}
-.logos:hover {
-    background-image: url(../img/previews/Logo.jpg);
-    background-size: cover;
-}
-.record {
-    background-image: url(../img/colored/colored-record-preview.jpg);
-    background-size: cover;
-}
-.record:hover {
-    background-image: url(../img/previews/record-preview.jpg);
-    background-size: cover;
-}
-.card {
-    background-image: url(../img/colored/colored-card-preview.jpg);
-    background-size: cover;
-}
-.card:hover {
-    background-image: url(../img/previews/card-preview.jpg);
-    background-size: cover;
-}
-.cupper {
-    background-image: url(../img/colored/colored-journal-preview.jpg);
-    background-size: cover;
-}
-.cupper:hover {
-    background-image: url(../img/previews/journal-preview.jpg);
-    background-size: cover;
-}
-.espresso {
-    background-image: url(../img/colored/colored-infographic-preview.jpg);
-    background-size: cover;
-}
-.espresso:hover {
-    background-image: url(../img/previews/infographic-preview.jpg);
-    background-size: cover;
-}
-.tiny {
-    background-image: url(../img/colored/colored-tiny-book-preview.jpg);
-    background-size: cover;
-}
-.tiny:hover {
-    background-image: url(../img/previews/tiny-book-preview.jpg);
-    background-size: cover;
-}
-.dance {
-    background-image: url(../img/colored/colored-dance-poster-preview.jpg);
-    background-size: cover;
-}
-.dance:hover {
-    background-image: url(../img/previews/dance-poster-preview.jpg);
-    background-size: cover;
-}
-.type {
-    background-image: url(../img/colored/colored-type-specimen-preview.jpg);
-    background-size: cover;
-}
-.type:hover {
-    background-image: url(../img/previews/type-specimen-preview.jpg);
-    background-size: cover;
-}
-.poetry {
-    background-image: url(../img/colored/colored-chapbook-preview.jpg);
-    background-size: cover;
-}
-.poetry:hover {
-    background-image: url(../img/previews/chapbook-preview.jpg);
-    background-size: cover;
-}
-.wasd {
-    background-image: url(../img/colored/colored-snake-preview.jpg);
-    background-size: cover;
-}
-.wasd:hover {
-    background-image: url(../img/previews/snake-preview.jpg);
-    background-size: cover;
-}
-footer {
-    position: relative;
-    height: auto;
-    padding: 20vw 0 0 0;
-    z-index: 2;
-    text-align: center;
-}
-.footy {
-    padding: 20vw 5vw;
-    z-index: 9999;
-}
-
-footer p {
-    padding: 10vw 5vw 0 5vw;
-    line-height: 5.5vw;
-}
-footer img {
+.alt-grid-item .img {
+    grid-area: img;
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    width: calc(100% + 2.5vw);
     width: 100%;
-    height: 100%;
+    height: 0;
+    padding-top: 75%;
 }
-footer a {
-    width: 20%;
-    margin: 0 4.5% 0 0;
-    padding: 0;
-    z-index: 999;
-    cursor: pointer;
-    display: inline-block;
+.grid-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 2.5vw;
+    grid-template-areas: "img img sidebar";
+}
+.grid-item .img {
+    grid-area: img;
+    grid-row: 1 / 2;
+    grid-column: 1 / 3;
+    width: calc(100% + 2.5vw);
+}
+.img {
+    background-size: 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.one {
+    background-image: url(../img/YL-Nav-Case-Study.jpg);
+    transition: ease-in 0.1s;
+}
+.grid-item-1:hover .one {
+    background-image: url(../img/YL-Nav-Case-Study-Hover.jpg);
+    transition: ease-in 0.1s;
+}
+.two {
+    background-image: url(../img/Multiman-Case-Study.jpg);
+    transition: ease-in 0.1s;
+}
+.grid-item-2:hover .two {
+    background-image: url(../img/Multiman-Case-Study-Hover.jpg);
+    transition: ease-in 0.1s;
+}
+.three {
+    background-image: url(../img/Web-Design-2.jpg);
+    transition: ease-in 0.1s;
+}
+.grid-item-3:hover .three {
+    background-image: url(../img/Web-Design-2-Hover.jpg);
+    transition: ease-in 0.1s;
+}
+.four {
+    background-image: url(../img/Graphic-Design.jpg);
+    transition: ease-in 0.1s;
+}
+.grid-item-4:hover .four {
+    background-image: url(../img/Graphic-Design-Hover.jpg);
+    transition: ease-in 0.1s;
+}
+.five {
+    background-image: url(../img/Snake.jpg);
+    transition: ease-in 0.1s;
+}
+.grid-item-5:hover .five {
+    background-image: url(../img/Snake-Hover.jpg);
+    transition: ease-in 0.1s;
+}
+.sub-grid-item {
+    position: relative;
+    grid-area: sidebar;
+    background-color: rgba(252,202,70,1);
+    height: 100%;
+    width: 100%;
+}
+.sub-grid-item h3 {
+    margin: 5% 10% 5% 10%;
+}
+.sub-grid-item p {
+    margin: 0% 10% 5% 10%;
+}
+.sub-grid-item .button1 {
+    margin: 0% 10% 5% 10%;
+}
+.sub-grid-item .button2 {
+    margin: 0% 10% 5% 10%;
     
-} 
-.margin-reset {
+}
+.cta {
+    padding: 10vw 10vw;
+    text-align: center;
+}
+.cta h3 {
+    color: white;
+}
+.grid-container-2 {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 10vw 1fr 1fr 1fr 10vw;
+    grid-column-gap: 5vw;
+    grid-template-areas: 
+    "photo photo bio bio .";
+}
+.footer h2 {
+    color: rgba(35,61,77,1);
+}
+.footer-grid-item-1 {
+    grid-area: bio;
+    margin: auto auto auto -2.5vw;
+}
+.footer-grid-item-2 {
+    grid-area: photo;
+    margin: auto;
+}
+.footer-grid-item-2 img {
+    width: 100%;
     margin: 0;
 }
-#icons {
-    padding: 5vw 10vw 10vw 10vw;
-    z-index: 99999;
+.footer-grid-item-1 .button1, .footer-grid-item-1 .button2 {
+    margin-right: 1vw;
+} 
+
+/* --- Case Study Specific --- */
+.blue-bg .case-study h3, .blue-bg .case-study p {
+    color: white;
 }
-main h2 { 
-    text-align: center;
+.cs-content, .cs-photo {
+    margin: auto 0px;
+} 
+.case-study img {
+    width: 100%;
+}
+.grid-container-3 {
+    padding: 0 10vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-column-gap: 2.5vw;
+    grid-row-gap: 2.5vw;
+}
+
+/* --- Gallery Specific --- */
+.gallery {
+    margin: 0 10vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-column-gap: 1.25vw;
+    grid-row-gap: 1.25vw;
+}
+.gal-intro {
+    margin: 0 10vw 5vw 10vw;
+    color: white;
 }
 .gallery img {
     width: 100%;
-    margin: 5vw 0;
+    -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
 }
-.gallery .box {
-    width: 100%;
-    height: auto;
-    margin: 5vw 0 15vw 0;
-}
-.gallery .box:hover {
-    background-color: rgba(252,202,70,0.5);
-}
-.gallery .box p {
-    line-height: 5.5vw;
-}
-@media (min-width: 600px){
-    body {
-        padding: 0;
-    }
-    .mainy a   {
-        margin: 0;
-        padding: 0;
-}
-    h2 {
-        font-size: 6vw;
-        
-    }
-    h3 {
-        font-size: 4.5vw;
-        color: rgb(252,202,70);
-    }
-    p {
-        font-size: 3.5vw;
-        margin: 1.8vw 2vw;
-    }
-    .smallp {
-        font-size: 2.5vw;
-        margin: -1.2vw 1.8vw 0vw 1.8vw;
-    }
-    .center p {
-        margin: 10vw 2vw 5vw;
-    }
-    .center a {
-        font-size: 3.5vw;
-        padding: 3vw 7.5vw;
-    }
-    .icons a {
-        padding: 1.7vw 3vw;
-        margin: 20vw 0 20vw 0;
-    }
-    .box {
-        height: 42vw;
-        width: 42vw;
-        margin: 4.8vw 0 0 4.8vw;
-    }
-    .box:hover {
-        background-color: rgba(52,78,104,0);
-    }
-    .info {
-        height: 10.5vw;
-    }
-    footer a {
-        width: 20.8%;
-        margin: 0 4% 0 0;
-    } 
-    footer p {
-        font-size: 3vw;
-        line-height: 5vw;
-    }
-    .footer {
-    height: 80vw;
-    }
-    #icons {
-        padding: 5vw 28vw 5vw 28vw;
-        z-index: 5;
-    }  
-    .gallery img {
-        display: inline-block;
-        width: 42%;
-        margin: 4.8vw 0 0 4.8%;
-    }
-    .gallery .box {
-        width: 89%;
-        margin: 5vw 5vw 20vw 5vw;
-        padding: 1vw;
-    }
-    .gallery .box p {
-        font-size: 3vw;
-        line-height: 5vw;
-    }
+.gallery img:hover {
+	-webkit-transform: scale(1.05);
+	transform: scale(1.05);
 }
 
-@media (min-width: 800px){
-    h2 {
-        font-size: 4vw;
-        margin: 20vw 0 0 0;
-        
-    }
-    h3 {
-        font-size: 3vw;
-        color: rgb(252,202,70);
-        margin: 0 0 20vw 0;
-    }
-    p {
-        font-size: 2vw;
-        margin: 1.4vw 2vw;
-    }
-    .smallp {
-        font-size: 1.5vw;
-        margin: -0.8vw 2vw 0vw 2vw;
-    }
-    .center p {
-        font-size: 2.3vw;
-        margin: 7vw 2vw 4vw;
-    }
-    .center a {
-        font-size: 2vw;
-        padding: 2vw 6.5vw;
-    }
-    .icons a {
-        font-size: 2.4vw;
-        padding: 1vw 2vw;
-    }
-    .box {
-        height: 26.65vw;
-        width: 26.65vw;
-    }
-    .info {
-        height: 6.6625vw;
-    }
-    footer p {
-        line-height: 4vw;
-    }
-    
-    footer a {
-        width: 20.6%;
-        margin: 0 4% 0 0;
-    } 
-    .footer {
-        height: 65vw;
-    }
-    #icons {
-        padding: 5vw 34.75vw 5vw 34.75vw;
-        z-index: 5;
-    }  
-    .gallery .box p {
-        font-size: 2.2vw;
-        line-height: 4vw
-    }
-    
+/* --- Snake specific --- */
+section h3 {
+    color: white;
 }
-@media (min-width: 1024px){
-    #body {
-        width: 1024px;
-        margin: 0 auto;
-    }
-    wrapper {
-        max-width: 1024px;
-    }
-    
-    p {
-        font-size: 1.29em;
-        margin: 14px 14px;
-    }
-    .smallp {
-        font-size: .95em;
-        margin: -10px 14px 0vw 14px;
-    }
-    .center p {
-        font-size: 1.47em;
-    }
-    .center a {
-        font-size: 1.5em;
-        padding: 20px 52px;
-    }
-    .icons a {
-        font-size: 1.53em;
-        padding: 10px 20px;
-    }
-    .box {
-        height: 272px;
-        width: 272px;
-        margin: 47px 0 0 47px;
-    }
-    .info {
-        height: 68.22px;
-    }
-    footer p {
-        padding: 0 2em;
-        line-height: 130%;
-        font-size: 1.7em;
-    }
-    footer a {
-        width: 56.2px;
-        margin: 0 10px 0 0;
-    }
-    .footer {
-        height: 550px;
-        width: 100%;
-        
-    }
-     #icons {
-        padding: 5% 36.675% 5% 36.675%;
-        z-index: 5;
-    }   
-    footer {
-        width: 100%;
-    }
-    .gallery img {
-        width: 423px;
-        margin: 59px 0 0 59px;
-    }
-    .gallery .box {
-        width: 905px;
-        margin: 59px 0 59px 59px;
-        padding: 1em 2em;
-    }
-    .gallery .box p {
-        font-size: 1.29em;
-        line-height: 150%;
-    }
-}
-
-
-
-
-
-
-
-
 #snake {
-			margin: 2vw 0 7vw 0;
-			padding: 0;
-		}
-		html {
-			height: 100%;
-		}
-		body {
-			text-align: center;
-		}
-		.score {
-			font-family: verdana;
-			font-size: 2em;
-			position: relative;
-			color: #fff;
-		}
-		canvas {
-			display: block;
-			position: relative;
-			margin: auto;
-			top: 2vw;
-			bottom: 0;
-			right: 0;
-			left: 0;
-            
-            max-width: 100%; /* don't let it get wider than the screen (mobile)*/
-		}
+    margin: 0 0 0 0;
+    padding: 0;
+    text-align: center;
+}
+.score {
+    font-family: Inter, Arial, Helvetica, sans-serif;;
+    font-size: 2em;
+    position: relative;
+    color: rgb(252,202,70,1);
+}
+canvas {
+    display: block;
+    position: relative;
+    margin: auto;
+    top: 2vw;
+    bottom: 0;
+    right: 0;
+    left: 0;
+               
+    max-width: 100%; /* don't let it get wider than the screen (mobile)*/
+}
+@media only screen and (min-width: 1920px) {
+    header {
+        padding: 20% 0;
+    }
+    .grid-container {
+        margin: 0 10%;
+        grid-column-gap: 3.1%;
+        grid-row-gap: 5.35%;
+    }
+    .cta {
+        padding: 25% 0 15% 0;
+    }
+    .grid-container-2 {
+        margin: 0 10%;
+        grid-template-columns: 1fr 2fr;
+        grid-column-gap: 5%;
+        grid-template-areas: 
+        "photo bio";
+    }
+}
+@media only screen and (max-width: 948px) {
+    .yellow-bg {
+        padding: 2.5vw 0;
+    }
+    h1 {
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+    h2 {
+        font-size: 1.75rem;
+        line-height: 2rem;
+    }
+    header {
+        text-align: center;
+        padding: 30vw 0;
+    }
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto;
+        grid-row-gap: 5vw;
+        grid-template-areas: 
+        "case-1 case-1 case-1"
+        "case-2 case-2 case-2"
+        "case-3 case-3 case-3"
+        "case-4 case-4 case-4"
+        "case-5 case-5 case-5";
+    }
+    .sub-grid-item {
+        position: relative;
+        grid-area: sidebar;
+        background-color: rgba(252,202,70,1);
+        height: 100%;
+        width: 100%;
+    }
+    .sub-grid-item h3 {
+        margin: 5% 10% 2.5% 10%;
+    }
+    .sub-grid-item p{
+        margin: 0% 10% 2.5% 10%;
+    }
+    .sub-grid-item .button1 {
+        position: relative;
+        margin: 0% 10% 5% 10%;
+    }
+    .sub-grid-item .button2 {
+        margin: 0% 10% 5% 10%;
+    }
+    .alt-grid-item {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-column-gap: 0;
+        grid-template-rows: auto auto;
+        grid-template-areas: "img" "sidebar";
+    }
+    .alt-grid-item .img {
+        grid-area: img;
+        width: 100%;
+        height: 0;
+        padding-top: 75%;
+    }
+    .one {
+        background-image: url(../img/YL-Nav-Case-Study-Hover.jpg);
+    }
+    .two {
+        background-image: url(../img/Multiman-Case-Study-Hover.jpg);
+    }
+    .three {
+        background-image: url(../img/Web-Design-2-Hover.jpg);
+    }
+    .four {
+        background-image: url(../img/Graphic-Design-Hover.jpg);
+    }
+    .five {
+        background-image: url(../img/Snake-Hover.jpg);
+    }
+    .grid-item {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-column-gap: 0;
+        grid-template-rows: auto auto;
+        grid-template-areas: "img" "sidebar";
+    }
+    .grid-item .img {
+        grid-area: img;
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+        width: 100%;
+        height: 0;
+        padding-top: 75%;
+    }
+    .img {
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+
+    .grid-container-2 {
+        margin: 0 10vw;
+        padding: 10vw 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-column-gap: 0;
+        grid-template-rows: auto auto;
+        grid-row-gap: 5vw;
+        grid-template-areas: 
+        "photo" "bio";
+    }
+    .footer-grid-item-1 {
+        margin: 0;
+    }
+    .footer-grid-item-2 img {
+        width: 40vw;
+        border-radius: 50%;
+    }
+    /* --- Case Study Specific --- */
+    .grid-container-3 {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-row-gap: 2.5vw;
+       
+    }
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        grid-column-gap: 2.5vw;
+        grid-row-gap: 2.5vw;
+    }
+}
+@media only screen and (max-width: 524px) {
+    .footer-grid-item-1 .button1, .footer-grid-item-1 .button2 {
+        margin-bottom: 2.5vw;
+    } 
+}
+@media only screen and (max-width: 415px) {
+    .footer-grid-item-2 img {
+        width: 60vw;
+    }
+    /* --- Gallery Specific --- */
+    .gallery {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-row-gap: 2.5vw;
+    }
+    header {
+        padding: 30vw 10vw;
+    }
+}
+@media only screen and (max-width: 375px) {
+    .button3:after {
+        top: 28px;
+    }
+    .button3:hover:after {
+        right: 32px;
+    }
+}
+@media only screen and (max-width: 340px) {
+    h1 {
+        font-size: 2rem;
+        line-height: 2.25rem;
+    }
+    h2 {
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+        font-weight: 200;
+    }
+}
+@media only screen and (max-width: 280px) {
+    
+    .button1:after {
+        top: 20px;
+    }
+    .button1:hover:after {
+        right: 24px;
+    }
+    .button2:after {
+        top: 20px;
+    }
+    .button2:hover:after {
+        right: 24px;
+    }
+}
+@media only screen and (max-width: 200px) {
+    h1 {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+        margin-bottom: 15vw;
+    }
+    h2 {
+        font-size: 1rem;
+        line-height: 1.25rem;
+    }
+}
