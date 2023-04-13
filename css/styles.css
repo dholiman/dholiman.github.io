@@ -596,6 +596,10 @@ canvas {
     } 
 }
 @media only screen and (max-width: 415px) {
+    h1 {
+        font-size: 2.25rem;
+        line-height: 2.25rem;
+    }
     .footer-grid-item-2 img {
         width: 60vw;
     }
@@ -620,7 +624,6 @@ canvas {
 @media only screen and (max-width: 340px) {
     h1 {
         font-size: 2rem;
-        line-height: 2.25rem;
     }
     h2 {
         font-size: 1.25rem;
@@ -628,8 +631,11 @@ canvas {
         font-weight: 200;
     }
 }
-@media only screen and (max-width: 280px) {
-    
+@media only screen and (max-width: 300px) {
+    h1 {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
     .button1:after {
         top: 20px;
     }
@@ -645,7 +651,7 @@ canvas {
 }
 @media only screen and (max-width: 200px) {
     h1 {
-        font-size: 1.5rem;
+        font-size: 1rem;
         line-height: 1.5rem;
         margin-bottom: 15vw;
     }
