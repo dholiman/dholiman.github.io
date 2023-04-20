@@ -456,7 +456,7 @@ canvas {
     .grid-container-2 {
         margin: 0 10%;
         grid-template-columns: 1fr 2fr;
-        grid-column-gap: 5%;
+        grid-column-gap: 5vw;
         grid-template-areas: 
         "photo bio";
     }
