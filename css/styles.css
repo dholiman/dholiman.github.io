@@ -165,6 +165,7 @@ a {
     text-transform: uppercase;
     position: relative;
     transition: all 0.25s;
+    cursor: pointer;
 }
 .button1:after {
     content: '»';
@@ -196,6 +197,7 @@ a {
     text-transform: uppercase;
     position: relative;
     transition: all 0.25s;
+    cursor: pointer;
 }
 .button2:after {
     content: '»';
@@ -228,6 +230,7 @@ a {
     text-transform: uppercase;
     position: relative;
     transition: all 0.25s;
+    cursor: pointer;
 }
 .button3:after {
     content: '»';
@@ -259,6 +262,7 @@ a {
     text-transform: uppercase;
     position: relative;
     transition: all 0.25s;
+    cursor: pointer;
 }
 .button4:after {
     content: '«';
