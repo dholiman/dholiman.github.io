@@ -65,15 +65,16 @@ body::after{
  }
 .blank-btn {
     background: none repeat scroll 0 0 transparent;
-        border: medium none;
-        border-spacing: 0;
-        color: #26589F;
-        cursor: pointer;
-        list-style: none outside none;
-        margin: 0;
-        padding: 0;
-        text-decoration: none;
-        text-indent: 0;
+	background-color: rgba(0,0,0,0);
+	border: medium none;
+	border-spacing: 0;
+	color: #26589F;
+	cursor: pointer;
+	list-style: none outside none;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	text-indent: 0;
 }
 .blank-btn:focus{
     outline: 2px solid rgb(var(--cta)); 
