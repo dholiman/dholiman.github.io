@@ -153,9 +153,20 @@ a {
     border: 2px solid rgb(var(--primary-btn-outline));
 }
 .blank-btn {
-    border: none;
-    background-color: rgba(var(--bg),0.0);
-    cursor: pointer;
+    background: none repeat scroll 0 0 transparent;
+        border: medium none;
+        border-spacing: 0;
+        color: #26589F;
+        cursor: pointer;
+        font-family: 'PT Sans Narrow',sans-serif;
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 1.42rem;
+        list-style: none outside none;
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        text-indent: 0;
 }
 .blank-btn:focus{
     outline: 2px solid rgb(var(--cta)); 
