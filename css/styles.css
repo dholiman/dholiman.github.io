@@ -12,6 +12,7 @@
     --primary-btn-text: 234,229,211;
     --cta: 244,197,117;
     --text-cta: 26,39,52;
+    --focus: white;
 }
 .original {
     --bg: 26,39,52;
@@ -24,6 +25,7 @@
     --primary-btn-text: 234,229,211;
     --cta: 244,197,117;
     --text-cta: 26,39,52;
+    --focus: white;
 }
 .dark {
     --accent-clr: 63,76,92;
@@ -183,8 +185,10 @@ a {
     opacity: 1;
     right: 12px;
 }
+
 .button2 {
     border: 2px solid rgb(var(--primary-btn-outline));
+    background-color: rgb(var(--accent-clr));
     color: rgb(var(--primary-btn-outline));
     padding: 12px 24px;
     text-align: center;
@@ -214,6 +218,11 @@ a {
 .button2:hover:after {
     opacity: 1;
     right: 10px;
+}
+.button1:focus, .button2:focus {
+    outline: 2px solid rgb(var(--cta)); 
+    border: 2px solid rgb(var(--primary-btn));
+    box-shadow:0 0 0 4px rgb(var(--primary-btn));
 }
 .button3 {
     background-color: rgba(var(--cta));
@@ -279,6 +288,16 @@ a {
 .button4:hover:after {
     opacity: 1;
     left: 16px;
+}
+.button4:focus, .button3:focus {
+    outline: 2px solid rgb(var(--primary-btn)); 
+    border: 2px solid rgb(var(--cta));
+    box-shadow:0 0 0 4px rgb(var(--cta));
+}
+button.swatch:focus {
+    outline: 2px solid rgb(var(--cta)); 
+    border: 2px solid rgb(var(--primary-btn));
+    box-shadow:0 0 0 4px rgb(var(--primary-btn-outline));
 }
 header {
     text-align: center;
