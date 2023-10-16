@@ -152,6 +152,16 @@ a {
     background-color: rgb(var(--yellow));
     border: 2px solid rgb(var(--primary-btn-outline));
 }
+.blank-btn {
+    border: none;
+    background-color: rgba(var(--bg),0.0);
+    cursor: pointer;
+}
+.blank-btn:focus{
+    outline: 2px solid rgb(var(--cta)); 
+    border: 2px solid rgb(var(--primary-btn));
+    box-shadow:0 0 0 4px rgb(var(--primary-btn));
+}
 .button1 {
     background-color: rgb(var(--primary-btn));
     border: 2px solid rgb(var(--primary-btn-outline));
