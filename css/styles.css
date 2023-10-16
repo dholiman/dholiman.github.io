@@ -276,7 +276,8 @@ a {
     right: 16px;
 }
 .button4 {
-    background-color: rgb(var(--cta));
+    background-color: rgba(var(--cta));
+    border: none;
     color: rgb(var(--text-cta));
     padding: 16px 32px;
     text-align: center;
