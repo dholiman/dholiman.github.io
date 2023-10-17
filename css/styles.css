@@ -132,6 +132,8 @@ a {
     text-decoration: none;
 }
 .swatch {
+    font-size: 4px;
+    color: rgba(0,0,0,0);
     display: inline-block;
     height: 16px;
     width: 64px;
