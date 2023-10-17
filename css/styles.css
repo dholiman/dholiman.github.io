@@ -12,20 +12,9 @@
     --primary-btn-text: 234,229,211;
     --cta: 244,197,117;
     --text-cta: 26,39,52;
-    --focus: white;
-}
-.original {
-    --bg: 26,39,52;
-    --accent-clr: 234,229,211;
-    --text-1: 63,76,92;
-    --text-2: 244,197,117;
-    --text-3: 234,233,224;
-    --primary-btn: 63,76,92;
-    --primary-btn-outline: 63,76,92;
-    --primary-btn-text: 234,229,211;
-    --cta: 244,197,117;
-    --text-cta: 26,39,52;
-    --focus: white;
+    --in-focus: 63,76,92;
+    --mid-focus: 244,197,117;
+    --out-focus: 63,76,92;
 }
 .dark {
     --accent-clr: 63,76,92;
@@ -33,11 +22,17 @@
     --primary-btn: 234,233,224;
     --primary-btn-outline: 234,233,224;
     --primary-btn-text: 26,39,52;
+    --in-focus: 244,197,117;
+    --mid-focus: 63,76,92;
+    --out-focus: 244,197,117;
 }
 .light {
     --bg: 234,229,211;
     --text-2: 26,39,52;
     --text-3: 63,76,92;
+    --in-focus: 63,76,92;
+    --mid-focus: 244,197,117;
+    --out-focus: 63,76,92;
 }
 .yellow {
     --bg: 247,223,180;
@@ -47,6 +42,9 @@
     --primary-btn-text: 244,197,117;
     --cta: 63,76,92;
     --text-cta: 244,197,117;
+    --in-focus: 63,76,92;
+    --mid-focus: 234,229,211;
+    --out-focus: 63,76,92;
 }
 html {
     margin: 0;
@@ -63,24 +61,6 @@ body::after{
     position:absolute; width:0; height:0; overflow:hidden; z-index:-1; /* hide images */
     content:url(../img/YL-Nav-Case-Study-Hover.jpg) url(../img/Multiman-Case-Study-Hover.jpg) url(../img/Web-Design-2-Hover.jpg) url(../img/Graphic-Design-Hover.jpg) url(../img/Snake-Hover.jpg);   /* load images */
  }
-.blank-btn {
-    background: none repeat scroll 0 0 transparent;
-	background-color: rgba(0,0,0,0);
-	border: medium none;
-	border-spacing: 0;
-	color: #26589F;
-	cursor: pointer;
-	list-style: none outside none;
-	margin: 0;
-	padding: 0;
-	text-decoration: none;
-	text-indent: 0;
-}
-.blank-btn:focus{
-    outline: 2px solid rgb(var(--cta)); 
-    border: 2px solid rgb(var(--primary-btn));
-    box-shadow:0 0 0 4px rgb(var(--primary-btn));
-}
 .bg-img {
     z-index: -1;
     position: fixed;
@@ -170,6 +150,26 @@ a {
     background-color: rgb(var(--yellow));
     border: 2px solid rgb(var(--primary-btn-outline));
 }
+.blank-btn {
+        background: none repeat scroll 0 0 transparent;
+        border: medium none;
+        border-spacing: 0;
+        color: #26589F;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 1.42rem;
+        list-style: none outside none;
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        text-indent: 0;
+}
+button:focus{
+    border: 2px solid rgb(var(--in-focus));
+    outline: 2px solid rgb(var(--mid-focus));
+    box-shadow:0 0 0 4px rgb(var(--out-focus));
+}
 .button1 {
     background-color: rgb(var(--primary-btn));
     border: 2px solid rgb(var(--primary-btn-outline));
@@ -237,11 +237,6 @@ a {
     opacity: 1;
     right: 10px;
 }
-.button1:focus, .button2:focus {
-    outline: 2px solid rgb(var(--cta)); 
-    border: 2px solid rgb(var(--primary-btn));
-    box-shadow:0 0 0 4px rgb(var(--primary-btn));
-}
 .button3 {
     background-color: rgba(var(--cta));
     border: none;
@@ -276,8 +271,7 @@ a {
     right: 16px;
 }
 .button4 {
-    background-color: rgba(var(--cta));
-    border: none;
+    background-color: rgb(var(--cta));
     color: rgb(var(--text-cta));
     padding: 16px 32px;
     text-align: center;
@@ -307,16 +301,6 @@ a {
 .button4:hover:after {
     opacity: 1;
     left: 16px;
-}
-.button4:focus, .button3:focus {
-    outline: 2px solid rgb(var(--primary-btn)); 
-    border: 2px solid rgb(var(--cta));
-    box-shadow:0 0 0 4px rgb(var(--cta));
-}
-button.swatch:focus {
-    outline: 2px solid rgb(var(--cta)); 
-    border: 2px solid rgb(var(--primary-btn));
-    box-shadow:0 0 0 4px rgb(var(--primary-btn-outline));
 }
 header {
     text-align: center;
