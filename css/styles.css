@@ -272,7 +272,7 @@ a {
     right: 16px;
 }
 .button4 {
-    background-color: rgb(var(--cta));
+    background-color: rgba(var(--cta));
     border: 0 none;
     outline: none;
     color: rgb(var(--text-cta));
