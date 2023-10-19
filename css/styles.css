@@ -274,6 +274,7 @@ button:focus{
 }
 .button4 {
     background-color: rgb(var(--cta));
+    border: none;
     color: rgb(var(--text-cta));
     padding: 16px 32px;
     text-align: center;
