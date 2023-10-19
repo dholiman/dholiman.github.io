@@ -167,11 +167,6 @@ a {
         text-decoration: none;
         text-indent: 0;
 }
-button:focus{
-    border: 2px solid rgb(var(--in-focus));
-    outline: 2px solid rgb(var(--mid-focus));
-    box-shadow:0 0 0 4px rgb(var(--out-focus));
-}
 .button1 {
     background-color: rgb(var(--primary-btn));
     border: 2px solid rgb(var(--primary-btn-outline));
@@ -312,6 +307,11 @@ button:focus{
 .button4:hover:after {
     opacity: 1;
     left: 16px;
+}
+button:focus{
+    border: 2px solid rgb(var(--in-focus));
+    outline: 2px solid rgb(var(--mid-focus));
+    box-shadow:0 0 0 4px rgb(var(--out-focus));
 }
 header {
     text-align: center;
