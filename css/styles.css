@@ -242,6 +242,7 @@ button:focus{
 .button3 {
     background-color: rgba(var(--cta));
     border: 0 none;
+    outline: none;
     color: rgb(var(--text-cta));
     padding: 16px 32px;
     text-align: center;
@@ -258,6 +259,8 @@ button:focus{
 }
 .button3:after {
     content: '»';
+    border: 0 none;
+    outline: none;
     position: absolute;
     opacity: 0;  
     top: 16px;
@@ -276,6 +279,7 @@ button:focus{
 .button4 {
     background-color: rgb(var(--cta));
     border: 0 none;
+    outline: none;
     color: rgb(var(--text-cta));
     padding: 16px 32px;
     text-align: center;
@@ -291,6 +295,8 @@ button:focus{
     cursor: pointer;
 }
 .button4:after {
+    border: 0 none;
+    outline: none;
     content: '«';
     position: absolute;
     opacity: 0;  
