@@ -241,7 +241,7 @@ button:focus{
 }
 .button3 {
     background-color: rgba(var(--cta));
-    border: none;
+    border: 0 none;
     color: rgb(var(--text-cta));
     padding: 16px 32px;
     text-align: center;
@@ -265,6 +265,7 @@ button:focus{
     transition: 0.25s;
 }
 .button3:hover{
+    border: 0 none;
     padding-right: 48px;
     padding-left: 16px;
 }
@@ -274,7 +275,7 @@ button:focus{
 }
 .button4 {
     background-color: rgb(var(--cta));
-    border: none;
+    border: 0 none;
     color: rgb(var(--text-cta));
     padding: 16px 32px;
     text-align: center;
@@ -298,6 +299,7 @@ button:focus{
     transition: 0.25s;
 }
 .button4:hover{
+    border: 0 none;
     padding-right: 16px;
     padding-left: 48px;
 }
