@@ -203,7 +203,6 @@ a {
     opacity: 1;
     right: 12px;
 }
-
 .button2 {
     border: 2px solid rgb(var(--primary-btn-outline));
     background-color: rgb(var(--accent-clr));
@@ -225,17 +224,17 @@ a {
     content: '»';
     position: absolute;
     opacity: 0;  
-    top: 10px;
-    right: -22px;
+    top: 12px;
+    right: -24px;
     transition: 0.25s;
 }
 .button2:hover{
-    padding-right: 34px;
-    padding-left: 10px;
+    padding-right: 36px;
+    padding-left: 12px;
 }
 .button2:hover:after {
     opacity: 1;
-    right: 10px;
+    right: 12px;
 }
 .button3 {
     background-color: rgba(var(--cta));
