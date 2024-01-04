@@ -11,7 +11,7 @@ document.addEventListener('keydown', function(key) {
 
     // If the pressed keys matches the required keystrokes (aka konami code)
     if (JSON.stringify(keystrokes) == JSON.stringify(userkeys)) {
-        window.open('https://www.yout-ube.com/watch?v=dQw4w9WgXcQ', '_blank');  // Opens in the browser one of the two videos
+        window.open('https://bit.ly/3BlS71b', '_blank');  // Opens in the browser one of the two videos
         userkeys = [] // Clear the user keystrokes array
     }
 
