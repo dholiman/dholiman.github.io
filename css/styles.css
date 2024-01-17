@@ -549,7 +549,7 @@ canvas {
 }
 @media only screen and (min-width: 1920px) {
     header {
-        padding: 20% 0;
+        padding: 25vh 0;
     }
     .grid-container {
         margin: 0 10%;
@@ -588,7 +588,7 @@ canvas {
     }
     header {
         text-align: center;
-        padding: 30vw 0;
+        padding: 25vh 0;
     }
     .grid-container {
         grid-template-columns: 1fr;
