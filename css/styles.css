@@ -317,7 +317,7 @@ button:focus{
 }
 header {
     text-align: center;
-    padding: 25vh 0;
+    padding: 30vh 0;
 }
 header h2 {
     margin-top: -1.25rem;
@@ -549,7 +549,7 @@ canvas {
 }
 @media only screen and (min-width: 1920px) {
     header {
-        padding: 25vh 0;
+        padding: 30vh 0;
     }
     .grid-container {
         margin: 0 10%;
@@ -588,7 +588,7 @@ canvas {
     }
     header {
         text-align: center;
-        padding: 25vh 0;
+        padding: 35vh 0;
     }
     .grid-container {
         grid-template-columns: 1fr;
