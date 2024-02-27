@@ -119,6 +119,15 @@ h3 {
     text-wrap: balance;
     color: rgb(var(--text-1));
 }
+h4 {
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: .15rem;
+    text-wrap: balance;
+    color: rgb(var(--text-1));
+    margin-top: -1vh;
+}
 p {
     font-family: Inter, Arial, Helvetica, sans-serif;
     font-weight: 500;
@@ -478,7 +487,7 @@ header h2 {
 } 
 
 /* --- Case Study Specific --- */
-.blue-bg .case-study h3, .blue-bg .case-study p {
+.blue-bg .case-study h3, .blue-bg .case-study p, .blue-bg .case-study h4 {
     color: rgb(var(--text-3));
 }
 .cs-content, .cs-photo {
