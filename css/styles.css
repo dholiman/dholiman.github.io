@@ -93,9 +93,9 @@ body::after{
 h1 {
     font-family: Inter, Arial, Helvetica, sans-serif;
     font-weight: 500;
-    font-size: 4rem;
+    font-size: 3rem;
     letter-spacing: .5rem;
-    line-height: 4rem;
+    line-height: 3.5rem;
     text-transform: uppercase;
     text-wrap: balance;
     color: rgb(var(--text-3));
@@ -170,6 +170,7 @@ a {
         border-spacing: 0;
         color: #26589F;
         cursor: pointer;
+        text-align: left;
         font-size: 16px;
         font-weight: normal;
         line-height: 1.42rem;
@@ -325,7 +326,7 @@ button:focus{
     box-shadow:0 0 0 4px rgb(var(--out-focus));
 }
 header {
-    text-align: center;
+    margin: 0 10vw;
     padding: 25vh 0;
 }
 header h2 {
@@ -568,8 +569,8 @@ canvas {
     margin-bottom: 3vh;
 }
 .pnf .cs-content .button1, .pnf .cs-content .button2 {
-    margin-right: 2.3%;
-	margin-bottom: 3%;
+    margin-right: 2%;
+    margin-bottom: 3%;
 }
 
 @media only screen and (min-width: 1920px) {
@@ -604,15 +605,14 @@ canvas {
         padding: 5% 0;
     }
     h1 {
-        font-size: 3rem;
-        line-height: 3rem;
+        font-size: 2rem;
+        line-height: 2.25rem;
     }
     h2 {
         font-size: 1.75rem;
         line-height: 2rem;
     }
     header {
-        text-align: center;
         padding: 25vh 0;
     }
     .grid-container {
@@ -735,8 +735,12 @@ canvas {
 }
 @media only screen and (max-width: 415px) {
     h1 {
-        font-size: 2.25rem;
-        line-height: 2.25rem;
+        font-size: 1.6rem;
+        line-height: 2rem;
+        padding-bottom: 1vh;
+    }
+    header {
+        padding: 20vh 0vw ;
     }
     .footer-grid-item-2 img {
         width: 60vw;
@@ -746,9 +750,6 @@ canvas {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
         grid-row-gap: 2.5vw;
-    }
-    header {
-        padding: 30vw 10vw;
     }
 }
 @media only screen and (max-width: 375px) {
