@@ -30,14 +30,32 @@
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- End Google Tag Manager (noscript) -->
         <div id="theme" class="bg-img original">
+            <nav>
+                <div class="container">
+                    <a href="index.html" class="logo">Dakota Holiman</a>
+                    <input type="checkbox" id="burger">
+                    <label for="burger"><i class="fas fa-bars"></i></label>
+                    <ul>
+                        <li class="navItem"><a href="index.html">Home</a></li>
+                        <li class="navItem"><a href="index.html#case">Case Studies</a></li>
+                        <li class="navItem"><a href="#about">About</a></li>
+                        <li><button onClick = "window.location.href='https://www.linkedin.com/in/dakota-holiman';" class="button5" target="_blank">Contact Me</button> </li>
+                    </ul>
+                </div>
+            </nav>
             <div class="blue-bg">
                 <div class="body">
                     <header>
-                        <button class="blank-btn" onClick ="window.location.href='index.html';">
+                        <button class="blank-btn gallery-header" onClick ="window.location.href='index.html';">
                             <h1>Graphic Design</h1>
                             <h2>Gallery</h2>
                          </button>
                     </header>
+                    <div class="icon">
+                        <div class="field">
+                            <div class="mouse"></div>
+                        </div>
+                    </div>
                     <div class="gallery">
                         <img src="img/graphic/ammon-nelson-law-2.jpg" alt="Ammon Nelson Law Primary Logo">
                         <img src="img/graphic/utah-heating-air.jpg" alt="Utah Heating and Air Logo">
@@ -68,7 +86,7 @@
                     <div class="footer">
                         <div class="grid-container-2">
                             <div class="footer-grid-item-1">
-                                <h3>Hello World! I'm Dakota Holiman.</h3>
+                                <h3>A little bit about me.</h3>
                                 <div>
                                     <button id="one" class="swatch dark-btn" alt="changes color theme to blue">Change Theme to Blue</button>
                                     <button id="two" class="swatch light-btn" alt="changes color theme to beige">Change Theme to Beige</button>
@@ -80,8 +98,7 @@
                                 <button onClick = "window.location.href='mailto:dakota.holiman@gmail.com?subject=Website%20inquiry';" class="button1">Send me an email</button>
                                 <button onClick = "window.location.href='https://www.linkedin.com/in/dakota-holiman';" class="button2" target="_blank">View My Linkedin</button>                          
                             </div>
-                            <div class="footer-grid-item-2">
-                                <img src="img/Profile-2.jpg" alt="Portrait of Dakota Holiman">
+                            <div class="footer-grid-item-2" id="about">
                             </div>
                         </div>
                     </div>
