@@ -593,7 +593,7 @@ nav a:focus {
 }
 header {
     margin: 0 10vw;
-    padding: 29vh 0;
+    padding: 26vh 0;
 }
 header h2 {
     margin-top: -1.25rem;
@@ -922,7 +922,7 @@ canvas {
 
 @media only screen and (min-width: 1920px) {
     header {
-        padding: 27vh 0;
+        padding: 24vh 0;
     }
     .grid-container {
         margin: 0 10%;
@@ -960,7 +960,7 @@ canvas {
         line-height: 2rem;
     }
     header {
-        padding: 26vh 0;
+        padding: 23vh 0;
     }
     .grid-container {
         grid-template-columns: 1fr;
@@ -1089,7 +1089,7 @@ canvas {
 }
 @media only screen and (max-width: 524px) {
     header {
-        padding: 20vh 0;
+        padding: 17vh 0;
     }
     .footer-grid-item-1 .button1 {
         margin-bottom: 2.5vw;
@@ -1105,7 +1105,7 @@ canvas {
         padding-bottom: 1vh;
     }
     header {
-        padding: 18vh 0;
+        padding: 15vh 0;
     }
     .footer-grid-item-2 img {
         width: 60vw;
@@ -1119,7 +1119,7 @@ canvas {
 }
 @media only screen and (max-width: 375px) {
     header {
-        padding: 16vh 0vw ;
+        padding: 13vh 0vw ;
     }
     .button3:after {
         top: 28px;
