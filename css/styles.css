@@ -295,8 +295,8 @@ body::after{
 h1 {
     font-family: Inter, Arial, Helvetica, sans-serif;
     font-weight: 500;
-    font-size: 3rem;
-    letter-spacing: .5rem;
+    font-size: 3.5rem;
+    letter-spacing: .1rem;
     line-height: 3.5rem;
     text-transform: uppercase;
     text-wrap: balance;
@@ -307,7 +307,7 @@ h2 {
     font-family: Inter, Arial, Helvetica, sans-serif;
     font-weight: 300;
     font-size: 2.25rem;
-    letter-spacing: .3rem;
+    letter-spacing: .1rem;
     line-height: 2.5rem;
     text-wrap: balance;
     color: rgb(var(--text-2));
@@ -354,6 +354,11 @@ p {
     font-size: 1rem;
     line-height: 1.25rem;
     color: rgb(var(--text-1));
+}
+.highlight {
+    display: inline;
+    font-style: italic;
+    font-weight: 400;
 }
 .inverse {
     color: rgb(var(--text-3));
@@ -674,7 +679,8 @@ header h2 {
     grid-template-rows: auto auto auto;
     grid-column-gap: 2.5vw;
     grid-row-gap: 2.5vw;
-    grid-template-areas: 
+    grid-template-areas:
+    "case-0 case-0 case-0" 
     "case-1 case-1 case-1"
     "case-2 case-2 case-2"
     "case-3 case-4 case-5";
@@ -693,6 +699,9 @@ header h2 {
     border-radius: 0 0 var(--round-card) var(--round-card);
 }
 /* -- End of Card style updates -- */
+.grid-item-0 {
+    grid-area: case-0;
+}
 .grid-item-1 {
     grid-area: case-1;
 }
@@ -741,12 +750,20 @@ header h2 {
     background-position: center;
     background-repeat: no-repeat;
 }
-.one {
+.zero {
     background-image: url(../img/YL-Nav-Case-Study.jpg);
     transition: ease-in 0.1s;
 }
-.grid-item-1:hover .one {
+.grid-item-0:hover .zero {
     background-image: url(../img/YL-Nav-Case-Study-Hover.jpg);
+    transition: ease-in 0.1s;
+}
+.one {
+    background-image: url(../img/Insights.jpg);
+    transition: ease-in 0.1s;
+}
+.grid-item-1:hover .one {
+    background-image: url(../img/Insights-hover.jpg);
     transition: ease-in 0.1s;
 }
 .two {
@@ -966,6 +983,7 @@ canvas {
         grid-template-rows: auto auto auto auto auto;
         grid-row-gap: 5vw;
         grid-template-areas: 
+        "case-0 case-0 case-0"
         "case-1 case-1 case-1"
         "case-2 case-2 case-2"
         "case-3 case-3 case-3"
@@ -1014,7 +1032,7 @@ canvas {
         padding-top: 75%;
     }
     .one {
-        background-image: url(../img/YL-Nav-Case-Study-Hover.jpg);
+        background-image: url(../img/Insights-hover.jpg);
     }
     .two {
         background-image: url(../img/Multiman-Case-Study-Hover.jpg);
