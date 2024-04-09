@@ -305,7 +305,7 @@ h1 {
 }
 h2 {
     font-family: Inter, Arial, Helvetica, sans-serif;
-    font-weight: 300;
+    font-weight: 200;
     font-size: 2.25rem;
     letter-spacing: .1rem;
     line-height: 2.5rem;
@@ -358,7 +358,7 @@ p {
 .highlight {
     display: inline;
     font-style: italic;
-    font-weight: 400;
+    font-weight: 300;
 }
 .inverse {
     color: rgb(var(--text-3));
