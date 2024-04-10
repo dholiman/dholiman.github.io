@@ -141,16 +141,6 @@ nav ul {
     }
 }
 /*=============================================*/
-
-
-
-
-
-
-
-
-
-
 :root {
     --blue: 63,76,92;
     --beige: 234,229,211;
@@ -950,6 +940,7 @@ canvas {
     }
     .grid-container-2 {
         margin: 0 10%;
+        padding: 4rem 0;
         grid-template-columns: 1fr 2fr;
         grid-column-gap: 5.35%;
         grid-template-areas: 
@@ -962,6 +953,9 @@ canvas {
         margin-right: 1%;
 	    margin-bottom: 1%;
     } 
+    .footer-grid-item-2 {
+        border-radius: var(--round-card);
+    }
 }
 @media only screen and (max-width: 948px) {
     .yellow-bg {
