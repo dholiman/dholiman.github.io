@@ -7,7 +7,6 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'UA-141041566-1');
         </script>
         <meta charset="utf-8">
@@ -35,7 +34,7 @@
             <nav>
                 <div class="container">
                     <a href="index.html" class="logo">Dakota Holiman</a>
-                    <input type="checkbox" id="burger">
+                    <input type="checkbox" id="burger" aria-label="menu">
                     <label for="burger"><i class="fas fa-bars"></i></label>
                     <ul>
                         <li class="navItem"><a href="index.html">Home</a></li>
@@ -48,14 +47,16 @@
             <div class="blue-bg">
                 <div class="body">
                     <header>
-                        <p class="label">Hello World!</p>
-                        <h1>I'm Dakota Holiman</h1>
-                        <h2>A <div class="highlight">people first</div> ux designer</h2>
+                        <p class="label">Hello world! I'm Dakota Holiman</p>
+                        <h1>A <div class="highlight">people first</div> ux designer</h1>
+                        <h2 class="intro">creating accessible products that simplify life.</h2>
                         <button onclick = "window.location.href='#about';" class="button1">About Me</button>
                     </header>
                     <div class="icon">
                         <div class="field">
-                            <div class="mouse"></div>
+                            <button class="blank-btn" onClick ="window.location.href='#case';">
+                                <div class="mouse"></div>
+                            </button>
                         </div>
                     </div>
                     <div class="grid-container" id="case">
@@ -63,7 +64,7 @@
                             <div class="img zero"></div>
                             <div class="sub-grid-item">
                                 <h3>Failed A/B Test Leads to a $1.2 Million Increase</h3>
-                                <p>As with most platforms, Young Living has what seems to be infinite room for improvement in regards to user interaction with their shopping platform. This case study dives into an isolated issue that was directly inhibiting the company goals.</p>
+                                <p>As with most platforms, Young Living has what seems to be infinite room for improvement in regards to user interaction with their shopping platform. This case study dives into an isolated issue that that was directly inhibiting the company goals.</p>
                                 <button onclick = "window.location.href='optimizing-product-discovery.html';" class="button1">Read More</button>
                             </div>
                         </div>
