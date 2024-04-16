@@ -141,6 +141,16 @@ nav ul {
     }
 }
 /*=============================================*/
+
+
+
+
+
+
+
+
+
+
 :root {
     --blue: 63,76,92;
     --beige: 234,229,211;
@@ -154,6 +164,7 @@ nav ul {
 @media (prefers-color-scheme: light) {
     :root {
         --bg: 234,229,211;
+        --bg-svg: url(../img/bg-light.svg);
         --accent-clr: 234,229,211;
         --text-1: 63,76,92;
         --text-2: 26,39,52;
@@ -171,6 +182,7 @@ nav ul {
 @media (prefers-color-scheme: dark) {
     :root {
         --bg: 26,39,52;
+        --bg-svg: url(../img/bg-dark.svg);
         --accent-clr: 63,76,92;
         --text-1: 234,233,224;
         --text-2: 244,197,117;
@@ -187,6 +199,7 @@ nav ul {
 }
 .dark {
     --bg: 26,39,52;
+    --bg-svg: url(../img/bg-dark.svg);
     --accent-clr: 63,76,92;
     --text-1: 234,233,224;
     --text-2: 244,197,117;
@@ -202,6 +215,7 @@ nav ul {
 }
 .light {
     --bg: 234,229,211;
+    --bg-svg: url(../img/bg-light.svg);
     --accent-clr: 234,229,211;
     --text-1: 63,76,92;
     --text-2: 26,39,52;
@@ -217,6 +231,7 @@ nav ul {
 }
 .yellow {
     --bg: 247,223,180;
+    --bg-svg: url(../img/bg-accent.svg);
     --accent-clr: 244,197,117;
     --text-1: 63,76,92;
     --text-2: 26,39,52;
@@ -252,15 +267,21 @@ body::after{
 #footer {
     scroll-margin-top: 20px;
 }
+path {
+    fill: #101820;
+    stroke: #101820;
+  }
 .bg-img {
     z-index: -1;
     position: fixed;
     top: 0;
     background-position-x: 50%;
+    background-position-y: 80%;
     height: 100%;
     width: 100%;
     background-size: cover;
-    background-image: url(../img/background-image-optimized.jpg);
+    background-image: var(--bg-svg);
+    background-color: rgb(var(--primary-btn));
     background-repeat: no-repeat;
     overflow-y:scroll;
     overflow-x:hidden;
@@ -288,10 +309,8 @@ h1 {
     font-size: 3.5rem;
     letter-spacing: .1rem;
     line-height: 3.5rem;
-    text-transform: uppercase;
     text-wrap: balance;
     color: rgb(var(--text-3));
-
 }
 h2 {
     font-family: Inter, Arial, Helvetica, sans-serif;
@@ -320,14 +339,24 @@ h4 {
     color: rgb(var(--text-1));
     margin-top: -1vh;
 }
+.intro {
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 1.25rem;
+    letter-spacing: .15rem;
+    line-height: 1.8rem;
+    text-wrap: balance;
+    color: rgb(var(--text-1));
+    margin: -1.5rem 0 3rem 0;
+}
 .label {
     font-family: Inter, Arial, Helvetica, sans-serif;
     font-weight: 300;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     letter-spacing: .15rem;
     text-wrap: balance;
     color: rgb(var(--text-2));
-    margin-bottom: -1rem;
+    margin-bottom: -1.5rem;
 }
 .label-sm {
     font-family: Inter, Arial, Helvetica, sans-serif;
@@ -383,6 +412,7 @@ a {
 .blank-btn {
         background: none repeat scroll 0 0 transparent;
         border: medium none;
+        border-radius: var(--round-md);
         border-spacing: 0;
         color: #26589F;
         cursor: pointer;
@@ -968,6 +998,15 @@ canvas {
     h2 {
         font-size: 1.75rem;
         line-height: 2rem;
+    }
+    .intro {
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+        margin: -.75rem 0 2rem 0;
+    }
+    .label {
+        font-size: 1.25rem;
+        margin-bottom: -.75rem;
     }
     header {
         padding: 23vh 0;
