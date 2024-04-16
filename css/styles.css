@@ -913,13 +913,16 @@ header h2 {
 	-webkit-transform: scale(1.05);
 	transform: scale(1.05);
 }
-
 /* --- Snake specific --- */
+.center h1, .center h2 {
+    width: 80vw;
+    text-align: center;    
+}
 section h3 {
     color: rgb(var(--text-3));
 }
 #snake {
-    margin: 0 0 0 0;
+    margin: 0;
     padding: 0;
     text-align: center;
 }
@@ -938,7 +941,7 @@ canvas {
     right: 0;
     left: 0;
     border-radius: var(--round-lg);           
-    max-width: 100%; /* don't let it get wider than the screen (mobile)*/
+    max-width: 100%; /*s don't let it get wider than the screen (mobile)*/
 }
 /* --- 404 specific --- */
 .case-study canvas {
