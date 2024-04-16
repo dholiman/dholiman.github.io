@@ -20,7 +20,7 @@
         <title>Globalized Data Management | Dakota Holiman</title>
         <link rel="stylesheet" href="css/styles.css">
         <script src="js/konami.js"></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;500;800&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;800&display=swap" rel="stylesheet">
         <link rel="preload" as="image" href="img/background-image-optimized.jpg">
         <link rel="icon" href="img/Portfolio-Favicon-DH.svg" sizes="any" type="image/svg+xml">
     </head>
@@ -30,10 +30,10 @@
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- End Google Tag Manager (noscript) -->
         <div id="theme" class="bg-img original">
-            <nav>
+            <<nav>
                 <div class="container">
                     <a href="index.html" class="logo">Dakota Holiman</a>
-                    <input type="checkbox" id="burger">
+                    <input type="checkbox" id="burger" aria-label="menu">
                     <label for="burger"><i class="fas fa-bars"></i></label>
                     <ul>
                         <li class="navItem"><a href="index.html">Home</a></li>
@@ -53,14 +53,16 @@
                     </header>
                     <div class="icon">
                         <div class="field">
-                            <div class="mouse"></div>
+                            <button class="blank-btn" onClick ="window.location.href='#case';">
+                                <div class="mouse"></div>
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="yellow-bg">
                 <div class="body">
-                    <div class="case-study grid-container-3">
+                    <div class="case-study grid-container-3" id="case">
                         <div class="cs-content">
                             <p class="label-sm">The Goal:</p>
                             <h3>Empowering Worldwide Users with Accurate Data</h3>
