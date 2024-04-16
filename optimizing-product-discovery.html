@@ -17,7 +17,7 @@
         <meta property="og:description" content="Passionate human advocate and UX Designer"/>
         <!-- Meta tag to ensure pages render correctly on mobile browsers -->
         <meta name="viewport" content="width=device-width, initial-scale=1">    
-        <title>Optimizing Product Discovery | Dakota Holiman UX Designer</title>
+        <title>Optimizing Product Discovery | Dakota Holiman</title>
         <link rel="stylesheet" href="css/styles.css">
         <script src="js/konami.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;500;800&display=swap" rel="stylesheet">
@@ -33,7 +33,7 @@
             <nav>
                 <div class="container">
                     <a href="index.html" class="logo">Dakota Holiman</a>
-                    <input type="checkbox" id="burger">
+                    <input type="checkbox" id="burger" aria-label="menu">
                     <label for="burger"><i class="fas fa-bars"></i></label>
                     <ul>
                         <li class="navItem"><a href="index.html">Home</a></li>
@@ -53,23 +53,25 @@
                     </header>
                     <div class="icon">
                         <div class="field">
-                            <div class="mouse"></div>
+                            <button class="blank-btn" onClick ="window.location.href='#case';">
+                                <div class="mouse"></div>
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="yellow-bg">
                 <div class="body">
-                    <div class="case-study grid-container-3">
+                    <div class="case-study grid-container-3" id="case">
                         <div class="cs-content">
-                            <p class="label-sm">The Goals:</p>
-                            <h3>Decrease Time to Conversion</h3>
-                            <p>Like many companies with a product focus, our key objective is to boost conversion rates and revenue. Achieving this goal involves streamlining the shopping experience. We know reducing confusion is pivotal for successful purchases. Especially in the direct sales industry, a user-friendly UI with an intuitive workflow significantly aids in converting potential members and retaining the existing ones.</p>
+                            <p class="label-sm">The Goal:</p>
+                            <h3>Reducing Time to Conversion</h3>
+                            <p>Our primary aim was to elevate conversion rates and revenue by streamlining the shopping experience. Recognizing the critical role of user-friendly interfaces in the direct sales industry, we sought to minimize confusion, facilitating successful purchases and fostering customer conversion and retention.</p>
                         </div>
                         <div class="cs-content">
                             <p class="label-sm">The Challenge:</3>
-                            <h3>Navigating 1,400 Unique SKUs</h3>
-                            <p>With over 1,400 SKUs, helping users find the products they’re looking for is one of the most valuable processes to optimize. As we hypothesized, our data showed two dominant methods of product discovery: search and header navigation. Both methods were poorly optimized and led to potential customers feeling overwhelmed and in-turn, dropping from the shopping platform.</p>
+                            <h3>Navigating a Vast Product Range</h3>
+                            <p>With a catalogue boasting over 1,400 SKUs, facilitating product discovery emerged as a pivotal process to optimize. Data analysis revealed that both search and header navigation methods were ineffective, leading potential customers to feel overwhelmed and abandon the platform.</p>
                         </div>
                     </div>
                 </div>
@@ -80,7 +82,7 @@
                         <div class="cs-content">
                             <p class="label-sm">The Process:</p>
                             <h3>Solving the Right Problem the Wrong Way</h3>
-                            <p>Our journey began with a close examination of our shopping flow, revealing poorly optimized primary navigation methods that overwhelmed potential customers, causing them to drop from the platform. The cluttered main header navigation and product search feature were the major culprits. In our tests, finding categories took an excessive amount of time due to overlapping categories within one mega-menu. Simplifying options and improving navigation was vital. Though a category review wasn't approved, we designed a simplified navigation using alternative methods.</p>
+                            <p>The journey commenced with a careful examination of the shopping flow, identifying poorly optimized primary navigation methods as a key obstacle. The cluttered main header navigation and product search feature were the major culprits. In our tests, finding products took an excessive amount of time due to overlapping categories within one mega-menu. Simplifying options and improving navigation was vital, but a category review was not approved. </p>
                         </div>
                         <div class="cs-photo">
                             <img src="img/YL-Case-Study-Research-Revised.png" alt="Screenshots from 2 tests showing a quicker conversion and photo preference.">
@@ -95,7 +97,8 @@
                             <img src="img/YL-Nav-Case-Study-1-Revised.png" alt="Exploded view of Navigation design.">
                         </div>
                         <div class="cs-content">
-                            <p>After extensive iterations involving wireframes, mockups, research, and a bit of speculation, we presented our first prototype for a pilot user test. The results were encouraging, with users finding products an average of 17 seconds faster. This led us to collaborate with the Brand team to integrate updated branding through carefully selected photos for every link in the header nav. A subsequent A/B/C test revealed variants B (redesigned layout with supporting photos) and C (redesigned layout with additional white space) to be effective. However, as we approached the end of the month, the test experienced an unexpected anomaly. Our direct selling members began placing their monthly commission-earning orders. The visual changes caused confusion for members who had already grown accustomed to our old navigation system, outweighing the potential gains. In agreement with the stakeholders, we opted to preserve the member experience over marginal revenue increases.</p>
+                            <p>Through iterative cycles of wireframing, mockups, and user testing, we unveiled a prototype that expedited product discovery by an average of 17 seconds. Collaborating with the Brand team, we integrated updated branding elements, including carefully curated photos for each header link. A subsequent A/B/C test revealed promising outcomes for our new navigation. As we approached the end of the month, the test experienced an unexpected anomaly.</p>
+                            <p>Our direct selling members began placing their monthly commission-earning orders. The visual changes caused confusion for members who had already grown accustomed to our old navigation system, outweighing the potential benefits. Prioritizing member experience over marginal revenue gains, we reverted to the original navigation system.</p>
                         </div>
                     </div>
                 </div>
@@ -104,7 +107,7 @@
                 <div class="body">
                     <div class="case-study grid-container-3 mobile-reverse">
                         <div class="cs-content">
-                            <p class="label-sm">The Continued Process:</p>
+                            <p class="label-sm">The Next Steps:</p>
                             <h3>The Other Side of the Coin</h3>
                             <p>After this disappointing test, our stakeholders moved on. One researcher and I could not abandon our newly gained knowledge, and continued analyzing user navigation methods. We refocused our attention on the search feature, which seemed to have been untouched since launch. With updated the visual styles, we attracted more attention to the feature. We also changed the behavior during scroll to enlarge the search bar while also minimizing the sticky header. Lastly, we reduced the number of clicks needed to interact with the feature.</p>
                             <p>While I’m the first to admit that much of this process was based on intuition and speculation, our testing validated our hypotheses. During a 1 month test, we saw a significant increase in conversion rate for those placing one-time orders.</p>
@@ -121,12 +124,12 @@
                         <div class="cs-content">
                             <p class="label-sm">Primary Achievement:</p>
                             <h3>$1.2 Million for a Tiny Change</h3>
-                            <p>The adjustments to the search field yielded a 0.17% increase in conversion rates, resulting in a projected annual revenue boost of over $1.2 million, underscoring the significant impact of human focused, user experience improvements on financial outcomes.</p>
+                            <p>Refinements to the search field resulted in a 0.17% increase in conversion rates, translating to a projected annual revenue surge of over $1.2 million. This underscores the tangible impact of human focused UX improvements.</p>
                         </div>
                         <div class="cs-content">
                             <p class="label-sm">Bonus Achievement:</p>
                             <h3>A Stepping Stone for the Future</h3>
-                            <p>This project also provided valuable insights into our customers’ distinctive monthly shopping behavior. Understanding these patterns allows us to tailor our strategies to better meet their needs, allowing us to further enhance the overall shopping experience.</p>
+                            <p>In addition to financial gains, we gained invaluable insights into member shopping behaviors. Understanding these patterns allows us to tailor our strategies to better meet their needs, allowing us to further enhance the overall shopping experience.</p>
                         </div>
                     </div>
                 </div>
