@@ -33,7 +33,7 @@
             <nav>
                 <div class="container">
                     <a href="index.html" class="logo">Dakota Holiman</a>
-                    <input type="checkbox" id="burger">
+                    <input type="checkbox" id="burger" aria-label="menu">
                     <label for="burger"><i class="fas fa-bars"></i></label>
                     <ul>
                         <li class="navItem"><a href="index.html">Home</a></li>
@@ -53,10 +53,12 @@
                     </header>
                     <div class="icon">
                         <div class="field">
-                            <div class="mouse"></div>
+                            <button class="blank-btn" onClick ="window.location.href='#case';">
+                                <div class="mouse"></div>
+                            </button>
                         </div>
                     </div>
-                    <div class="gallery">
+                    <div class="gallery" id="case">
                         <img src="img/graphic/ammon-nelson-law-2.jpg" alt="Ammon Nelson Law Primary Logo">
                         <img src="img/graphic/utah-heating-air.jpg" alt="Utah Heating and Air Logo">
                         <img src="img/graphic/gunnell-family-dentistry-2.jpg" alt="Gunnell Family Dentistry Logo">
