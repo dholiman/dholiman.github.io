@@ -20,7 +20,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">   
         <title>WASD Snake | Dakota Holiman</title>
         <link rel="stylesheet" href="css/styles.css">
-        <script src="js/konami.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;500;800&display=swap" rel="stylesheet">
         <link rel="preload" as="image" href="img/background-image-optimized.jpg">
         <link rel="icon" href="img/Portfolio-Favicon-DH.svg" sizes="any" type="image/svg+xml">
@@ -40,17 +40,19 @@
                         <li class="navItem"><a href="index.html">Home</a></li>
                         <li class="navItem"><a href="index.html#case">Case Studies</a></li>
                         <li class="navItem"><a href="#about">About</a></li>
-                        <li><button onClick = "window.location.href='https://www.linkedin.com/in/dakota-holiman';" class="button5" target="_blank">Contact Me</button> </li>
+                        <li><button onclick="window.open('https://www.linkedin.com/in/dakota-holiman','popUpWindow','height=1200,width=600,left=10,top=10,,scrollbars=yes,menubar=no'); return false;" class="button5">Contact Me</button> </li>
                     </ul>
                 </div>
             </nav>
             <div class="blue-bg">
                 <div class="body">
-                    <header class="center">
-                        <button class="blank-btn" onClick ="window.location.href='index.html';">
-                            <h1>WASD Snake</h1>
-                            <h2>This is Not an Easter Egg</h2>
-                         </button>
+                    <header class="center table">
+                        <div class="child">
+                            <button class="blank-btn" onClick ="window.location.href='index.html';">
+                                <h1>WASD Snake</h1>
+                                <h2>This is Not an Easter Egg</h2>
+                            </button>
+                        </div>
                     </header>
                     <main>
                         <section>
@@ -81,7 +83,7 @@
                                 <p>When not head down in a high-fidelity prototype, you’ll find me drinking copious amounts of coffee, admiring the work of my favorite artists, and tinkering with things I have no business tinkering with.</p>
                                 <p>And yes, bad leading does keep me up at night.</p>
                                 <button onClick = "window.location.href='mailto:dakota.holiman@gmail.com?subject=Website%20inquiry';" class="button1">Send me an email</button>
-                                <button onClick = "window.location.href='https://www.linkedin.com/in/dakota-holiman';" class="button2" target="_blank">View My Linkedin</button>                          
+                                <button onclick="window.open('https://www.linkedin.com/in/dakota-holiman','popUpWindow','height=1200,width=600,left=10,top=10,,scrollbars=yes,menubar=no'); return false;" class="button2" target="_blank">View My Linkedin</button>                          
                             </div>
                             <div class="footer-grid-item-2" id="about">
                             </div>
@@ -91,7 +93,8 @@
             </div>  
         </div>  
     </body>
-    <script src="js/swatches.js"></script>
+    <script defer src="js/konami.js"></script>
+    <script defer src="js/swatches.js"></script>
     <script src="js/snake.js"></script>
     <script src="js/snake+swipe.js"></script> 
 </html>
