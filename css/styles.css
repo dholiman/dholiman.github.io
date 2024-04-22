@@ -36,11 +36,10 @@ nav .container{
     margin-top: 2px;
     border-bottom: solid 2px rgba(var(--primary-btn), 0);
 }
-i{
+i {
     font-size: 1.2rem;
     cursor: pointer;
 }
-
 i:hover{
     color: rgb(var(--primary-btn));
     transition: all 200ms ease;
@@ -256,10 +255,6 @@ body {
     margin: 0;
     height: 100vh;
     background-color: rgb(var(--accent-clr));
-}
-body::after{
-    position:absolute; width:0; height:0; overflow:hidden; z-index:-1; /* hide images */
-    content:url(../img/YL-Nav-Case-Study-Hover.jpg) url(../img/Insights-hover.jpg) url(../img/Multiman-Case-Study-Hover.jpg) url(../img/Web-Design-2-Hover.jpg) url(../img/Graphic-Design-Hover.jpg) url(../img/Snake-Hover.jpg);   /* load images */
 }
 #case {
     scroll-margin-top: 80px;
@@ -609,6 +604,9 @@ button:focus {
     outline: 2px solid rgb(var(--mid-focus));
     box-shadow:0 0 0 4px rgb(var(--out-focus));
 }
+a.card-link {
+    display: none;
+}
 nav a:focus {
     outline: 2px solid rgb(var(--mid-focus));
     box-shadow:0 0 0 4px rgb(var(--out-focus));
@@ -616,8 +614,13 @@ nav a:focus {
     padding: .25rem .5rem;
 }
 header {
+    height: 77vh;
     margin: 0 10vw;
-    padding: 26vh 0;
+    display: table;
+}
+.table .child {
+    display: table-cell;
+    vertical-align: middle;
 }
 header h2 {
     margin-top: -1.25rem;
@@ -771,52 +774,52 @@ header h2 {
     background-repeat: no-repeat;
 }
 .zero {
-    background-image: url(../img/YL-Nav-Case-Study.jpg);
-    transition: ease-in 0.1s;
+    background-image: url(../img/YL-Nav-Case-Study-Hover.jpg);
+    transition: cubic-bezier(0.175, 0.485, 0.32, 1.175) 2s;
 }
 .grid-item-0:hover .zero {
-    background-image: url(../img/YL-Nav-Case-Study-Hover.jpg);
-    transition: ease-in 0.1s;
+    background-size: 150%;
+    transition: ease-out 10s;
 }
 .one {
-    background-image: url(../img/Insights.jpg);
-    transition: ease-in 0.1s;
+    background-image: url(../img/Insights-hover.jpg);
+    transition: cubic-bezier(0.175, 0.485, 0.32, 1.175) 2s;
 }
 .grid-item-1:hover .one {
-    background-image: url(../img/Insights-hover.jpg);
-    transition: ease-in 0.1s;
+    background-size: 150%;
+    transition: ease-out 10s;
 }
 .two {
-    background-image: url(../img/Multiman-Case-Study.jpg);
-    transition: ease-in 0.1s;
+    background-image: url(../img/Multiman-Case-Study-Hover.jpg);
+    transition: cubic-bezier(0.175, 0.485, 0.32, 1.175) 2s;
 }
 .grid-item-2:hover .two {
-    background-image: url(../img/Multiman-Case-Study-Hover.jpg);
-    transition: ease-in 0.1s;
+    background-size: 150%;
+    transition: ease-out 10s;
 }
 .three {
-    background-image: url(../img/Web-Design-2.jpg);
-    transition: ease-in 0.1s;
+    background-image: url(../img/Web-Design-2-Hover.jpg);
+    transition: cubic-bezier(0.175, 0.485, 0.32, 1.175) 2s;
 }
 .grid-item-3:hover .three {
-    background-image: url(../img/Web-Design-2-Hover.jpg);
-    transition: ease-in 0.1s;
+    background-size: 150%;
+    transition: ease-out 10s;
 }
 .four {
-    background-image: url(../img/Graphic-Design.jpg);
-    transition: ease-in 0.1s;
+    background-image: url(../img/Graphic-Design-Hover.jpg);
+    transition: cubic-bezier(0.175, 0.485, 0.32, 1.175) 2s;
 }
 .grid-item-4:hover .four {
-    background-image: url(../img/Graphic-Design-Hover.jpg);
-    transition: ease-in 0.1s;
+    background-size: 150%;
+    transition: ease-out 10s;
 }
 .five {
-    background-image: url(../img/Snake.jpg);
-    transition: ease-in 0.1s;
+    background-image: url(../img/Snake-Hover.jpg);
+    transition: cubic-bezier(0.175, 0.485, 0.32, 1.175) 2s;
 }
 .grid-item-5:hover .five {
-    background-image: url(../img/Snake-Hover.jpg);
-    transition: ease-in 0.1s;
+    background-size: 150%;
+    transition: ease-out 10s;
 }
 .sub-grid-item {
     position: relative;
@@ -904,6 +907,7 @@ header h2 {
 }
 .gallery img {
     width: 100%;
+    border-radius: var(--round-lg);
     -webkit-transform: scale(1);
 	transform: scale(1);
 	-webkit-transition: .3s ease-in-out;
@@ -961,7 +965,7 @@ canvas {
 
 @media only screen and (min-width: 1920px) {
     header {
-        padding: 24vh 0;
+    height: 75vh;
     }
     .grid-container {
         margin: 0 10%;
@@ -1012,7 +1016,7 @@ canvas {
         margin-bottom: -.75rem;
     }
     header {
-        padding: 23vh 0;
+        height: 80vh;
     }
     .grid-container {
         grid-template-columns: 1fr;
@@ -1148,9 +1152,14 @@ canvas {
         grid-row-gap: 2.5vw;
     }
 }
+@media screen and (max-width: 861px){
+    header {
+        height: 70vh;
+    }
+}
 @media only screen and (max-width: 524px) {
     header {
-        padding: 17vh 0;
+        height: 70vh;
     }
     .footer-grid-item-1 .button1 {
         margin-bottom: 2.5vw;
@@ -1165,9 +1174,6 @@ canvas {
         line-height: 2rem;
         padding-bottom: 1vh;
     }
-    header {
-        padding: 15vh 0;
-    }
     .footer-grid-item-2 img {
         width: 60vw;
     }
@@ -1179,9 +1185,6 @@ canvas {
     }
 }
 @media only screen and (max-width: 375px) {
-    header {
-        padding: 13vh 0vw ;
-    }
     .button3:after {
         top: 28px;
     }
