@@ -17,7 +17,7 @@
         <meta property="og:description" content="I’m a passionate human advocate and ux designer, and this is my portfolio. It’s a high-level overview of impactful interactions and innovative solutions (with few Easter eggs scattered about.)"/>
         <!-- Meta tag to ensure pages render correctly on mobile browsers -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="theme-color" content="rgb(var(--accent-clr))">
+       <!-- <meta name="theme-color" content="rgb(var(--accent-clr))"> -->
         <title>Dakota Holiman | People First UX Designer</title>
         <meta name="description" content="Dakota Holiman is a human focused UX designer creating digital tools that simplify daily living. On this portfolio, you can explore case studies, galleries, and Easter eggs to see his work in action and learn more about his design process and philosophy.">
         <link rel="stylesheet" href="css/styles.css">
@@ -39,75 +39,77 @@
                         <li class="navItem"><a href="index.html">Home</a></li>
                         <li class="navItem"><a href="index.html#case">Case Studies</a></li>
                         <li class="navItem"><a href="#about">About</a></li>
-                        <li><button onClick = "window.location.href='https://www.linkedin.com/in/dakota-holiman';" class="button5" target="_blank">Contact Me</button> </li>
+                        <li><button onclick="window.open('https://www.linkedin.com/in/dakota-holiman','popUpWindow','height=1200,width=600,left=10,top=10,,scrollbars=yes,menubar=no'); return false;" class="button5">Contact Me</button> </li>
                     </ul>
                 </div>
             </nav>
             <div class="blue-bg">
                 <div class="body">
-                    <header>
-                        <p class="label">Hello world! I'm Dakota Holiman</p>
-                        <h1>A <div class="highlight">people first</div> ux designer</h1>
-                        <h2 class="intro">creating accessible products that simplify life.</h2>
-                        <button onclick = "window.location.href='#about';" class="button1">About Me</button>
+                    <header class="table">
+                        <div class=" child">
+                            <p class="label">Hello world! <span class="inverse">I'm Dakota Holiman</span></p>
+                            <h1>A <span class="highlight">people first</span> ux designer</h1>
+                            <h2 class="intro">creating accessible products that simplify life.</h2>
+                            <button onclick = "window.location.href='#about';" class="button1">About Me</button>
+                        </div>
                     </header>
                     <div class="icon">
                         <div class="field">
-                            <button class="blank-btn" onClick ="window.location.href='#case';" aria-label="scroll to case studies">
+                            <button class="blank-btn" onClick="window.location.href='#case';">
                                 <div class="mouse"></div>
                             </button>
                         </div>
                     </div>
                     <div class="grid-container" id="case">
-                        <div class="grid-item grid-item-0">
-                            <div class="img zero"></div>
-                            <div class="sub-grid-item">
-                                <h3>Failed A/B Test Leads to a $1.2 Million Increase</h3>
-                                <p>As with most platforms, Young Living has what seems to be infinite room for improvement in regards to user interaction with their shopping platform. This case study dives into an isolated issue that that was directly inhibiting the company goals.</p>
-                                <button onclick = "window.location.href='optimizing-product-discovery.html';" class="button1">Read More</button>
+                            <div class="grid-item grid-item-0" onClick="cardClick('optimizing-product-discovery.html')">
+                                <div class="img zero"></div>
+                                <div class="sub-grid-item">
+                                    <h3>Failed A/B Test Leads to a $1.2 Million Increase</h3>
+                                    <p>As with most platforms, Young Living has what seems to be infinite room for improvement in regards to user interaction with their shopping platform. This case study dives into an isolated issue that that was directly inhibiting the company goals.</p>
+                                    <button onclick="window.location.href='optimizing-product-discovery.html';" class="button1">Read More</button>
+                                </div>
                             </div>
-                        </div>
-                        <div class="grid-item grid-item-1">
+                        <div class="grid-item grid-item-1" onClick="cardClick('globalized-data-management.html')">
                             <div class="img one"></div>
                             <div class="sub-grid-item">
                                 <h3>Global Success: 386% Surge in User Engagement</h3>
                                 <p>The transformation of the YL Insights app into a globally accessible platform resulted in a remarkable 385.97% increase in user engagement. This success underscores the profound impact of strategic design and collaborative efforts in effectively catering to the diverse needs of users worldwide.</p>
-                                <button onclick = "window.location.href='globalized-data-management.html';" class="button1">Read More</button>
+                                <button onclick="window.location.href='globalized-data-management.html';" class="button1">Read More</button>
                             </div>
                         </div>
-                        <div class="grid-item grid-item-2">
+                        <div class="grid-item grid-item-2" onClick="cardClick('creating-stategic-user-journey.html')">
                             <div class="img two"></div>
                             <div class="sub-grid-item">
                                 <h3>Sales jump 258% because people don't read</h3>
                                 <p>A rough history with marketing agencies left Eddy hesitant to give us a shot. We analyzed his company and developed a strategy to attract, educate, and convert new customers. Our content delivery method worked great for the users, but made SEO a challenge.</p>
-                                <button onclick = "window.location.href='creating-stategic-user-journey.html';" class="button1 btn-focus btn-focus2">Read More</button>
+                                <button onclick="window.location.href='creating-stategic-user-journey.html';" class="button1 btn-focus btn-focus2">Read More</button>
                             </div>
                         </div>
-                        <div class="alt-grid-item grid-item-3">
+                        <div class="alt-grid-item grid-item-3" onClick="cardClick('gallery-web.html')">
                             <div class="img three"></div>
                             <div class="sub-grid-item">
                                 <h3>Web Design</h3> 
-                                <button onClick = "window.location.href='gallery-web.html';" class="button1">View Gallery</button>
+                                <button onClick="window.location.href='gallery-web.html';" class="button1">View Gallery</button>
                             </div>
                         </div>
-                        <div class="alt-grid-item grid-item-4">
+                        <div class="alt-grid-item grid-item-4" onClick="cardClick('gallery-graphic.html')">
                             <div class="img four"></div>
                             <div class="sub-grid-item">
                                 <h3>Graphic Design</h3> 
-                                <button onClick = "window.location.href='gallery-graphic.html';" class="button1">View Gallery</button>
+                                <button onClick="window.location.href='gallery-graphic.html';" class="button1">View Gallery</button>
                             </div>
                         </div>
-                        <div class="alt-grid-item grid-item-5">
+                        <div class="alt-grid-item grid-item-5" onClick="cardClick('snake.html')">
                             <div class="img five"></div>
                             <div class="sub-grid-item">
                                 <h3>WASD Snake</h3> 
-                                <button onClick = "window.location.href='snake.html';" class="button1">Play Snake</button>
+                                <button onClick="window.location.href='snake.html';" class="button1">Play Snake</button>
                             </div>
                         </div>
                     </div>
                     <div class="cta">
                         <h3>Let's work together!</h3>
-                        <button onClick = "window.location.href='mailto:dakota.holiman@gmail.com?subject=Website%20inquiry';" class="button3">Send me an email</button>
+                        <button onClick="window.location.href='mailto:dakota.holiman@gmail.com?subject=Website%20inquiry';" class="button3">Send me an email</button>
                     </div>
                 </div>
             </div>
@@ -125,8 +127,8 @@
                                 <p>As a ux designer with an engineering background and a BFA in graphic design, I thrive on collaborative design strategies. I dive deep into problem-solving, leverage user research for impactful changes, and streamline workflows. While my knack for adaptability ensures I stay on the pulse of design systems and trends, my mission will always be to use design to advocate for the people using my product.</p>
                                 <p>When not head down in a high-fidelity prototype, you’ll find me drinking copious amounts of coffee, admiring the work of my favorite artists, and tinkering with things I have no business tinkering with.</p>
                                 <p>And yes, bad leading does keep me up at night.</p>
-                                <button onClick = "window.location.href='mailto:dakota.holiman@gmail.com?subject=Website%20inquiry';" class="button1">Send me an email</button>
-                                <button onClick = "window.location.href='https://www.linkedin.com/in/dakota-holiman';" class="button2" target="_blank">View My Linkedin</button>                          
+                                <button onClick="window.location.href='mailto:dakota.holiman@gmail.com?subject=Website%20inquiry';" class="button1">Send me an email</button>
+                                <button onclick="window.open('https://www.linkedin.com/in/dakota-holiman','popUpWindow','height=1200,width=600,left=10,top=10,,scrollbars=yes,menubar=no'); return false;" class="button2" target="_blank">View My Linkedin</button>                          
                             </div>
                             <div class="footer-grid-item-2" id="about">
                             </div>
@@ -138,4 +140,12 @@
     </body>
     <script defer src="js/konami.js"></script>
     <script defer src="js/swatches.js"></script>
+    <script>
+        function cardClick(url) {
+    var selection = window.getSelection().toString().trim();
+    if (selection === '') {
+        window.location.href = url;
+    }
+}
+    </script>
 </html>
