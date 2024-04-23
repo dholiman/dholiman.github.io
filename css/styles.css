@@ -140,16 +140,6 @@ nav ul {
     }
 }
 /*=============================================*/
-
-
-
-
-
-
-
-
-
-
 :root {
     --blue: 63,76,92;
     --beige: 234,229,211;
@@ -298,6 +288,39 @@ path {
 .footer-bg {
     background-color: rgb(var(--accent-clr));
 }
+/*----Photo Highlights-----------------------*/
+.photo-highlight {
+    height: 40vw;
+    width: 100vw;
+    margin: -5vw 0 -2.5vw 0;
+}
+@keyframes push-left {
+	0% {
+        transform: translateX(100vw);
+    }
+    100% {
+		transform: translateX(0vw);
+	}
+}
+.ph-g-one {
+    height: 100%;
+    width: 100%;
+    background-image: url(../img/insights-overview-1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translateX(100vw);
+    animation: push-left 3s ease-in-out forwards;
+}
+.ph-g-two {
+    height: 100%;
+    width: 100%;
+    background-image: url(../img/insights-overview-2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+/*---------------------------*/
 h1 {
     font-family: Inter, Arial, Helvetica, sans-serif;
     font-weight: 500;
@@ -775,7 +798,7 @@ header h2 {
 }
 .zero {
     background-image: url(../img/YL-Nav-Case-Study-Hover.jpg);
-    transition: cubic-bezier(0.175, 0.485, 0.32, 1.175) 2s;
+    transition: ease-in-out 2s;
 }
 .grid-item-0:hover .zero {
     background-size: 150%;
@@ -783,7 +806,7 @@ header h2 {
 }
 .one {
     background-image: url(../img/Insights-hover.jpg);
-    transition: cubic-bezier(0.175, 0.485, 0.32, 1.175) 2s;
+    transition: ease-in-out 2s;
 }
 .grid-item-1:hover .one {
     background-size: 150%;
@@ -791,7 +814,7 @@ header h2 {
 }
 .two {
     background-image: url(../img/Multiman-Case-Study-Hover.jpg);
-    transition: cubic-bezier(0.175, 0.485, 0.32, 1.175) 2s;
+    transition: ease-in-out 2s;
 }
 .grid-item-2:hover .two {
     background-size: 150%;
@@ -799,7 +822,7 @@ header h2 {
 }
 .three {
     background-image: url(../img/Web-Design-2-Hover.jpg);
-    transition: cubic-bezier(0.175, 0.485, 0.32, 1.175) 2s;
+    transition: ease-in-out 2s;
 }
 .grid-item-3:hover .three {
     background-size: 150%;
@@ -807,7 +830,7 @@ header h2 {
 }
 .four {
     background-image: url(../img/Graphic-Design-Hover.jpg);
-    transition: cubic-bezier(0.175, 0.485, 0.32, 1.175) 2s;
+    transition: ease-in-out 2s;
 }
 .grid-item-4:hover .four {
     background-size: 150%;
@@ -815,7 +838,7 @@ header h2 {
 }
 .five {
     background-image: url(../img/Snake-Hover.jpg);
-    transition: cubic-bezier(0.175, 0.485, 0.32, 1.175) 2s;
+    transition: ease-in-out 2s;
 }
 .grid-item-5:hover .five {
     background-size: 150%;
