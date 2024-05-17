@@ -18,8 +18,9 @@ nav {
     bottom: 0;
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.1);
     z-index: 2;
+}
+.moveHeader nav{
     animation: moveHeader 2s ease-in-out;
-
 }
 @-webkit-keyframes moveHeader {
     0% {
