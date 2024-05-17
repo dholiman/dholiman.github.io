@@ -5,28 +5,44 @@ nav a{
     transition: all 200ms ease;
 }
 nav {
-    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
     font-weight: 700;
     font-size: .9rem;
     letter-spacing: .15rem;
     color: rgb(var(--text-1));
     background-color: rgb(var(--primary-btn-text));
+    border-radius: var(--round-lg);
     position: fixed;
-    width: 100%;
+    width: 90vw;
+    margin: 1rem 5vw;
     bottom: 0;
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.1);
     z-index: 2;
+    animation: moveHeader 2s ease-in-out;
+
+}
+@-webkit-keyframes moveHeader {
+    0% {
+        width: 100vw;
+        margin: 0;
+        border-radius: 0;
+    }
+    100% {
+        width: 90vw;
+        margin: 1rem 5vw;
+        border-radius: var(--round-lg);
+    }
 }
 nav .container{
     display: flex;
     width: 80vw;
-    margin: .25rem 10vw;
+    margin: .5rem 5vw;
     justify-content: space-between;
     align-items: center;
     position: relative;
 }
 .logo {
-    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
     text-transform: uppercase;
     font-weight: 700;
     font-size: 1rem;
@@ -84,9 +100,10 @@ nav ul .button5 {
 nav ul {
     padding: 2rem;
     background: rgb(var(--accent-clr));
-    border-radius: var(--round-card);
+    border-radius: var(--round-lg);
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.1);
 }
+
 @media screen and (min-width: 861px){
     nav {
         padding: 0;
@@ -105,7 +122,7 @@ nav ul {
         all: initial;
         list-style-type: none;
         display: inline;
-        font-family: Inter, Arial, Helvetica, sans-serif;
+        font-family: "Inter", Arial, Helvetica, sans-serif;
         font-weight: 700;
         font-size: .9rem;
     }
@@ -322,7 +339,7 @@ path {
 }
 /*---------------------------*/
 h1 {
-    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
     font-weight: 500;
     font-size: 3.5rem;
     letter-spacing: .1rem;
@@ -331,7 +348,7 @@ h1 {
     color: rgb(var(--text-3));
 }
 h2 {
-    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
     font-weight: 200;
     font-size: 2.25rem;
     letter-spacing: .1rem;
@@ -341,7 +358,7 @@ h2 {
     margin-top: -5rem;
 }
 h3 {
-    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
     font-weight: 800;
     font-size: 1.1rem;
     text-transform: uppercase;
@@ -349,7 +366,7 @@ h3 {
     color: rgb(var(--text-1));
 }
 h4 {
-    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
     font-weight: 700;
     font-size: 1.3rem;
     letter-spacing: .15rem;
@@ -358,7 +375,7 @@ h4 {
     margin-top: -1vh;
 }
 .intro {
-    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
     font-weight: 300;
     font-size: 1.25rem;
     letter-spacing: .15rem;
@@ -367,8 +384,180 @@ h4 {
     color: rgb(var(--text-1));
     margin: -1.5rem 0 3rem 0;
 }
+.typer {
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 1.5rem;
+    letter-spacing: .15rem;
+    text-wrap: balance;
+    color: rgb(var(--text-2));
+    margin-bottom: -0.5rem;
+}
+.typer:after {
+    content:"";
+    animation: oops 3s linear 1, blink 1s linear 3s infinite;
+    animation-fill-mode: forwards;
+}
+@keyframes oops {
+    10% {
+       content: "↑ ↑ ↓ ↓ ← → ← → B A |";
+    }
+    13% {
+       content: "↑ ↑ ↓ ↓ ← → ← → B |";
+    }
+    16% {
+       content: "↑ ↑ ↓ ↓ ← → ← →|";
+    }
+    19% {
+       content: "↑ ↑ ↓ ↓ ← → ←|";
+    }
+    22% {
+        content: "↑ ↑ ↓ ↓ ← →|";
+    }
+    25% {
+        content: "↑ ↑ ↓ ↓ ←|";
+    }
+    28% {
+         content: "↑ ↑ ↓ ↓|";
+    }
+    31% {
+        content: "↑ ↑ ↓|";
+    }
+    34% {
+        content: "↑ ↑|";
+    }
+    37% {
+        content: "↑|";
+    }
+    40% {
+        content: "|";
+    }
+    45% {
+        content: "H|";
+    }
+    50% {
+        content: "He|";
+    }
+    55% {
+        content: "Hel|";
+    }
+    60% {
+       content: "Hell|";
+    }
+    65% {
+        content: "Hello|";
+    }
+    70% {
+       content: "Hello |";
+    }
+    75% {
+       content: "Hello W|";
+    }
+    80% {
+        content: "Hello Wo|";
+    }
+    85% {
+        content: "Hello Wor|";
+    }
+    90% {
+      content: "Hello Worl|";
+    }
+    95% {
+        content: "Hello World|";
+    }
+    100% {
+       content: "Hello World!|";
+    }
+}
+@-webkit-keyframes oops {
+    10% {
+       content: "↑ ↑ ↓ ↓ ← → ← → B A |";
+    }
+    13% {
+       content: "↑ ↑ ↓ ↓ ← → ← → B |";
+    }
+    16% {
+       content: "↑ ↑ ↓ ↓ ← → ← →|";
+    }
+    19% {
+       content: "↑ ↑ ↓ ↓ ← → ←|";
+    }
+    22% {
+        content: "↑ ↑ ↓ ↓ ← →|";
+    }
+    25% {
+        content: "↑ ↑ ↓ ↓ ←|";
+    }
+    28% {
+         content: "↑ ↑ ↓ ↓|";
+    }
+    31% {
+        content: "↑ ↑ ↓|";
+    }
+    34% {
+        content: "↑ ↑|";
+    }
+    37% {
+        content: "↑|";
+    }
+    40% {
+        content: "|";
+    }
+    45% {
+        content: "H|";
+    }
+    50% {
+        content: "He|";
+    }
+    55% {
+        content: "Hel|";
+    }
+    60% {
+       content: "Hell|";
+    }
+    65% {
+        content: "Hello|";
+    }
+    70% {
+       content: "Hello |";
+    }
+    75% {
+       content: "Hello W|";
+    }
+    80% {
+        content: "Hello Wo|";
+    }
+    85% {
+        content: "Hello Wor|";
+    }
+    90% {
+      content: "Hello Worl|";
+    }
+    95% {
+        content: "Hello World|";
+    }
+    100% {
+       content: "Hello World!|";
+    }
+}  
+@keyframes blink {
+    0% {
+        content: "Hello World!"
+    }
+    100% {
+        content: "Hello World!|"
+    }
+}
+@keyframes blink {
+    0% {
+        content: "Hello World!"
+    }
+    100% {
+        content: "Hello World!|"
+    }
+}
 .label {
-    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
     font-weight: 300;
     font-size: 1.5rem;
     letter-spacing: .15rem;
@@ -377,7 +566,7 @@ h4 {
     margin-bottom: -1.5rem;
 }
 .label-sm {
-    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
     font-weight: 300;
     font-size: 1rem;
     letter-spacing: .15rem;
@@ -386,7 +575,7 @@ h4 {
     margin-bottom: -0.75rem;
 }
 p {
-    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
     font-weight: 500;
     font-size: 1rem;
     line-height: 1.25rem;
@@ -444,6 +633,17 @@ a {
         text-decoration: none;
         text-indent: 0;
 }
+.clue {
+    display: inline-block;
+    align-items: center;
+}
+.clue svg {
+    width: auto;
+    height: 1rem;
+    fill: rgb(var(--bg));
+    background-color: rgb(var(--bg));
+    padding-top: 1vw;
+}
 .button1 {
     background-color: rgb(var(--primary-btn));
     border: 2px solid rgb(var(--primary-btn-outline));
@@ -453,7 +653,7 @@ a {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
     font-weight: 800;
     font-size: .75rem;
     letter-spacing: .15rem;
@@ -487,7 +687,7 @@ a {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
     font-weight: 800;
     font-size: .75rem;
     letter-spacing: .15rem;
@@ -522,7 +722,7 @@ a {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
     font-weight: 800;
     font-size: 1.25rem;
     letter-spacing: .15rem;
@@ -560,7 +760,7 @@ a {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
     font-weight: 800;
     font-size: 1.25rem;
     letter-spacing: .15rem;
@@ -597,7 +797,7 @@ a {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
     font-weight: 800;
     font-size: .75rem;
     letter-spacing: .15rem;
@@ -637,7 +837,7 @@ nav a:focus {
     padding: .25rem .5rem;
 }
 header {
-    height: 77vh;
+    height: 75vh;
     margin: 0 10vw;
     display: table;
 }
@@ -701,7 +901,6 @@ header h2 {
 		top: .4rem;
 	}
 }
-
 @-webkit-keyframes wheel {
 	0% {
         opacity: 0%;
@@ -954,7 +1153,7 @@ section h3 {
     text-align: center;
 }
 .score {
-    font-family: Inter, Arial, Helvetica, sans-serif;;
+    font-family: "Inter", Arial, Helvetica, sans-serif;;
     font-size: 2em;
     position: relative;
     color: rgb(var(--text-2));
@@ -988,7 +1187,7 @@ canvas {
 
 @media only screen and (min-width: 1920px) {
     header {
-    height: 75vh;
+    height: 72vh;
     }
     .grid-container {
         margin: 0 10%;
@@ -1032,14 +1231,19 @@ canvas {
     .intro {
         font-size: 1.1rem;
         line-height: 1.5rem;
-        margin: -.75rem 0 2rem 0;
+        margin: -0.75rem 0 2rem 0;
+    }
+    .typer {
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+        margin: -0.75rem 0 -0.75rem 0;
     }
     .label {
         font-size: 1.25rem;
         margin-bottom: -.75rem;
     }
     header {
-        height: 80vh;
+        height: 77vh;
     }
     .grid-container {
         grid-template-columns: 1fr;
@@ -1177,12 +1381,12 @@ canvas {
 }
 @media screen and (max-width: 861px){
     header {
-        height: 70vh;
+        height: 67vh;
     }
 }
 @media only screen and (max-width: 524px) {
     header {
-        height: 70vh;
+        height: 67vh;
     }
     .footer-grid-item-1 .button1 {
         margin-bottom: 2.5vw;
