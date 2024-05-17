@@ -392,7 +392,7 @@ h4 {
     letter-spacing: .15rem;
     text-wrap: balance;
     color: rgb(var(--text-2));
-    margin-bottom: 0rem;
+    margin-bottom: -0.5rem;
 }
 .typer:after {
     content:"";
@@ -564,7 +564,7 @@ h4 {
     letter-spacing: .15rem;
     text-wrap: balance;
     color: rgb(var(--text-2));
-    margin-bottom: -1rem;
+    margin-bottom: -0.5rem;
 }
 .label-sm {
     font-family: "Inter", Arial, Helvetica, sans-serif;
