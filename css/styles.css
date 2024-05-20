@@ -309,7 +309,14 @@ path {
         background-color: rgba(var(--bg),0);
     }
 }
-
+@-webkit-keyframes load{
+    0% {
+        background-color: rgba(var(--bg),0.4);
+    }
+    100% {
+        background-color: rgba(var(--bg),0);
+    }
+}
 .body {
     margin: 0 auto;
     width: 100%;
