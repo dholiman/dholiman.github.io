@@ -22,6 +22,18 @@ nav {
 .moveHeader nav{
     animation: moveHeader 2s ease-in-out;
 }
+@keyframes moveHeader {
+    0% {
+        width: 100vw;
+        margin: 0;
+        border-radius: 0;
+    }
+    100% {
+        width: 90vw;
+        margin: 1rem 5vw;
+        border-radius: var(--round-lg);
+    }
+}
 @-webkit-keyframes moveHeader {
     0% {
         width: 100vw;
@@ -289,11 +301,21 @@ path {
     overflow-y:scroll;
     overflow-x:hidden;
 }
+@keyframes load{
+    0% {
+        background-color: rgba(var(--bg),0.4);
+    }
+    100% {
+        background-color: rgba(var(--bg),0);
+    }
+}
+
 .body {
     margin: 0 auto;
     width: 100%;
     max-width: 1920px;
     scroll-behavior: smooth;
+    animation: load 2s ease-in-out;
 }
 .blue-bg {
     background-color: rgba(var(--bg),0.8);
@@ -395,10 +417,29 @@ h4 {
 }
 .typer:after {
     content:"";
-    animation: oops 3s linear 1, blink 1s linear 3s infinite;
+    animation: blink2 .5s 0s, oops 3s 1s, blink 1s 4s infinite;
     animation-fill-mode: forwards;
 }
+@keyframes blink2 {
+    0% {
+        content: "↑ ↑ ↓ ↓ ← → ← → B A |"
+    }
+    100% {
+        content: "↑ ↑ ↓ ↓ ← → ← → B A"
+    }
+}
+@-webkit-keyframes blink2 {
+    0% {
+        content: "↑ ↑ ↓ ↓ ← → ← → B A |"
+    }
+    100% {
+        content: "↑ ↑ ↓ ↓ ← → ← → B A"
+    }
+}
 @keyframes oops {
+    0% {
+        content: "↑ ↑ ↓ ↓ ← → ← → B A |";
+    }
     10% {
        content: "↑ ↑ ↓ ↓ ← → ← → B A |";
     }
@@ -470,6 +511,9 @@ h4 {
     }
 }
 @-webkit-keyframes oops {
+    0% {
+        content: "↑ ↑ ↓ ↓ ← → ← → B A |";
+    }
     10% {
        content: "↑ ↑ ↓ ↓ ← → ← → B A |";
     }
@@ -548,7 +592,7 @@ h4 {
         content: "Hello World!|"
     }
 }
-@keyframes blink {
+@-webkit-keyframes blink {
     0% {
         content: "Hello World!"
     }
