@@ -301,6 +301,9 @@ path {
     overflow-y:scroll;
     overflow-x:hidden;
 }
+.load {
+    animation: load 2s ease-in-out;
+}
 @keyframes load{
     0% {
         background-color: rgba(var(--bg),0.4);
@@ -322,7 +325,6 @@ path {
     width: 100%;
     max-width: 1920px;
     scroll-behavior: smooth;
-    animation: load 2s ease-in-out;
 }
 .blue-bg {
     background-color: rgba(var(--bg),0.8);
