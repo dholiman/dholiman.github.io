@@ -339,9 +339,10 @@ path {
 }
 /*----Photo Highlights-----------------------*/
 .photo-highlight {
-    height: 40vw;
-    width: 100vw;
-    margin: -5vw 0 -2.5vw 0;
+    height: 50%;
+    width: 100%;
+    margin: -2.5vh auto -2.5vh auto;
+    max-width: 1920px;
 }
 @keyframes push-left {
 	0% {
@@ -1268,6 +1269,7 @@ canvas {
     .footer-grid-item-2 {
         border-radius: var(--round-card);
     }
+    
 }
 @media only screen and (max-width: 948px) {
     .yellow-bg {
