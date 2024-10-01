@@ -181,7 +181,7 @@ nav ul {
       }
       100% {
           width: 1920px;
-          margin: 1rem auto;
+          margin: 1rem calc((100vw - 1920px)/2);
           border-radius: var(--round-lg);
       }
     }
@@ -193,19 +193,19 @@ nav ul {
         }
         100% {
             width: 1920px;
-            margin: 1rem atuo;
+            margin: 1rem calc((100vw - 1920px)/2);
             border-radius: var(--round-lg);
         }
     }
     nav {
         width: 1920px;
-        margin-left: calc((100vw - 1920px)/2);
+        margin: 1rem calc((100vw - 1920px)/2);
         }
     nav .container {
         width: 80%;
         margin: 0 10%;
-        padding: 0;
     }
+  
 }
 /*=============================================*/
 :root {
