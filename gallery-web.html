@@ -43,8 +43,8 @@
                     <label for="burger"><i class="fas fa-bars"></i></label>
                     <ul>
                         <li class="navItem"><a href="index.html">Home</a></li>
-                        <li class="navItem"><a href="index.html#case">Case Studies</a></li>
-                        <li class="navItem"><a href="#about">About</a></li>
+                        <li class="navItem"><a href="process.html">Process</a></li>
+                        <li class="navItem"><a href="about.html">About</a></li>
                         <li><button onclick="window.open('https://www.linkedin.com/in/dakota-holiman','popUpWindow','height=1200,width=600,left=10,top=10,,scrollbars=yes,menubar=no'); return false;" class="button5">Contact Me</button> </li>
                     </ul>
                 </div>
@@ -54,12 +54,12 @@
                     <header class="table">
                         <div class="child">
                             <button class="blank-btn" onClick ="window.location.href='index.html';">
-                                <h1>Web Design</h1>
-                                <h2>Gallery</h2>
+                                <h1 class="animate">Web Design</h1>
+                                <h2 class="animate">Archive</h2>
                             </button>
                         </div>
                     </header>
-                    <div class="icon">
+                    <div class="icon animate" style="transition-delay: 200ms;">
                         <div class="field">
                             <button class="blank-btn" onClick ="window.location.href='#case';">
                                 <div class="mouse"></div>
@@ -89,7 +89,7 @@
                         <img src="img/websites/Homes-In-Tooele.jpg" alt="Screenshots of Homes in Tooele website">
                         <img src="img/websites/Rasmussen-Cabinets-Countertops.jpg" alt="Screenshots of Rasmussen Cabinets and Countertops website">
                     </div>
-                    <div class="cta">
+                    <div class="cta animate">
                         <button onClick = "window.location.href='index.html';" class="button4">Back to Homepage</button>
                     </div>
                 </div>
@@ -119,6 +119,7 @@
             </div>  
         </div>  
     </body>
+    <script defer src="js/animate.js"></script>
     <script defer src="js/konami.js"></script>
     <script defer src="js/swatches.js"></script>
 </html>
