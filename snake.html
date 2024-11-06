@@ -44,8 +44,8 @@
                     <label for="burger"><i class="fas fa-bars"></i></label>
                     <ul>
                         <li class="navItem"><a href="index.html">Home</a></li>
-                        <li class="navItem"><a href="index.html#case">Case Studies</a></li>
-                        <li class="navItem"><a href="#about">About</a></li>
+                        <li class="navItem"><a href="process.html">Process</a></li>
+                        <li class="navItem"><a href="about.html">About</a></li>
                         <li><button onclick="window.open('https://www.linkedin.com/in/dakota-holiman','popUpWindow','height=1200,width=600,left=10,top=10,,scrollbars=yes,menubar=no'); return false;" class="button5">Contact Me</button> </li>
                     </ul>
                 </div>
@@ -55,21 +55,21 @@
                     <header class="center table">
                         <div class="child">
                             <button class="blank-btn" onClick ="window.location.href='index.html';">
-                                <h1>WASD Snake</h1>
-                                <h2>This is Not an Easter Egg</h2>
+                                <h1 class="animate">WASD Snake</h1>
+                                <h2 class="animate">This is Not the Easter Egg You're Looking For</h2>
                             </button>
                         </div>
                     </header>
                     <main>
                         <section>
                             <div id="snake">
-                                <h3>Control with W,A,S,D, or gestures on mobile</h3>
-                                <div class="score" id="score">0</div>
-                                <canvas id="canvas" height="500px" width="500px"></canvas>
+                                <h3 class="animate">Control with W,A,S,D, or gestures on mobile</h3>
+                                <div class="score animate" id="score">0</div>
+                                <canvas id="canvas" height="500px" width="500px" class="animate"></canvas>
                             </div>
                         </section>
                     </main> 
-                    <div class="cta">
+                    <div class="cta anmiate">
                         <button onClick = "window.location.href='index.html';" class="button4">Back to Homepage</button>
                     </div>
                 </div>
@@ -99,6 +99,7 @@
             </div>  
         </div>  
     </body>
+    <script defer src="js/animate.js"></script>
     <script defer src="js/konami.js"></script>
     <script defer src="js/swatches.js"></script>
     <script src="js/snake.js"></script>
