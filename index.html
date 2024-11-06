@@ -39,46 +39,48 @@
             <div class="moveHeader">    
                 <nav>
                     <div class="container">
-                        <a href="index.html" class="logo">Dakota Holiman</a>
+                        <a href="index.html" class="logo"><span class="animate">Dakota Holiman</span></a>
                         <input type="checkbox" id="burger" aria-label="menu">
-                        <label for="burger"><i class="fas fa-bars"></i></label>
+                        <label for="burger"><i class="fas fa-bars animate"></i></label>
                         <ul>
-                            <li class="navItem"><a href="index.html">Home</a></li>
-                            <li class="navItem"><a href="index.html#case">Case Studies</a></li>
-                            <li class="navItem"><a href="#about">About</a></li>
-                            <li><button onclick="window.open('https://www.linkedin.com/in/dakota-holiman','popUpWindow','height=1200,width=600,left=10,top=10,,scrollbars=yes,menubar=no'); return false;" class="button5">Contact Me</button> </li>
+                            <span class="animate"><li class="navItem active"><a href="index.html">Home</a></li></span>
+                            <span class="animate"><li class="navItem"><a href="process.html" class="animate">Process</a></li></span>
+                            <span class="animate"><li class="navItem"><a href="about.html" class="animate">About</a></li></span>
+                            <li class="animate"><button onclick="window.open('https://www.linkedin.com/in/dakota-holiman','popUpWindow','height=1200,width=600,left=10,top=10,,scrollbars=yes,menubar=no'); return false;" class="button5">Contact Me</button> </li>
                         </ul>
                     </div>
                 </nav>
             </div>
             <div class="blue-bg">
-                <div class="body load">
+                <div class="body">
                     <header class="table">
-                        <div class=" child">
+                        <div class="child">
                             <span class="typer"></span>
                             <p class="label inverse">I'm Dakota Holiman</p>
-                            <h1>A <span class="highlight">people first</span> ux designer</h1>
-                            <h2 class="intro">creating accessible products that simplify life.</h2>
-                            <button onclick = "window.location.href='#about';" class="button1">About Me</button>
+                            <div class="animate" style="transition-delay: 1000ms;">
+                                <h1>A <span class="highlight">people first</span> ux designer</h1>
+                                <h2 class="intro">creating accessible products that simplify life.</h2>
+                            </div>
+                            <div class="animate" style="transition-delay: 1200ms;"><button onclick = "window.location.href='about.html';" class="button1">About Me</button></div>
                         </div>
                     </header>
-                    <div class="icon">
+                    <div class="icon animate" style="transition-delay: 3000ms;">
                         <div class="field">
                             <button class="blank-btn" onClick="window.location.href='#case';" aria-label="Scroll">
                                 <div class="mouse"></div>
                             </button>
-                        </div>
+                        </div>              
                     </div>
                     <div class="grid-container" id="case">
-                            <div class="grid-item grid-item-0" onClick="cardClick('optimizing-product-discovery.html')">
-                                <div class="img zero"></div>
-                                <div class="sub-grid-item">
-                                    <h3>Failed A/B Test Leads to a $1.2 Million Increase</h3>
-                                    <p>As with most platforms, Young Living has what seems to be infinite room for improvement in regards to user interaction with their shopping platform. This case study dives into an isolated issue that that was directly inhibiting the company goals.</p>
-                                    <button onclick="window.location.href='optimizing-product-discovery.html';" class="button1">Read More</button>
-                                </div>
+                        <div class="grid-item grid-item-0 animate" onClick="cardClick('optimizing-product-discovery.html')">
+                            <div class="img zero"></div>
+                            <div class="sub-grid-item">
+                                <h3>Failed A/B Test Leads to a $1.2 Million Increase</h3>
+                                <p>As with most platforms, Young Living has what seems to be infinite room for improvement in regards to user interaction with their shopping platform. This case study dives into an isolated issue that that was directly inhibiting the company goals.</p>
+                                <button onclick="window.location.href='optimizing-product-discovery.html';" class="button1">Read More</button>
                             </div>
-                        <div class="grid-item grid-item-1" onClick="cardClick('globalized-data-management.html')">
+                        </div>
+                        <div class="grid-item grid-item-1 animate" onClick="cardClick('globalized-data-management.html')">
                             <div class="img one"></div>
                             <div class="sub-grid-item">
                                 <h3>Global Success: 386% Surge in User Engagement</h3>
@@ -86,7 +88,7 @@
                                 <button onclick="window.location.href='globalized-data-management.html';" class="button1">Read More</button>
                             </div>
                         </div>
-                        <div class="grid-item grid-item-2" onClick="cardClick('creating-stategic-user-journey.html')">
+                        <div class="grid-item grid-item-2 animate" onClick="cardClick('creating-stategic-user-journey.html')">
                             <div class="img two"></div>
                             <div class="sub-grid-item">
                                 <h3>Sales jump 258% because people don't read</h3>
@@ -94,21 +96,21 @@
                                 <button onclick="window.location.href='creating-stategic-user-journey.html';" class="button1 btn-focus btn-focus2">Read More</button>
                             </div>
                         </div>
-                        <div class="alt-grid-item grid-item-3" onClick="cardClick('gallery-web.html')">
+                        <div class="alt-grid-item grid-item-3 animate" onClick="cardClick('gallery-web.html')">
                             <div class="img three"></div>
                             <div class="sub-grid-item">
                                 <h3>Web Design</h3> 
                                 <button onClick="window.location.href='gallery-web.html';" class="button1">View Gallery</button>
                             </div>
                         </div>
-                        <div class="alt-grid-item grid-item-4" onClick="cardClick('gallery-graphic.html')">
+                        <div class="alt-grid-item grid-item-4 animate" onClick="cardClick('gallery-graphic.html')">
                             <div class="img four"></div>
                             <div class="sub-grid-item">
                                 <h3>Graphic Design</h3> 
                                 <button onClick="window.location.href='gallery-graphic.html';" class="button1">View Gallery</button>
                             </div>
                         </div>
-                        <div class="alt-grid-item grid-item-5" onClick="cardClick('snake.html')">
+                        <div class="alt-grid-item grid-item-5 animate" onClick="cardClick('snake.html')">
                             <div class="img five"></div>
                             <div class="sub-grid-item">
                                 <h3>WASD Snake</h3> 
@@ -116,8 +118,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="cta">
-                        <h3>Let's work together!</h3>
+                    <div class="cta animate">
+                        <h3 class="">Let's work together!</h3>
                         <button onClick="window.location.href='mailto:dakota.holiman@gmail.com?subject=Website%20inquiry';" class="button3">Send me an email</button>
                     </div>
                 </div>
@@ -147,6 +149,7 @@
             </div>  
         </div>  
     </body>
+    <script defer src="js/animate.js"></script>
     <script defer src="js/konami.js"></script>
     <script defer src="js/swatches.js"></script>
     <script>
