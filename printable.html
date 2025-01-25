@@ -59,7 +59,7 @@
                             </div>
                         </div>
                     </header>
-                    <div class="icon animate" style="transition-delay: 3000ms;">
+                    <div class="icon">
                         <div class="field">
                             <button class="blank-btn" onClick="window.location.href='#case';" aria-label="Scroll">
                                 <div class="mouse"></div>
@@ -67,7 +67,7 @@
                         </div>              
                     </div>
                     <div class="grid-container" id="case">
-                        <div class="grid-item grid-item-0 animate">
+                        <div class="grid-item grid-item-0">
                             <div class="img zero"></div>
                             <div class="sub-grid-item">
                                 <h3>Fellow Stagg: Rise and Hide</h3>
@@ -75,10 +75,11 @@
                                 <p>Fast forward a few months. Somewhere shared their version in r/pourover, and this one had a drawer to help clean it up. Many people were ready to buy, but some wanted the files to print themselves. While this redditor decided to only sell physical prints, it sparked the idea in me to share my own version.</p>
                                 <p>This is that version. Updated to fit most common scales, adding a drawer for a tidy look, and ensuring the drawer face does not interfere with the use of the scale during brewing.</p>
                                 <button id="downloadButton" class="button1">Download</button>
-                                <p class="intro">Total Downloads: <span id="downloadCount">0</span></p>
+                                <p>Total Downloads: <span id="downloadCount">0</span></p>
+
                                 <script>
-                                    const sheetId = "1VKbP0hknt3Mei-Arb6FJNeY-_19ktawS6H5tP8zEN5Q"; // Replace with your Google Sheet ID
-                                    const apiKey = "AIzaSyAZFZhJU9-ZJtyeZioCyQS_TGfq6zaYtKc"; // Replace with your Google API key
+                                    const sheetId = "1VKbP0hknt3Mei-Arb6FJNeY-_19ktawS6H5tP8zEN5Q";
+                                    const apiKey = "AIzaSyAZFZhJU9-ZJtyeZioCyQS_TGfq6zaYtKc";
                                     const sheetRange = "Sheet1!A2"; // The cell where the count is stored
 
                                     const downloadButton = document.getElementById("downloadButton");
@@ -128,8 +129,8 @@
 
                                         // Trigger file download
                                         const link = document.createElement("a");
-                                        link.href = "path-to-your-file.ext"; // Replace with your file path
-                                        link.download = "filename.ext"; // Replace with the desired file name
+                                        link.href = "/img/rewards.png"; // Replace with your file path
+                                        link.download = "rewards.png"; // Replace with the desired file name
                                         link.click();
                                     });
 
