@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script defer src="https://www.googletagmanager.com/gtag/js?id=UA-141041566-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-141041566-1');
+        </script>
+        <meta charset="utf-8">
+        <meta property="og:image" content="https://dakotaholiman.com/img/Social-Preview.png"/>
+        <meta property="og:type" content="Website"/>
+        <meta property="og:url" content="https://dakotaholiman.com"/>
+        <meta property="og:title" content="Dakota Holiman | Human Focused UX Designer"/>
+        <meta property="og:description" content="I’m a passionate human advocate and ux designer, and this is my portfolio. It’s a high-level overview of impactful interactions and innovative solutions (with few Easter eggs scattered about.)"/>
+        <!-- Meta tag to ensure pages render correctly on mobile browsers -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+       <!-- <meta name="theme-color" content="rgb(var(--accent-clr))"> -->
+        <title>Dakota Holiman | People First UX Designer</title>
+        <meta name="description" content="Dakota Holiman is a human focused UX designer creating digital tools that simplify daily living. On this portfolio, you can explore case studies, galleries, and Easter eggs to see his work in action and learn more about his design process and philosophy.">
+        <link rel="stylesheet" href="css/styles.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;800&display=swap" rel="stylesheet">
+        <link rel="preload" as="image" href="img/YL-Nav-Case-Study.jpg">
+        <link rel="preload" as="image" href="img/YL-Nav-Case-Study-Hover.jpg">
+        <!-- favicon and other off-site icons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/img/favicon/site.webmanifest">
+        <link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#eae9e0">
+        <meta name="theme-color" content="#EAE9E0">
+    </head>
+    <body>
+        <div id="theme" class="bg-img original">
+            <div class="moveHeader">    
+                <nav>
+                    <div class="container">
+                        <a href="https://www.dakotaholiman.com/printable.html" class="logo"><span class="animate">Slow Bar Barista</span></a>
+                        <input type="checkbox" id="burger" aria-label="menu">
+                        <label for="burger"><i class="fas fa-bars animate"></i></label>
+                        <ul>
+                            <li class="animate"><button onClick="window.location.href='mailto:dakota.holiman@gmail.com?subject=Website%20inquiry';" class="button5">contact me!</button></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="blue-bg">
+                <div class="body">
+                    <header class="table">
+                        <div class="child">
+                            <span class="typer"></span>
+                            <div class="animate" style="transition-delay: 1000ms;">
+                                <h1>Looks like you found my stl files!</h1>
+                                <h2 class="intro">It'd be a shame if you printed something for your coffee bar...</h2>
+                            </div>
+                        </div>
+                    </header>
+                    <div class="icon animate" style="transition-delay: 3000ms;">
+                        <div class="field">
+                            <button class="blank-btn" onClick="window.location.href='#case';" aria-label="Scroll">
+                                <div class="mouse"></div>
+                            </button>
+                        </div>              
+                    </div>
+                    <div class="grid-container" id="case">
+                        <div class="grid-item grid-item-0 animate">
+                            <div class="img zero"></div>
+                            <div class="sub-grid-item">
+                                <h3>Fellow Stagg: Rise and Hide</h3>
+                                <p>After buying a broken Ender 3 from a thrift and repairing it, I began my dive into 3D printing. My first print (apart from Benchy of course) was a kettle riser. I found the file online for free, printed it out, and added some rubber feet to stop some rattles when using it.</p>
+                                <p>Fast forward a few months. Somewhere shared their version in r/pourover, and this one had a drawer to help clean it up. Many people were ready to buy, but some wanted the files to print themselves. While this redditor decided to only sell physical prints, it sparked the idea in me to share my own version.</p>
+                                <p>This is that version. Updated to fit most common scales, adding a drawer for a tidy look, and ensuring the drawer face does not interfere with the use of the scale during brewing.</p>
+                                <button id="downloadButton" class="button1">Download</button>
+                                <p class="intro">Total Downloads: <span id="downloadCount">0</span></p>
+                                <script>
+                                    const sheetId = "1VKbP0hknt3Mei-Arb6FJNeY-_19ktawS6H5tP8zEN5Q"; // Replace with your Google Sheet ID
+                                    const apiKey = "AIzaSyAZFZhJU9-ZJtyeZioCyQS_TGfq6zaYtKc"; // Replace with your Google API key
+                                    const sheetRange = "Sheet1!A2"; // The cell where the count is stored
+
+                                    const downloadButton = document.getElementById("downloadButton");
+                                    const downloadCountElement = document.getElementById("downloadCount");
+
+                                    // Fetch the current count from Google Sheets
+                                    function fetchCount() {
+                                        fetch(`https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${sheetRange}?key=${apiKey}`)
+                                            .then(response => response.json())
+                                            .then(data => {
+                                                const count = data.values ? data.values[0][0] : 0;
+                                                downloadCountElement.textContent = count;
+                                            })
+                                            .catch(error => console.error("Error fetching data:", error));
+                                    }
+
+                                    // Update the count in Google Sheets
+                                    function updateCount(newCount) {
+                                        fetch(`https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${sheetRange}?valueInputOption=USER_ENTERED&key=${apiKey}`, {
+                                            method: "PUT",
+                                            headers: {
+                                                "Content-Type": "application/json"
+                                            },
+                                            body: JSON.stringify({
+                                                range: sheetRange,
+                                                majorDimension: "ROWS",
+                                                values: [[newCount]]
+                                            })
+                                        })
+                                        .then(response => response.json())
+                                        .then(() => {
+                                            downloadCountElement.textContent = newCount;
+                                        })
+                                        .catch(error => console.error("Error updating data:", error));
+                                    }
+
+                                    // Handle the button click
+                                    downloadButton.addEventListener("click", () => {
+                                        fetchCount(); // Fetch the current count
+                                        fetch(`https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${sheetRange}?key=${apiKey}`)
+                                            .then(response => response.json())
+                                            .then(data => {
+                                                const currentCount = parseInt(data.values[0][0]);
+                                                const newCount = currentCount + 1;
+                                                updateCount(newCount); // Update the count
+                                            });
+
+                                        // Trigger file download
+                                        const link = document.createElement("a");
+                                        link.href = "path-to-your-file.ext"; // Replace with your file path
+                                        link.download = "filename.ext"; // Replace with the desired file name
+                                        link.click();
+                                    });
+
+                                    // Initialize the count display
+                                    fetchCount();
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </body>
+    <script defer src="js/animate.js"></script>
+    <script defer src="js/konami.js"></script>
+    <script defer src="js/swatches.js"></script>
+    <script>
+        function cardClick(url) {
+    var selection = window.getSelection().toString().trim();
+    if (selection === '') {
+        window.location.href = url;
+    }
+}
+    </script>
+</html>
