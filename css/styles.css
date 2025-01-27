@@ -144,6 +144,8 @@ nav ul {
     }
     .navItem:hover, .logo:hover {
         border-bottom: solid 2px rgb(var(--primary-btn));
+	transition-delay: 0ms;
+        transition-duration: 200ms;
     }
     .active {
         border-bottom: solid 2px rgb(var(--primary-btn));
