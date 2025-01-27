@@ -22,6 +22,7 @@
         <meta name="description" content="Dakota Holiman is a human focused UX designer creating digital tools that simplify daily living. On this portfolio, you can explore case studies, galleries, and Easter eggs to see his work in action and learn more about his design process and philosophy.">
         <link rel="stylesheet" href="css/styles.css">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;800&display=swap" rel="stylesheet">
         <link rel="preload" as="image" href="img/YL-Nav-Case-Study.jpg">
         <link rel="preload" as="image" href="img/YL-Nav-Case-Study-Hover.jpg">
@@ -37,7 +38,7 @@
             // Import Firebase modules
             import { initializeApp } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js";
             import { getFirestore, doc, getDoc, updateDoc, increment } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-firestore.js";
-    
+        
             // Firebase configuration
             const firebaseConfig = {
                 apiKey: "AIzaSyAWrjS84B_jfMFJCk7kbF7U3UcbHJ_0Hyc",
@@ -48,66 +49,79 @@
                 appId: "1:1000014062310:web:f75dda3b9cb64b76999127",
                 measurementId: "G-T79KFPP4WY"
             };
-    
+        
             // Initialize Firebase
             const app = initializeApp(firebaseConfig);
             const db = getFirestore(app);
-    
-            // Function to handle download and update Firestore
-            async function handleDownload() {
-                const downloadButton = document.getElementById('downloadButton');
+        
+            // Firestore document reference
+            const docRef = doc(db, 'downloads', 'globalCount');
+        
+            // Function to fetch and display the current count on page load
+            async function fetchDownloadCount() {
                 const downloadCountElement = document.getElementById('downloadCount');
-    
-                // Firestore document reference
-                const docRef = doc(db, 'downloads', 'globalCount');
-    
                 try {
-                    // Fetch current count
                     const docSnap = await getDoc(docRef);
                     if (docSnap.exists()) {
                         const currentCount = docSnap.data().count;
                         downloadCountElement.textContent = currentCount;
-    
-                        // Increment the count
-                        await updateDoc(docRef, {
-                            count: increment(1)
-                        });
-    
-                        // Update UI with new count
-                        const updatedDoc = await getDoc(docRef);
-                        downloadCountElement.textContent = updatedDoc.data().count;
-    
-                        // Trigger file download
-                        const link = document.createElement('a');
-                        link.href = 'path-to-your-file.ext'; // Replace with actual file URL
-                        link.download = 'filename.ext'; // Replace with desired file name
-                        link.click();
                     } else {
                         console.error("Document does not exist!");
+                        downloadCountElement.textContent = "0";
                     }
+                } catch (error) {
+                    console.error("Error fetching Firestore data:", error);
+                    downloadCountElement.textContent = "Error";
+                }
+            }
+        
+            // Function to handle download and update Firestore
+            async function handleDownload() {
+                const downloadCountElement = document.getElementById('downloadCount');
+                try {
+                    // Increment the count
+                    await updateDoc(docRef, {
+                        count: increment(1)
+                    });
+        
+                    // Fetch the updated count
+                    const updatedDoc = await getDoc(docRef);
+                    if (updatedDoc.exists()) {
+                        downloadCountElement.textContent = updatedDoc.data().count;
+                    }
+        
+                    // Trigger file download
+                    const link = document.createElement('a');
+                    link.href = '/img/Kettle-Stand-V1.zip'; // Replace with actual file URL
+                    link.download = 'Kettle-Stand-V1.zip'; // Replace with desired file name
+                    link.click();
                 } catch (error) {
                     console.error("Error updating Firestore:", error);
                     alert("Failed to update the download count. Please try again later.");
                 }
             }
-    
+        
             // Attach event listener after DOM is loaded
             document.addEventListener('DOMContentLoaded', () => {
+                // Fetch the current download count
+                fetchDownloadCount();
+        
+                // Attach click event to the download button
                 const downloadButton = document.getElementById('downloadButton');
                 downloadButton.addEventListener('click', handleDownload);
             });
-        </script>
+        </script>        
     </head>
     <body>
         <div id="theme" class="bg-img original">
             <div class="moveHeader">    
                 <nav>
                     <div class="container">
-                        <a href="https://www.dakotaholiman.com/printable.html" class="logo"><span class="animate">Slow Bar Barista</span></a>
+                        <a href="https://www.dakotaholiman.com/slow-bar.html" class="logo"><span class="animate">Slow Bar Coffee Co.</span></a>
                         <input type="checkbox" id="burger" aria-label="menu">
                         <label for="burger"><i class="fas fa-bars animate"></i></label>
-                        <ul>
-                            <li class="animate"><button onClick="window.location.href='mailto:dakota.holiman@gmail.com?subject=Website%20inquiry';" class="button5">contact me!</button></li>
+                        <ul>                       
+                            <li class="animate"><button onClick="window.location.href='https://www.instagram.com/slowbarbarista/';" class="button5">Instagram</button></li>
                         </ul>
                     </div>
                 </nav>
@@ -117,9 +131,14 @@
                     <header class="table">
                         <div class="child">
                             <span class="typer"></span>
+                            <div class="inverse">
+                                <button id="one" class="swatch dark-btn" alt="changes color theme to blue">Change Theme to Blue</button>
+                                <button id="two" class="swatch light-btn" alt="changes color theme to beige">Change Theme to Beige</button>
+                                <button id="three" class="swatch yellow-btn" alt="changes color theme to yellow">Change Theme to Yellow</button>
+                            </div>
                             <div class="animate" style="transition-delay: 1000ms;">
-                                <h1>Looks like you found my stl files!</h1>
-                                <h2 class="intro">It'd be a shame if you printed something for your coffee bar...</h2>
+                                <h1>Welcome to Slow Bar</h1>
+                                <h2 class="intro">A simple home for some nerdy coffee things</h2>
                             </div>
                         </div>
                     </header>
@@ -134,13 +153,12 @@
                         <div class="grid-item grid-item-0">
                             <div class="img"></div>
                             <div class="sub-grid-item">
-                                <h3>Fellow Stagg: Rise and Hide</h3>
-                                <p>After buying a broken Ender 3 from a thrift and repairing it, I began my dive into 3D printing. My first print (apart from Benchy of course) was a kettle riser. I found the file online for free, printed it out, and added some rubber feet to stop some rattles when using it.</p>
-                                <p>Fast forward a few months. Somewhere shared their version in r/pourover, and this one had a drawer to help clean it up. Many people were ready to buy, but some wanted the files to print themselves. While this redditor decided to only sell physical prints, it sparked the idea in me to share my own version.</p>
-                                <p>This is that version. Updated to fit most common scales, adding a drawer for a tidy look, and ensuring the drawer face does not interfere with the use of the scale during brewing.</p>
-                                <button id="downloadButton" class="button1">Download</button>
-                                <p>Total Downloads: <span id="downloadCount">0</span></p>
-                                
+                                <h3>Kettle Stand V1</h3>
+                                <p class="intro">Total Downloads: <span id="downloadCount">?</span></p>
+                                <p>Built for the Fellow Stagg EKG, this stand hides your scale under your kettle for a tidier workspace.</p>
+                                <p>When opened, the drawer face can fold flat, allowing you to use most scales without interference.</p>
+                                <p>Top tip, add felt to the bottom, middle of the drawer. This makes it easy to fully remove the drawer, and slide it back in without needing to lift it off the table.</p>
+                                <button id="downloadButton" class="button1">Download</button>                                
                             </div>
                         </div>
                     </div>
