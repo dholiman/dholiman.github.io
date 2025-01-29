@@ -87,7 +87,7 @@ ul{
 }
 .navItem {
     line-height: 26.5px;
-    margin-top: calc(.5rem + 2px);    
+    margin-top: calc(.5rem + 2px); 
 }
 nav input:checked ~ ul {
     transform: translateX(-45vw);
@@ -110,8 +110,8 @@ nav ul li {
     box-sizing: border-box;  
     cursor: pointer;
 }
-nav ul .button5 {
-    margin-top: 1rem;
+nav ul li .button5 {
+    margin-left: 1rem;
 }
 nav ul {
     padding: 2rem;
@@ -144,7 +144,7 @@ nav ul {
     }
     .navItem:hover, .logo:hover {
         border-bottom: solid 2px rgb(var(--primary-btn));
-	transition-delay: 0ms;
+        transition-delay: 0ms;
         transition-duration: 200ms;
     }
     .active {
@@ -153,6 +153,7 @@ nav ul {
     nav ul .button5 {
         margin: .2rem 0;
     }
+
     nav li {
         display: inline-block;
         line-height: 26.5px;
@@ -339,8 +340,8 @@ path {
     background-image: var(--bg-svg);
     background-color: rgb(var(--primary-btn));
     background-repeat: no-repeat;
-    overflow-y:scroll;
-    overflow-x:hidden;
+    
+    overflow-x: hidden;
 }
 .body {
     margin: 0 auto;
@@ -936,6 +937,40 @@ a {
     opacity: 1;
     right: 6px;
 }
+.button6 {
+    background-color: rgb(var(--accent-clr));
+    border: 2px solid rgb(var(--primary-btn-outline));
+    border-radius: var(--round-sm);
+    color: rgb(var(--primary-btn-outline));
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    font-size: .75rem;
+    letter-spacing: .15rem;
+    text-transform: uppercase;
+    position: relative;
+    transition: all 0.25s;
+    cursor: pointer;
+}
+.button6:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;  
+    top: 6px;
+    right: -12px;
+    transition: 0.25s;
+}
+.button6:hover{
+    padding-right: 18px;
+    padding-left: 6px;
+}
+.button6:hover:after {
+    opacity: 1;
+    right: 6px;
+}
 button:focus-visible {
     border: 2px solid rgb(var(--in-focus));
     outline: 2px solid rgb(var(--mid-focus));
@@ -1145,7 +1180,7 @@ header h2 {
 }
 .grid-item-0:hover .zero {
     background-size: 150%;
-    transition: ease-out 10s;
+    transition: ease-out 10s;   
 }
 .one {
     background-image: url(../img/Insights-hover.jpg);
@@ -1329,6 +1364,15 @@ canvas {
 .pnf .cs-content .button1, .pnf .cs-content .button2 {
     margin-right: 2%;
     margin-bottom: 3%;
+}
+/* --- Slow Bar specific --- */
+.sb-zero {
+    background-image: url(../img/KSV1-preview.png);
+    transition: ease-in-out 2s;
+}
+.grid-item-0:hover .sb-zero {
+    background-size: 150%;
+    transition: ease-out 10s;   
 }
 
 @media only screen and (min-width: 1920px) {
