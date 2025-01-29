@@ -18,7 +18,7 @@
         <!-- Meta tag to ensure pages render correctly on mobile browsers -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
        <!-- <meta name="theme-color" content="rgb(var(--accent-clr))"> -->
-        <title>Dakota Holiman | People First UX Designer</title>
+        <title>Dakota Holiman | Slow Bar Coffee Company</title>
         <meta name="description" content="Dakota Holiman is a human focused UX designer creating digital tools that simplify daily living. On this portfolio, you can explore case studies, galleries, and Easter eggs to see his work in action and learn more about his design process and philosophy.">
         <link rel="stylesheet" href="css/styles.css">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
@@ -121,7 +121,9 @@
                         <input type="checkbox" id="burger" aria-label="menu">
                         <label for="burger"><i class="fas fa-bars animate"></i></label>
                         <ul>                       
-                            <li class="animate"><button onClick="window.location.href='https://www.instagram.com/slowbarbarista/';" class="button5">Instagram</button></li>
+                            <li class="animate"><button onclick="window.open('https://www.instagram.com/slowbarbarista/','popUpWindow','height=1200,width=600,left=10,top=10,,scrollbars=yes,menubar=no'); return false;" class="button6" target="_blank">Tip Jar</button></li>
+                            <li></li>
+                            <li class="animate"><button onclick="window.open('https://www.instagram.com/slowbarbarista/','popUpWindow','height=1200,width=600,left=10,top=10,,scrollbars=yes,menubar=no'); return false;" class="button5" target="_blank">Instagram</button></li>
                         </ul>
                     </div>
                 </nav>
@@ -130,12 +132,7 @@
                 <div class="body">
                     <header class="table">
                         <div class="child">
-                            <span class="typer"></span>
-                            <div class="inverse">
-                                <button id="one" class="swatch dark-btn" alt="changes color theme to blue">Change Theme to Blue</button>
-                                <button id="two" class="swatch light-btn" alt="changes color theme to beige">Change Theme to Beige</button>
-                                <button id="three" class="swatch yellow-btn" alt="changes color theme to yellow">Change Theme to Yellow</button>
-                            </div>
+                            <span class="typer inverse"></span>
                             <div class="animate" style="transition-delay: 1000ms;">
                                 <h1>Welcome to Slow Bar</h1>
                                 <h2 class="intro">A simple home for some nerdy coffee things</h2>
@@ -151,7 +148,7 @@
                     </div>
                     <div class="grid-container" id="case">
                         <div class="grid-item grid-item-0">
-                            <div class="img"></div>
+                            <div class="img sb-zero"></div>
                             <div class="sub-grid-item">
                                 <h3>Kettle Stand V1</h3>
                                 <p class="intro">Total Downloads: <span id="downloadCount">?</span></p>
@@ -163,6 +160,29 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="footer-bg">
+                <div class="body">
+                    <div class="footer">
+                        <div class="grid-container-2">
+                            <div class="footer-grid-item-1">
+                                <h3>What am I doing here?</h3>
+                                <div>
+                                    <button id="one" class="swatch dark-btn" alt="changes color theme to blue">Change Theme to Blue</button>
+                                    <button id="two" class="swatch light-btn" alt="changes color theme to beige">Change Theme to Beige</button>
+                                    <button id="three" class="swatch yellow-btn" alt="changes color theme to yellow">Change Theme to Yellow</button>
+                                </div>
+                                <p>I’m always tinkering, whether it's on cars, espresso machiens, or my sketchy DIY coffee roaster. I'm all about discovering how things work.</p>
+                                <p>Here, you'll find the results of one more outlet for my fidgeting. These 3D models are released FREE of charge, because I believe communities are made better through group effort and support.</p>
+                                <p>That being said, if you want to buy me a coffee, I won't decline!</p>
+                                <button onclick="window.open('https://www.dakotaholiman.com/img/Venmo-QR.png','popUpWindow','height=512,width=428,left=10,top=10,,scrollbars=yes,menubar=no'); return false;" class="button2" target="_blank">Venmo Tip Jar</button>
+                                <button onclick="window.open('https://www.instagram.com/slowbarbarista/','popUpWindow','height=1200,width=600,left=10,top=10,,scrollbars=yes,menubar=no'); return false;" class="button1" target="_blank">Instagram</button>                          
+                            </div>
+                            <div class="footer-grid-item-2" id="about">
+                            </div>
+                        </div>
+                    </div>
+                </div>    
             </div>
         </div>
     </body>
