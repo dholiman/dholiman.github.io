@@ -111,7 +111,7 @@ nav ul li {
     cursor: pointer;
 }
 nav ul li .button5, nav ul li .button6  {
-    margin: 0 .5rem;
+    margin-left: 0.5rem;
 }
 nav ul {
     padding: 2rem;
