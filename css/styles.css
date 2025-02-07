@@ -1367,7 +1367,7 @@ canvas {
 }
 /* --- Slow Bar specific --- */
 .sb-zero {
-    background-image: url(../img/KSV1-preview.png);
+    background-image: url(../img/KSV1-preview.mp4);
     transition: ease-in-out 2s;
 }
 .grid-item-0:hover .sb-zero {
