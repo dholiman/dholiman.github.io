@@ -363,7 +363,7 @@ path {
 video {
     margin-bottom: -.5rem;
     width: 100vw;
-    height: 78vw;
+    height: 70svh;
     object-fit: cover;
 }
 .tiny-margin {
@@ -373,7 +373,7 @@ video {
 @media only screen and (min-width: 1920px) {
     video {
         width: 100vw;
-        height: 70vh;
+        height: 70svh;
     }
     .tiny-margin {
         padding: 10vh 10vh;
