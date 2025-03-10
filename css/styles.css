@@ -1337,12 +1337,12 @@ header h2 {
     font-size: 1rem;
     line-height: 1.4rem;
     color: rgb(var(--text-1));
-
     display: flex;
     align-items: end;
     justify-content: start;
     color: rgba(var(--text-1),0);
     background-color: rgb(var(--accent-clr));
+    background-position: center; 
 }
 .holder:hover {
     color: rgba(var(--text-1),1);
