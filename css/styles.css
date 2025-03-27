@@ -110,9 +110,6 @@ nav ul li {
     box-sizing: border-box;  
     cursor: pointer;
 }
-nav ul li .button5, nav ul li .button6  {
-    margin-left: .5rem;
-}
 nav ul {
     padding: 2rem;
     background: rgb(var(--accent-clr));
@@ -388,22 +385,11 @@ video {
     width: 100%;
     margin: -2.5vh auto -2.5vh auto;
     max-width: 1920px;
+    text-align: center;
 }
-.ph-g-one {
+.photo-hightlight, img {
     height: 100%;
-    width: 100%;
-    background-image: url(../img/insights-overview-1.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.ph-g-two {
-    height: 100%;
-    width: 100%;
-    background-image: url(../img/insights-overview-2.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+    width: auto;
 }
 /*---------------------------*/
 h1 {
@@ -1283,6 +1269,14 @@ header h2 {
 .cs-content, .cs-photo {
     margin: auto 0px;
 } 
+.cs-content ul{
+    list-style-type: disc;
+    display: inline;
+    position: relative;
+    width: auto;
+    top: -1.5rem;
+    left: 1rem;
+}
 .case-study img {
     width: 100%;
 }
