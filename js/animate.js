@@ -11,3 +11,13 @@ const observer = new IntersectionObserver((entries) => {
 
 const hiddenElements = document.querySelectorAll('.animate');
 hiddenElements.forEach((el) => observer.observe(el));
+
+document.addEventListener('click', function (event) {
+    const burgerInput = document.getElementById('burger');
+    const navContainer = document.querySelector('nav .container');
+
+    // Check if the click is outside the nav container and the input is checked
+    if (!navContainer.contains(event.target) && burgerInput.checked) {
+        burgerInput.checked = false; // Toggle the input off
+    }
+});
