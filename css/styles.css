@@ -1279,6 +1279,7 @@ header h2 {
 }
 .case-study img {
     width: 100%;
+    height: auto;
 }
 .grid-container-3 {
     padding: 0 10vw;
