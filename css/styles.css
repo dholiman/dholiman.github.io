@@ -381,15 +381,15 @@ video {
 }
 /*----Photo Highlights-----------------------*/
 .photo-highlight {
-    height: 50%;
+    height: auto;
     width: 100%;
-    margin: -2.5vh auto -2.5vh auto;
+    margin: -2.5vh auto 0px auto;
     max-width: 1920px;
     text-align: center;
 }
 .photo-hightlight, img {
-    height: 100%;
-    width: auto;
+    height: auto;
+    width: 100%;
 }
 /*---------------------------*/
 h1 {
