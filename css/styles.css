@@ -1700,6 +1700,7 @@ canvas {
         grid-template-rows: auto auto auto auto auto;
         grid-row-gap: 5vw;
         grid-template-areas: 
+        "case-0a case-0a case-0a"
         "case-0 case-0 case-0"
         "case-1 case-1 case-1"
         "case-2 case-2 case-2"
