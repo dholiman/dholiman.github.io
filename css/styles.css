@@ -383,7 +383,7 @@ video {
 .photo-highlight {
     height: auto;
     width: 100%;
-    margin: -2.5vh auto 0px auto;
+    margin: -2.5vh auto -2.5vw auto;
     max-width: 1920px;
     text-align: center;
 }
@@ -974,7 +974,7 @@ nav a:focus-visible {
     padding: .25rem .5rem;
 }
 header {
-    height: 75vh;
+    height: 70vh;
     margin: 0 10vw;
     display: table;
 }
@@ -1092,6 +1092,7 @@ header h2 {
     grid-column-gap: 2.5vw;
     grid-row-gap: 2.5vw;
     grid-template-areas:
+    "case-0a case-0a case-0a"
     "case-0 case-0 case-0" 
     "case-1 case-1 case-1"
     "case-2 case-2 case-2"
@@ -1111,6 +1112,9 @@ header h2 {
     border-radius: 0 0 var(--round-card) var(--round-card);
 }
 /* -- End of Card style updates -- */
+.grid-item-0a {
+    grid-area: case-0a;
+}
 .grid-item-0 {
     grid-area: case-0;
 }
@@ -1162,11 +1166,19 @@ header h2 {
     background-position: center;
     background-repeat: no-repeat;
 }
+.zeroa {
+    background-image: url(../img/MGSP/MGSP-hover.jpg);
+    transition: ease-in-out 2s;
+}
+.grid-item-0a:hover .zeroa {
+    background-size: 150%;
+    transition: ease-out 10s;   
+}
 .zero {
     background-image: url(../img/YL-Nav-Case-Study-Hover.jpg);
     transition: ease-in-out 2s;
 }
-.grid-item-0:hover .zero {
+.grid-item-0:hover .one {
     background-size: 150%;
     transition: ease-out 10s;   
 }
@@ -1174,7 +1186,7 @@ header h2 {
     background-image: url(../img/Insights-hover.jpg);
     transition: ease-in-out 2s;
 }
-.grid-item-1:hover .one {
+.grid-item-1:hover .zero {
     background-size: 150%;
     transition: ease-out 10s;
 }
@@ -1289,8 +1301,41 @@ header h2 {
     grid-column-gap: 2.5vw;
     grid-row-gap: 2.5vw;
 }
+.grid-container-4 {
+    padding: 0 10vw;
+}
 .spaceTop {
-    margin: 6.5vh 0 0 0;
+    margin: 4rem 0 0 0;
+}
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: stretch;
+    justify-content: center;
+    padding: 1rem 0;
+}
+.flex-block {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: top;
+    flex: 1;
+    min-width: 130px;
+    padding: 2rem 1rem;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.1);
+    background-color: rgba(var(--bg),0.8);
+    border-radius: var(--round-lg);
+}
+.flex-block .highlight {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin: 0;
+    color: rgb(var(--text-1));
+}
+.flex-block p {
+    margin: 0.5rem 0 0 0;
 }
 /* --- Gallery Specific --- */
 .gallery {
@@ -1628,6 +1673,7 @@ canvas {
     h1 {
         font-size: 2rem;
         line-height: 2.25rem;
+        padding-bottom: 1vh;
     }
     h2 {
         font-size: 1.75rem;
@@ -1838,12 +1884,14 @@ canvas {
     .footer-grid-item-1 .button2 {
         margin-bottom: 2.5rem;
     }
+    .flex-block {
+        padding: 1.5rem 1rem;
+    }
 }
 @media only screen and (max-width: 415px) {
     h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
         line-height: 2.4rem;
-        padding-bottom: 1vh;
     }
     .footer-grid-item-2 img {
         width: 60vw;
@@ -1856,6 +1904,10 @@ canvas {
     }
 }
 @media only screen and (max-width: 375px) {
+    h1 {
+        font-size: 1.75rem;
+        line-height: 2.2rem;
+    }
     .button3:after {
         top: 28px;
     }
@@ -1865,7 +1917,7 @@ canvas {
 }
 @media only screen and (max-width: 340px) {
     h1 {
-        font-size: 2rem;
+        font-size: 1.75rem;
     }
     h2 {
         font-size: 1.25rem;
