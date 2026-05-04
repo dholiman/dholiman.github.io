@@ -1,5 +1,5 @@
 /* ============================================================
-   Dough Pro Max — app.js
+   PieMinder Pro — app.js
    All percentages are baker's percentages (relative to flour)
    ============================================================ */
 
@@ -45,7 +45,7 @@ const state = {
 };
 
 // ── Persistence ───────────────────────────────────────────────
-const STORAGE_KEY = 'doughCalcState';
+const STORAGE_KEY = 'pieminderState';
 
 function saveState() {
   try {
