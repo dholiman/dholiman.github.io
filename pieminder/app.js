@@ -503,9 +503,9 @@ const WALKTHROUGH_STEPS = [
     img: 'assets/icons/Jar.png',
     title: 'Into Oiled Containers',
     getBody: () => `Place each dough ball into a lightly oiled container — a deli container or small bowl works great. Coat the top of each ball with a thin film of oil so it doesn't dry out, then cover tightly with a lid or plastic wrap.
-      <div class="bonus-tip" role="note" style="margin-top:1rem;">
-        <span class="bonus-tip__label"><img src="assets/icons/Lightbulb.png" alt="" class="tip-icon"> Pro Tip</span>
-        <p class="bonus-tip__text">Want to freeze dough for later? Instead of a container, lightly oil each ball, wrap tightly in plastic wrap, and place in the freezer. When ready to use, remove the plastic wrap, place in a lightly oiled container, and move to the fridge for <strong>3 days</strong> before baking.</p>
+      <div class="bonus-tip bonus-tip--accordion" role="button" tabindex="0" aria-expanded="false" style="margin-top:1rem;">
+        <span class="bonus-tip__label"><img src="assets/icons/Lightbulb.png" alt="" class="tip-icon"> Freeze some for later?<span class="bonus-tip__toggle" aria-hidden="true">+</span></span>
+        <p class="bonus-tip__text">Instead of a container, lightly oil each ball you want to freeze, wrap tightly in plastic wrap, and place in the freezer. When ready to use, remove the plastic wrap, place in a lightly oiled container, and move to the fridge for <strong>3 days</strong> before baking.</p>
       </div>`,
   },
   {
@@ -517,9 +517,9 @@ const WALKTHROUGH_STEPS = [
     img: 'assets/icons/Bake.png',
     title: 'Ready to Bake',
     getBody: () => `Pull the dough out of the fridge and rest at room temperature for <strong>3–4 hours</strong> before baking — cold dough tears instead of stretches.
-      <div class="bonus-tip" role="note" style="margin-top:1rem;">
-        <span class="bonus-tip__label"><img src="assets/icons/Lightbulb.png" alt="" class="tip-icon"> Pro Tip</span>
-        <p class="bonus-tip__text">Preheat a baking steel in your oven at <strong>525°F</strong> for at least 45 minutes. In the last 2–3 minutes, switch to broil for a charred, pizzeria-style top.</p>
+      <div class="bonus-tip bonus-tip--accordion" role="button" tabindex="0" aria-expanded="false" style="margin-top:1rem;">
+        <span class="bonus-tip__label"><img src="assets/icons/Lightbulb.png" alt="" class="tip-icon"> Bake it like pizzeria<span class="bonus-tip__toggle" aria-hidden="true">+</span></span>
+        <p class="bonus-tip__text">Preheat a baking steel in your oven at <strong>525°F</strong> for at least 45 minutes. Bake for 6-8 minutes. Try switching to broil in the last minute or 2 for a charred, pizzeria-style top.</p>
       </div>`,
   },
 ];
@@ -531,6 +531,38 @@ let wtIsOpen = false;
 const APP_EL    = document.getElementById('app');
 const OPEN_DUR  = 380; // ms — matches CSS transition
 const EXIT_DUR  = 220; // ms — matches CSS exit keyframe
+
+// ── Focus Trap ────────────────────────────────────────────────
+// Returns { activate, deactivate } for a given container element.
+// Wraps Tab/Shift-Tab so keyboard focus stays within the container.
+function createFocusTrap(containerEl) {
+  const FOCUSABLE = 'button:not([disabled]), [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+
+  function handleTab(e) {
+    if (e.key !== 'Tab') return;
+    const nodes = Array.from(containerEl.querySelectorAll(FOCUSABLE));
+    if (!nodes.length) return;
+    const first = nodes[0];
+    const last  = nodes[nodes.length - 1];
+    if (e.shiftKey) {
+      if (!containerEl.contains(document.activeElement) || document.activeElement === first) {
+        e.preventDefault(); last.focus();
+      }
+    } else {
+      if (!containerEl.contains(document.activeElement) || document.activeElement === last) {
+        e.preventDefault(); first.focus();
+      }
+    }
+  }
+
+  return {
+    activate()   { containerEl.addEventListener('keydown', handleTab); },
+    deactivate() { containerEl.removeEventListener('keydown', handleTab); },
+  };
+}
+
+const walkthroughTrap = createFocusTrap(els.walkthrough);
+const tipTrap         = createFocusTrap(els.tipOverlay);
 
 // ── Step rendering ─────────────────────────────────────────────
 function renderStep() {
@@ -546,8 +578,14 @@ function renderStep() {
     dot.classList.toggle('is-active', i === wtStep);
   });
 
-  els.wtBack.disabled = false;
-  els.wtBack.setAttribute('aria-disabled', 'false');
+  // Back button: show "Close" + X on step 1, "Back" + chevron on all others
+  if (wtStep === 0) {
+    els.wtBack.setAttribute('aria-label', 'Close walkthrough');
+    els.wtBack.innerHTML = '<svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 1L13 13M13 1L1 13" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg> Close';
+  } else {
+    els.wtBack.setAttribute('aria-label', 'Previous step');
+    els.wtBack.innerHTML = '<svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M11 3.5L6 9L11 14.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> Back';
+  }
   els.wtNext.textContent = wtStep === WALKTHROUGH_STEPS.length - 1 ? 'Done' : 'Next';
 }
 
@@ -572,24 +610,28 @@ function transitionStep(direction, callback) {
 }
 
 // ── Open / Close ───────────────────────────────────────────────
-function openWalkthrough() {
-  wtStep   = 0;
+function openWalkthrough(startStep = 0) {
+  wtStep   = startStep;
   wtIsOpen = true;
   APP_EL.classList.add('app--pushed');
+  APP_EL.inert = true;
   els.walkthrough.classList.add('is-open');
   els.walkthrough.removeAttribute('aria-hidden');
   renderStep();
   els.walkthrough.focus({ preventScroll: true });
   document.body.style.overflow = 'hidden';
+  walkthroughTrap.activate();
 }
 
 function closeWalkthrough() {
   wtIsOpen = false;
+  walkthroughTrap.deactivate();
   APP_EL.classList.remove('app--pushed');
   els.walkthrough.classList.remove('is-open');
   els.walkthrough.setAttribute('aria-hidden', 'true');
   // Delay restoring scroll + focus until slide-out animation completes
   setTimeout(() => {
+    APP_EL.inert = false;
     document.body.style.overflow = '';
     els.openWalkthrough.focus();
   }, OPEN_DUR);
@@ -598,15 +640,19 @@ function closeWalkthrough() {
 
 // ── Tip Modal ─────────────────────────────────────────────────
 function openTipModal() {
+  APP_EL.inert = true;
   els.tipOverlay.classList.add('is-open');
   els.tipOverlay.removeAttribute('aria-hidden');
   els.tipClose.focus();
   document.body.style.overflow = 'hidden';
+  tipTrap.activate();
 }
 
 function closeTipModal() {
+  tipTrap.deactivate();
   els.tipOverlay.classList.remove('is-open');
   els.tipOverlay.setAttribute('aria-hidden', 'true');
+  APP_EL.inert = false;
   document.body.style.overflow = '';
   els.openTipModal.focus();
 }
@@ -620,7 +666,7 @@ function closeTipModal() {
   });
 })();
 
-els.openWalkthrough.addEventListener('click', openWalkthrough);
+els.openWalkthrough.addEventListener('click', () => openWalkthrough());
 els.wtClose.addEventListener('click', closeWalkthrough);
 
 els.wtNext.addEventListener('click', () => {
@@ -648,6 +694,27 @@ els.walkthrough.addEventListener('keydown', (e) => {
   if (e.key === 'ArrowLeft' && wtStep > 0) {
     transitionStep('back', () => { wtStep--; renderStep(); saveState(); });
   }
+});
+
+// Pro Tip accordion — click and keyboard (Enter/Space)
+function toggleAccordion(tip) {
+  const isOpen = tip.classList.toggle('is-open');
+  tip.setAttribute('aria-expanded', String(isOpen));
+  const toggle = tip.querySelector('.bonus-tip__toggle');
+  if (toggle) toggle.textContent = isOpen ? '−' : '+';
+}
+
+document.addEventListener('click', (e) => {
+  const tip = e.target.closest('.bonus-tip--accordion');
+  if (tip) toggleAccordion(tip);
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key !== 'Enter' && e.key !== ' ') return;
+  const tip = e.target.closest('.bonus-tip--accordion');
+  if (!tip) return;
+  e.preventDefault();
+  toggleAccordion(tip);
 });
 
 // Swipe navigation
@@ -708,11 +775,9 @@ function init() {
   document.fonts.ready.then(positionIndicator);
   recalculate();
 
-  // Restore walkthrough if user was mid-flow
+  // Restore walkthrough if user was mid-flow — pass saved step to skip step-0 flash
   if (savedWtStep !== null) {
-    openWalkthrough();     // sets wtStep = 0, shows overlay
-    wtStep = savedWtStep;  // override with saved step
-    renderStep();          // re-render at the correct step
+    openWalkthrough(savedWtStep);
   }
 }
 

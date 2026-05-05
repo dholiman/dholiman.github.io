@@ -4,14 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Making homemade pizza dough easy and repeatable. Enter your pizza size, quantity, and thickness to get exact ingredient amounts." />
+  <meta name="theme-color" content="#EDE8E0" />
   <!-- Security -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none';">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <title>PieMinder Pizza Calculator</title>
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="PieMinder Pro — Pizza Dough Calculator" />
+  <meta property="og:description" content="Making homemade pizza dough easy and repeatable. Enter your pizza size, quantity, and thickness to get exact ingredient amounts." />
+  <meta property="og:image"       content="https://dakotaholiman.com/pieminder/assets/web/og-image.png" />
+  <meta property="og:url"         content="https://dakotaholiman.com/pieminder/" />
+  <title>PieMinder — Pizza Dough Calculator</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/web/favicon.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/web/favicon-16.png" />
+  <link rel="apple-touch-icon"    href="assets/web/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=47" />
+  <link rel="stylesheet" href="styles.css?v=55" />
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -20,7 +30,7 @@
 
     <!-- ── Header ── -->
     <header class="header" role="banner">
-      <div class="header-logo" aria-hidden="true"><img src="assets/icons/Pizza.png" alt="pizza slice icon" width="56" height="56"></div>
+      <div class="header-logo" aria-hidden="true"><img src="assets/icons/Pizza.png" alt="" width="56" height="56"></div>
       <h1 class="header-title">PieMinder Pro</h1>
       <p class="header-tagline">Home pizza dough, simplified</p>
     </header>
@@ -178,8 +188,8 @@
           <p class="hero-sub" id="ball-weight">214g per ball · 7.6 oz</p>
 
           <div id="large-batch-warning" class="bonus-tip" role="note" style="display:none; text-align:left">
-            <span class="bonus-tip__label"><img src="assets/icons/Whisk.png" alt="" class="tip-icon"> Heads Up</span>
-            <p class="bonus-tip__text">Woah, that's a big batch of dough! Consider kneading by hand. Some mixers struggle with this much dough.</p>
+            <span class="bonus-tip__label"><img src="assets/icons/Whisk.png" alt="" class="tip-icon"> Woah, that's a big batch of dough!</span>
+            <p class="bonus-tip__text">Consider kneading by hand. Some mixers struggle with this much dough.</p>
           </div>
 
           <div
@@ -262,9 +272,9 @@
           <li><span>Rest at room temp for 3–4 hours before baking</span></li>
         </ol>
 
-        <div class="bonus-tip" role="note">
-          <span class="bonus-tip__label"><img src="assets/icons/Lightbulb.png" alt="" class="tip-icon"> Pro Tip</span>
-          <p class="bonus-tip__text">Preheat a baking steel in your oven at <strong>525°F</strong> for at least 45 minutes. In the last 2–3 minutes, switch to broil for a charred, pizzeria-style top.</p>
+        <div class="bonus-tip bonus-tip--accordion" role="button" tabindex="0" aria-expanded="false">
+          <span class="bonus-tip__label"><img src="assets/icons/Lightbulb.png" alt="" class="tip-icon"> Bake it like pizzeria<span class="bonus-tip__toggle" aria-hidden="true">+</span></span>
+          <p class="bonus-tip__text">Preheat a baking steel in your oven at <strong>525°F</strong> for at least 45 minutes. Bake for 6-8 minutes. Try switching to broil in the last minute or 2 for a charred, pizzeria-style top.</p>
         </div>
 
         <button class="walkthrough-btn" id="open-walkthrough" aria-haspopup="dialog">
@@ -328,7 +338,7 @@
         <div class="wt-card">
           <div class="wt-content">
             <h2 class="wt-title" id="wt-title"></h2>
-            <p class="wt-body" id="wt-body"></p>
+            <div class="wt-body" id="wt-body"></div>
           </div>
 
           <div class="wt-nav">
@@ -352,6 +362,6 @@
     </div>
   </div>
 
-  <script src="app.js?v=23"></script>
+  <script src="app.js?v=30"></script>
 </body>
 </html>
