@@ -140,6 +140,9 @@ const els = {
   openTipModal: document.getElementById('open-tip-modal'),
   tipOverlay:   document.getElementById('tip-overlay'),
   tipClose:     document.getElementById('tip-close'),
+
+  // Share
+  shareBtn: document.getElementById('share-btn'),
 };
 
 // ── Calculation Engine ─────────────────────────────────────────
@@ -750,10 +753,99 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
+// ── Share Recipe ───────────────────────────────────────────────
+function buildShareUrl() {
+  const base   = window.location.origin + window.location.pathname;
+  const params = new URLSearchParams({
+    qty:   state.quantity,
+    size:  state.size,
+    thick: state.thickness,
+    hyd:   state.hydration,
+    gfhyd: state.gfHydration,
+    gf:    state.glutenFree ? '1' : '0',
+  });
+  return `${base}?${params}`;
+}
+
+async function shareRecipe() {
+  const url  = buildShareUrl();
+  const data = {
+    title: 'PieMinder Pro — Pizza Dough Recipe',
+    text:  `My dough settings: ${state.quantity}× ${state.size}" ${state.thickness} crust, ${state.glutenFree ? state.gfHydration : state.hydration}% hydration`,
+    url,
+  };
+
+  if (navigator.share && navigator.canShare?.(data)) {
+    try {
+      await navigator.share(data);
+    } catch (e) {
+      // User cancelled (AbortError) — do nothing. Any other error falls through to clipboard.
+      if (e.name !== 'AbortError') await copyUrlToClipboard(url);
+    }
+  } else {
+    await copyUrlToClipboard(url);
+  }
+}
+
+async function copyUrlToClipboard(url) {
+  const btn         = els.shareBtn;
+  const originalHTML = btn.innerHTML;
+
+  try {
+    await navigator.clipboard.writeText(url);
+  } catch (e) {
+    return; // clipboard unavailable — do nothing
+  }
+
+  btn.innerHTML = `<svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9l4.5 4.5L15 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Link Copied`;
+  btn.classList.add('share-btn--copied');
+
+  setTimeout(() => {
+    btn.innerHTML = originalHTML;
+    btn.classList.remove('share-btn--copied');
+  }, 2500);
+}
+
+function loadFromUrl() {
+  const params = new URLSearchParams(window.location.search);
+  if (!params.size) return false;
+
+  if (params.has('qty')) {
+    const v = Number(params.get('qty'));
+    if (!isNaN(v)) state.quantity = Math.min(Math.max(Math.round(v), QTY_MIN), QTY_MAX);
+  }
+  if (params.has('size')) {
+    const v = Number(params.get('size'));
+    if (!isNaN(v)) state.size = Math.min(Math.max(Math.round(v), 8), 20);
+  }
+  if (params.has('thick')) {
+    const v = params.get('thick');
+    if (['thin', 'regular', 'thick'].includes(v)) state.thickness = v;
+  }
+  if (params.has('hyd')) {
+    const v = Number(params.get('hyd'));
+    if (!isNaN(v)) state.hydration = Math.min(Math.max(Math.round(v), 60), 80);
+  }
+  if (params.has('gfhyd')) {
+    const v = Number(params.get('gfhyd'));
+    if (!isNaN(v)) state.gfHydration = Math.min(Math.max(Math.round(v), 60), 80);
+  }
+  if (params.has('gf')) {
+    state.glutenFree = params.get('gf') === '1';
+  }
+
+  // Silently clean the URL — no page refresh, no flicker
+  history.replaceState(null, '', window.location.pathname);
+  return true;
+}
+
+els.shareBtn.addEventListener('click', shareRecipe);
+
 // ── Init ───────────────────────────────────────────────────────
 function init() {
-  // Restore persisted state before syncing UI
+  // localStorage first, then URL params override (shared links win)
   const savedWtStep = loadState();
+  const fromUrl     = loadFromUrl();
 
   // Sync DOM inputs from (possibly restored) state
   els.sizeSlider.value = state.size;
@@ -775,8 +867,8 @@ function init() {
   document.fonts.ready.then(positionIndicator);
   recalculate();
 
-  // Restore walkthrough if user was mid-flow — pass saved step to skip step-0 flash
-  if (savedWtStep !== null) {
+  // Restore walkthrough only if NOT opening from a shared link
+  if (!fromUrl && savedWtStep !== null) {
     openWalkthrough(savedWtStep);
   }
 }
