@@ -664,6 +664,7 @@ body {
 .ingredient-text {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 2px;
   min-width: 0;
 }
@@ -782,6 +783,47 @@ body {
   font-weight: 700;
   color: var(--text-accent);
   margin-top: 1px;
+}
+
+/* ── Share Button ── */
+.share-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  width: 100%;
+  margin-top: var(--space-lg);
+  padding: 14px var(--space-lg);
+  border: none;
+  border-radius: var(--radius-md);
+  background: var(--bg);
+  color: var(--text-secondary);
+  font-family: inherit;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: var(--shadow-raised-sm);
+  transition:
+    box-shadow var(--dur-fast) ease,
+    transform   var(--dur-fast) ease,
+    color       var(--dur-fast) ease;
+}
+.share-btn:hover {
+  color: var(--text-primary);
+  transform: translateY(-2px);
+  box-shadow:
+    var(--shadow-raised-sm),
+    0 6px 16px rgba(162, 138, 104, 0.25);
+}
+.share-btn:active {
+  box-shadow: var(--shadow-pressed);
+  transform: scale(0.97) translateY(0);
+  color: var(--text-primary);
+}
+
+.share-btn--copied {
+  color: var(--text-accent);
+  pointer-events: none;
 }
 
 /* ── Footer ── */
